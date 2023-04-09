@@ -1,0 +1,80 @@
+2023-04-06T12:10:59.801+02:00  INFO 20272 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 with PID 20272 (C:\Users\tonyc\Desktop\Codesurfers\dut-healthcare-clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Codesurfers\dut-healthcare-clinic)
+2023-04-06T12:10:59.889+02:00  INFO 20272 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-04-06T12:11:01.890+02:00  INFO 20272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-04-06T12:11:01.940+02:00  INFO 20272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-04-06T12:11:02.020+02:00  INFO 20272 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.codesurfers.duthealthcareclinic.appointment.AppointmentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-04-06T12:11:02.023+02:00  INFO 20272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 0 JDBC repository interfaces.
+2023-04-06T12:11:02.058+02:00  INFO 20272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-04-06T12:11:02.060+02:00  INFO 20272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-06T12:11:02.143+02:00  INFO 20272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 1 JPA repository interfaces.
+2023-04-06T12:11:03.844+02:00  INFO 20272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9092 (http)
+2023-04-06T12:11:03.866+02:00  INFO 20272 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-06T12:11:03.867+02:00  INFO 20272 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-06T12:11:04.190+02:00  INFO 20272 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-04-06T12:11:04.195+02:00  INFO 20272 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4136 ms
+2023-04-06T12:11:04.619+02:00  INFO 20272 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-06T12:11:04.747+02:00  INFO 20272 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-06T12:11:05.473+02:00  INFO 20272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-06T12:11:05.873+02:00  INFO 20272 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7272ee51
+2023-04-06T12:11:05.876+02:00  INFO 20272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-06T12:11:05.912+02:00  WARN 20272 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.0.0 version for [org.hibernate.dialect.MySQL5Dialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-04-06T12:11:05.915+02:00  INFO 20272 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-04-06T12:11:05.919+02:00  WARN 20272 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL5Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-04-06T12:11:06.821+02:00  INFO 20272 --- [main] o.h.c.beanvalidation.TypeSafeActivator   : Error calling `jakarta.validation.Validation#buildDefaultValidatorFactory`
+
+jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+	at jakarta.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291) ~[jakarta.validation-api-3.0.2.jar:na]
+	at jakarta.validation.Validation.buildDefaultValidatorFactory(Validation.java:103) ~[jakarta.validation-api-3.0.2.jar:na]
+	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.getValidatorFactory(TypeSafeActivator.java:479) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.activate(TypeSafeActivator.java:82) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:137) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:287) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.7.jar:6.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.7.jar:6.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.7.jar:6.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.7.jar:6.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
+	at com.codesurfers.duthealthcareclinic.DutHealthcareClinicApplication.main(DutHealthcareClinicApplication.java:16) ~[classes/:na]
+
+2023-04-06T12:11:08.102+02:00  INFO 20272 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-06T12:11:08.135+02:00  INFO 20272 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-06T12:11:09.760+02:00  WARN 20272 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-06T12:11:11.173+02:00  WARN 20272 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-04-06T12:11:11.498+02:00  WARN 20272 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7b9dc6a0-5fb7-4c2f-8bdb-9d1ac2e4fff8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-04-06T12:11:11.846+02:00  INFO 20272 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@32192a69, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@135f760a, org.springframework.security.web.context.SecurityContextHolderFilter@7b6e196e, org.springframework.security.web.header.HeaderWriterFilter@6a94bd69, org.springframework.security.web.csrf.CsrfFilter@60fc4450, org.springframework.security.web.authentication.logout.LogoutFilter@b22bebc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7b6c3b37, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@d96f413, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@36e9fd4f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7b4b559d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@137a70f1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5472c27a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@730611a0, org.springframework.security.web.access.ExceptionTranslationFilter@76ea1cb5, org.springframework.security.web.access.intercept.AuthorizationFilter@6b58a0f9]
+2023-04-06T12:11:11.960+02:00  INFO 20272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9092 (http) with context path '/dut_healthcare_clinic'
+2023-04-06T12:11:11.980+02:00  INFO 20272 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 14.029 seconds (process running for 21.978)
+2023-04-06T12:13:22.634+02:00  INFO 20272 --- [http-nio-127.0.0.1-9092-exec-4] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-06T12:13:22.635+02:00  INFO 20272 --- [http-nio-127.0.0.1-9092-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-06T12:13:22.640+02:00  INFO 20272 --- [http-nio-127.0.0.1-9092-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-04-06T12:17:04.893+02:00  INFO 20272 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-06T12:17:04.898+02:00  INFO 20272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-06T12:17:04.918+02:00  INFO 20272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
