@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Healthcare</string>
+    <string name="first_tab_name">Upcoming</string>
+    <string name="second_tab_name">History</string>
+    <string name="tabs_name">My Tab Bar</string>
+    <string name="select">Select Campus</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empty_message">YOU HAVE NO APPOINTMENT</string>
+</resources>
