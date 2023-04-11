@@ -17,19 +17,4 @@ public class DutHealthcareClinicApplication {
 		SpringApplication.run(DutHealthcareClinicApplication.class, args);
 	}
 
-	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("*").allowedMethods("GET", "POST","PUT", "DELETE");
-			}
-		};
-	}
-
-	public RestTemplate getRestTemplate() {
-		return new RestTemplate();
-	}
-
-
 }

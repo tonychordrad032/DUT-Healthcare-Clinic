@@ -1,2 +1,7 @@
-package com.codesurfers.duthealthcareclinic.user;public interface UserRepository {
+package com.codesurfers.duthealthcareclinic.user;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    User findByUsername(String username);
 }
