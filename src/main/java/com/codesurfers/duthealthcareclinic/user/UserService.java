@@ -130,4 +130,34 @@ public class UserService {
             LOG.info("{} : Finish deleting user", correlationId);
         }
     }
+
+    public ResponseEntity login(User user, String correlationId){
+        try {
+            LOG.info("{} : Start logging in", correlationId);
+
+            User user1 = userRepository.findByUsernameAndPassword(user.getUsername(), user.getPassword());
+
+            System.out.println(user1);
+            if (user1 == null){
+                LOG.info("{} : Incorrect password or username ");
+                return ResponseEntity.notFound().build();
+            }
+
+            if (user1.getDeleted() == 1){
+                LOG.info("{} : User with id " + user.getUserId() + " is not found");
+                return ResponseEntity.notFound().build();
+            }
+
+
+            LOG.info("{} : Login successfully", correlationId);
+
+            return ResponseEntity.ok().body(new ResponseResult(200, "Login successfully", user1));
+
+        }catch (Exception e){
+            LOG.error("{} : Error while logging in", correlationId, e);
+            return ResponseEntity.badRequest().body(new ResponseResult(400, e.getMessage(), null));
+        }finally {
+            LOG.info("{} : Finish logging in", correlationId);
+        }
+    }
 }

@@ -38,4 +38,10 @@ public class UserController {
         return userService.delete(id, correlationId);
     }
 
+   @PostMapping("/login")
+    public ResponseEntity login(@RequestBody User user){
+        String correlationId = UUID.randomUUID().toString();
+        return userService.login(user, correlationId);
+    }
+
 }

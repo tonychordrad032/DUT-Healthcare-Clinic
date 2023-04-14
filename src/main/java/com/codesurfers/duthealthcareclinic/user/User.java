@@ -15,6 +15,8 @@ public class User {
 
     @Column(length = 999, unique = true)
     private String username, studentNumber;
+
+    //@Transient
     private String password;
     private int deleted = 0;
     private String profilePicture;

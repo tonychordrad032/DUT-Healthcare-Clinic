@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -25,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
     private IClinicAPI ClinicAPI;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText username = (EditText) findViewById(R.id.emailAddressField);
         TextView signUp = (TextView) findViewById(R.id.signUpText);
         TextView resetPass = (TextView) findViewById(R.id.resetPasswordText);
 
@@ -49,12 +51,16 @@ public class MainActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String username1 = username.getText().toString();
                 Toast.makeText(MainActivity.this, "Your Username is " + username1, Toast.LENGTH_SHORT).show();
                 Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
+
                 startActivity(fp);
             }
         });
+
+
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+]
     
     // API functions
 
@@ -600,5 +606,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
 }

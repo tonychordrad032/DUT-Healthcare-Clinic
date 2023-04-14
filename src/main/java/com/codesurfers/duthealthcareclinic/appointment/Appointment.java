@@ -1,9 +1,8 @@
 package com.codesurfers.duthealthcareclinic.appointment;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.codesurfers.duthealthcareclinic.clinic.Clinic;
+import com.codesurfers.duthealthcareclinic.user.User;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -14,12 +13,17 @@ public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long appointmentId;
-
-    private String studentNumber;
+    @ManyToOne
+    private User patient;
+    @OneToOne
+    private Clinic clinic;
     private String status;
-    private String qualification;
+
+    private String notes;
+
     private int deleted = 0;
     private LocalDateTime appointmentDate;
     private LocalDateTime appointmentTime;
+
 
 }
