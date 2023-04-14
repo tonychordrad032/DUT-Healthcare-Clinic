@@ -1,4 +1,4 @@
-package com.codesurfers.healthcare;
+package com.codesurfers.healthcare.model;
 
 public class User {
     private long userId;

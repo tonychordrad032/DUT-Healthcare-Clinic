@@ -1,5 +1,10 @@
 package com.codesurfers.healthcare;
 
+import com.codesurfers.healthcare.model.Appointment;
+import com.codesurfers.healthcare.model.Clinic;
+import com.codesurfers.healthcare.model.Feedback;
+import com.codesurfers.healthcare.model.User;
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -22,7 +27,7 @@ public interface IClinicAPI {
     @POST("user")
     Call<User> addUser(@Body User user);
 
-    @POST("user")
+    @POST("user/login")
     Call<User> loginUser(@Body User user);
 
     @PATCH("user/{id}")

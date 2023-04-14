@@ -4,14 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import com.codesurfers.healthcare.model.Appointment;
+import com.codesurfers.healthcare.model.Clinic;
+import com.codesurfers.healthcare.model.Feedback;
+import com.codesurfers.healthcare.model.User;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -25,6 +27,7 @@ import retrofit2.Call;
 
 public class MainActivity extends AppCompatActivity {
     private IClinicAPI ClinicAPI;
+    TextView username, password;
 
 
 
@@ -35,28 +38,29 @@ public class MainActivity extends AppCompatActivity {
 
         TextView signUp = (TextView) findViewById(R.id.signUpText);
         TextView resetPass = (TextView) findViewById(R.id.resetPasswordText);
+        username = findViewById(R.id.emailAddressField);
+        password = findViewById(R.id.passwordField);
+
 
         /*
         * You need to set the baseUrl to your API
         * */
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("")  // Set the baseUrl to your API
+                .baseUrl("http://192.168.8.119:9092/dut_healthcare_clinic/api/")  // Set the baseUrl to your API
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         ClinicAPI = retrofit.create(IClinicAPI.class);
 
+
         Button loginBtn = (Button) findViewById(R.id.loginBtn);
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String username1 = username.getText().toString();
-                Toast.makeText(MainActivity.this, "Your Username is " + username1, Toast.LENGTH_SHORT).show();
-                Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
-
-                startActivity(fp);
+                String password1 = password.getText().toString();
+                loginUser(username1,password1);
             }
         });
 
@@ -78,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-]
     
     // API functions
 
@@ -170,17 +173,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loginUser(String username, String password) {
+
         User user = new User(username, password);
         Call<User> call = ClinicAPI.loginUser(user);
+        System.out.println(call.toString());
 
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
+                System.out.println("SUCCESS RESPONSE");
 
-                if (!response.isSuccessful()) {
-                    // Do something
-                    return;
+
+                if (response.code() == 404) {
+                    System.out.println("SUCCESS1");
+                    System.out.println(response.code());
+                    Toast.makeText(MainActivity.this, "Incorrect username or password" , Toast.LENGTH_SHORT).show();
+                }else {
+                    System.out.println("SUCCESS2");
+                    System.out.println(response.body());
+                    Toast.makeText(MainActivity.this, "Login Successfully" , Toast.LENGTH_SHORT).show();
+                    Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
+                    startActivity(fp);
                 }
+
+
 
                 // Do something else if response successful
                 // response.body() has the returned response data
@@ -188,7 +204,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
-
+                System.out.println("FAILED");
+                t.getMessage();
+                Toast.makeText(MainActivity.this, "Incorrect username or password", Toast.LENGTH_SHORT).show();
             }
         });
     }

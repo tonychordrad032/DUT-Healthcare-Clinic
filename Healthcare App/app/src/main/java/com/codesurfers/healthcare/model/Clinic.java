@@ -1,4 +1,4 @@
-package com.codesurfers.healthcare;
+package com.codesurfers.healthcare.model;
 
 public class Clinic {
     private long clinicId;

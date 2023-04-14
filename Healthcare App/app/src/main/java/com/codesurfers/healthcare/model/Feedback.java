@@ -1,4 +1,4 @@
-package com.codesurfers.healthcare;
+package com.codesurfers.healthcare.model;
 
 public class Feedback {
     private long feedbackId;

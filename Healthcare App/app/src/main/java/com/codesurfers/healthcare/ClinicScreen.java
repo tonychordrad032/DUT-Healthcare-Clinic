@@ -1,9 +1,5 @@
 package com.codesurfers.healthcare;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,21 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.concurrent.FutureTask;
 
 public class ClinicScreen extends AppCompatActivity {
 
@@ -44,12 +29,6 @@ public class ClinicScreen extends AppCompatActivity {
         fetchClinicBtn = findViewById(R.id.fetchClinic);
         onClick();
 
-        fetchClinicBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fetchClinics();
-            }
-        });
 
 
 
@@ -77,7 +56,7 @@ public class ClinicScreen extends AppCompatActivity {
         };
     }
 
-    public void fetchClinics(){
+    /**public void fetchClinics(){
         System.out.println("FETCH STARTING");
         Adapter adapter = new Adapter(this, arrayList, listener);
         rv_1.setLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false));
@@ -115,5 +94,5 @@ public class ClinicScreen extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(jsonArrayRequest);
-    }
+    }*/
 }
