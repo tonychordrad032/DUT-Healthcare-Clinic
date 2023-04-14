@@ -39,4 +39,10 @@ public class AppointmentController {
         String correlationId = UUID.randomUUID().toString();
         return appointmentService.delete(id, correlationId);
     }
+
+    @GetMapping("/findAppointmentByUserId/{patient}")
+    public ResponseEntity findAppointmentByUserId(@RequestParam("patient") long userId){
+        String correlationId = UUID.randomUUID().toString();
+        return appointmentService.listAppointmentByUserId(userId, correlationId);
+    }
 }

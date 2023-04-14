@@ -88,9 +88,9 @@ public class AppointmentService {
 
             //BusinessClient businessClient = businessClientRepository.findById(project.getBusinessClient().getClientId()).orElseThrow(() -> new Exception("Client not found."));
 
-            _appontment.setStudentNumber(appointment.getStudentNumber());
+            //_appontment.setStudentNumber(appointment.getStudentNumber());
             _appontment.setStatus(appointment.getStatus());
-            _appontment.setQualification(appointment.getQualification());
+            //_appontment.setQualification(appointment.getQualification());
             _appontment.setAppointmentDate(appointment.getAppointmentDate());
 
 
@@ -138,4 +138,32 @@ public class AppointmentService {
             LOG.info("{} : done deleting appointment process", correlationId);
         }
     }
+
+    public ResponseEntity listAppointmentByUserId(long userId, String correlationId){
+        try {
+            LOG.info("{} : Start searching appointments", correlationId);
+            List<Appointment> appointmentList = appointmentRepository.findAppointmentByUserId(userId);
+
+            if (appointmentList.isEmpty()) {
+                throw new Exception("Appointment with for user id "+userId+ " not found");
+            }
+
+            LOG.info("{} : appointment found", correlationId);
+
+            return ResponseEntity.ok().body(new ResponseResult(200, "Appointment was found", appointmentList));
+
+        }catch (Exception e){
+            LOG.error("{} : Error while searching for appointments {}", correlationId, e);
+            return ResponseEntity.badRequest().body(new ResponseResult(400, e.getMessage(), null));
+        }finally {
+            LOG.info("{} : done searching appointment process", correlationId);
+        }
+    }
+
+    /**public List<Appointment> listAppointmentByUserId(){
+        return appointmentRepository.findAppointmentByUserId(long id)
+                .stream()
+                .filter(assetLocation -> assetLocation.getDeleted() == 0)
+                .collect(Collectors.toList());
+    }*/
 }
