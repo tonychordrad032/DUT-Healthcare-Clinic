@@ -1,7 +1,10 @@
 package com.codesurfers.healthcare;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +19,7 @@ import com.codesurfers.healthcare.model.Feedback;
 import com.codesurfers.healthcare.model.User;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -30,21 +34,22 @@ public class MainActivity extends AppCompatActivity {
     TextView username, password;
 
 
+    ArrayList<Clinic> arrayList = new ArrayList<>();
+    Adapter.RecyclerViewClick listener;
+    RecyclerView rv_1;
+    String URL = "http://192.168.8.119:9092/dut_healthcare_clinic/api/clinic";
+    Button fetchClinicBtn;
 
+
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        TextView signUp = (TextView) findViewById(R.id.signUpText);
-        TextView resetPass = (TextView) findViewById(R.id.resetPasswordText);
-        username = findViewById(R.id.emailAddressField);
-        password = findViewById(R.id.passwordField);
-
-
         /*
-        * You need to set the baseUrl to your API
-        * */
+         * You need to set the baseUrl to your API
+         * */
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://192.168.8.119:9092/dut_healthcare_clinic/api/")  // Set the baseUrl to your API
@@ -52,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         ClinicAPI = retrofit.create(IClinicAPI.class);
+
+        // DECLARATION
+
+        TextView signUp = findViewById(R.id.signUpText);
+        TextView resetPass = findViewById(R.id.resetPasswordText);
+        username = findViewById(R.id.emailAddressField);
+        password = findViewById(R.id.passwordField);
 
 
         Button loginBtn = (Button) findViewById(R.id.loginBtn);
@@ -63,6 +75,10 @@ public class MainActivity extends AppCompatActivity {
                 loginUser(username1,password1);
             }
         });
+
+
+
+
 
 
 
@@ -176,20 +192,13 @@ public class MainActivity extends AppCompatActivity {
 
         User user = new User(username, password);
         Call<User> call = ClinicAPI.loginUser(user);
-        System.out.println(call.toString());
-
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-                System.out.println("SUCCESS RESPONSE");
-
-
                 if (response.code() == 404) {
-                    System.out.println("SUCCESS1");
                     System.out.println(response.code());
                     Toast.makeText(MainActivity.this, "Incorrect username or password" , Toast.LENGTH_SHORT).show();
                 }else {
-                    System.out.println("SUCCESS2");
                     System.out.println(response.body());
                     Toast.makeText(MainActivity.this, "Login Successfully" , Toast.LENGTH_SHORT).show();
                     Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
@@ -286,26 +295,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getClinics() {
+        Adapter adapter = new Adapter(this, arrayList, listener);
+        rv_1.setLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false));
+        rv_1.setAdapter(adapter);
+
         Call<List<Clinic>> call = ClinicAPI.getClinics();
 
         call.enqueue(new Callback<List<Clinic>>() {
             @Override
             public void onResponse(Call<List<Clinic>> call, Response<List<Clinic>> response) {
 
-                if (!response.isSuccessful()) {
-                    // Do something
-                    return;
+                if (response.code() == 200) {
+                    List<Clinic> tempList = response.body();
+                    for (int i = 0; i < tempList.size(); i++) {
+                        arrayList.add(new Clinic(tempList.get(1).getClinicName(), tempList.get(i).getClinicDescription(), tempList.get(i).getClinicCampus(), tempList.get(i).getLatitude(), tempList.get(i).getLongitude()));
+                    }
+
+                    System.out.println("SUCCESSFULLY");
+                    System.out.println(arrayList.size());
+
+                }else {
+                    System.out.println("Error Occurred");
                 }
 
-                // Do something else if response successful
-                // response.body() has the returned response data
             }
-
             @Override
             public void onFailure(Call<List<Clinic>> call, Throwable t) {
+                t.printStackTrace();
 
             }
         });
+
     }
 
     private void addClinic(HashMap<String,String> fields) {
