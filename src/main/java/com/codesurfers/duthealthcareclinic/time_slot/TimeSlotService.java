@@ -1,8 +1,5 @@
 package com.codesurfers.duthealthcareclinic.time_slot;
 
-import com.codesurfers.duthealthcareclinic.appointment_day.AppointmentDay;
-import com.codesurfers.duthealthcareclinic.appointment_day.AppointmentDayRepository;
-import com.codesurfers.duthealthcareclinic.user.User;
 import com.codesurfers.duthealthcareclinic.utils.helpers.ResponseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,13 +15,11 @@ import java.util.stream.Collectors;
 
 @Service
 public class TimeSlotService {
-    private static Logger LOG = LoggerFactory.getLogger(TimeSlotService.class);
+    private static final Logger LOG = LoggerFactory.getLogger(TimeSlotService.class);
 
     @Autowired
     private TimeSlotRepository timeSlotRepository;
 
-    @Autowired
-    private AppointmentDayRepository appointmentDayRepository;
 
     public ResponseEntity save(TimeSlot timeSlot, String correlationId){
         try {
@@ -87,10 +82,10 @@ public class TimeSlotService {
 
             List<TimeSlot> timeSlotList = timeSlotRepository.findAll()
                     .stream()
-                    .filter(timeSlot -> timeSlot.isBooked() == false && (Objects.equals(timeSlot.getDay().getAppointmentDayName(), day) && Objects.equals(timeSlot.getDay().isBooked(), false)))
+                    .filter(timeSlot -> !timeSlot.isBooked() && (Objects.equals(timeSlot.getDay().getAppointmentDayName(), day) && Objects.equals(timeSlot.getDay().isBooked(), false)))
                     .toList();
 
-            /**List<TimeSlot> availableTimeSlotList = null;
+            /*List<TimeSlot> availableTimeSlotList = null;
             for (int i = 0; i < timeSlotList.size(); i++) {
                 if (timeSlotList.get(i).isBooked() == true){
                     availableTimeSlotList.add(timeSlotList.get(i));
@@ -113,6 +108,36 @@ public class TimeSlotService {
         }
 
     }
+
+    public ResponseEntity update(TimeSlot timeSlot, String correlationId){
+        try {
+            LOG.info("{} : Start updating timeSlot", correlationId);
+
+            if (timeSlot == null){
+                LOG.warn("{} : no content", correlationId);
+                return ResponseEntity.noContent().build();
+            }
+
+            TimeSlot _timeSlot  = timeSlotRepository.findById(timeSlot.getTimeSlotId()).orElseThrow(() -> new RuntimeException("time slot Not found"));
+
+            _timeSlot.setTime(timeSlot.getTime());
+            _timeSlot.setBooked(timeSlot.isBooked());
+
+            timeSlotRepository.save(_timeSlot);
+            timeSlotRepository.flush();
+            LOG.info("{} : Time slot was successfully updated", correlationId);
+
+            return ResponseEntity.ok().body(new ResponseResult(200, "time slot was updated successfully", _timeSlot));
+
+        }catch (Exception e){
+            LOG.error("{} : Error while updating time slot", correlationId);
+            return ResponseEntity.badRequest().body(new ResponseResult(400, e.getMessage(), null));
+        }finally {
+            LOG.info("{} : Done updating time slot", correlationId);
+        }
+    }
+
+
 
 
 }

@@ -31,4 +31,10 @@ public class TimeSlotController {
         String correlationId = UUID.randomUUID().toString();
         return timeSlotService.findTimeSlotByDay(day, correlationId);
     }
+
+    @PutMapping
+    public ResponseEntity update(@RequestBody TimeSlot timeSlot){
+        String correlationId = UUID.randomUUID().toString();
+        return timeSlotService.update(timeSlot, correlationId);
+    }
 }

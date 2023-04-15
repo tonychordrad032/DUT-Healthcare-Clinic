@@ -240,3 +240,63 @@ java.lang.NullPointerException: Cannot invoke "java.util.List.isEmpty()" because
 2023-04-16T00:16:10.200+02:00  INFO 19268 --- [http-nio-192.168.8.119-9092-exec-6] c.c.d.time_slot.TimeSlotService          : 14009b47-290c-4567-89c7-6312e4f7af17 : Done fetching time slot
 2023-04-16T00:18:30.732+02:00  INFO 19268 --- [http-nio-192.168.8.119-9092-exec-8] c.c.d.time_slot.TimeSlotService          : 86398a66-e4da-48c5-9822-8a2ba06b2546 : Start searching time slot
 2023-04-16T00:18:30.739+02:00  INFO 19268 --- [http-nio-192.168.8.119-9092-exec-8] c.c.d.time_slot.TimeSlotService          : 86398a66-e4da-48c5-9822-8a2ba06b2546 : Done fetching time slot
+2023-04-16T00:31:53.238+02:00  INFO 19268 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-16T00:31:53.241+02:00  INFO 19268 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-16T00:31:53.251+02:00  INFO 19268 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-16T00:31:58.343+02:00  INFO 6228 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 with PID 6228 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
+2023-04-16T00:31:58.346+02:00  INFO 6228 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-04-16T00:31:59.259+02:00  INFO 6228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-16T00:31:59.364+02:00  INFO 6228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 6 JPA repository interfaces.
+2023-04-16T00:32:00.162+02:00  INFO 6228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9092 (http)
+2023-04-16T00:32:00.174+02:00  INFO 6228 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-16T00:32:00.175+02:00  INFO 6228 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-16T00:32:00.310+02:00  INFO 6228 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-04-16T00:32:00.311+02:00  INFO 6228 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1903 ms
+2023-04-16T00:32:00.508+02:00  INFO 6228 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-16T00:32:00.562+02:00  INFO 6228 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-16T00:32:00.870+02:00  INFO 6228 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-16T00:32:01.085+02:00  INFO 6228 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c0df4ab
+2023-04-16T00:32:01.087+02:00  INFO 6228 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-16T00:32:01.103+02:00  WARN 6228 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.0.0 version for [org.hibernate.dialect.MySQL5Dialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-04-16T00:32:01.106+02:00  INFO 6228 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-04-16T00:32:01.107+02:00  WARN 6228 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL5Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-04-16T00:32:02.152+02:00  INFO 6228 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-16T00:32:02.162+02:00  INFO 6228 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-16T00:32:02.981+02:00  WARN 6228 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-16T00:32:04.136+02:00  INFO 6228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9092 (http) with context path '/dut_healthcare_clinic'
+2023-04-16T00:32:04.149+02:00  INFO 6228 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 6.377 seconds (process running for 6.944)
+2023-04-16T00:33:39.570+02:00  INFO 6228 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-16T00:33:39.573+02:00  INFO 6228 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-04-16T00:33:39.581+02:00  INFO 6228 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-16T00:33:44.404+02:00  INFO 2528 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 with PID 2528 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
+2023-04-16T00:33:44.409+02:00  INFO 2528 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-04-16T00:33:45.297+02:00  INFO 2528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-16T00:33:45.406+02:00  INFO 2528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 6 JPA repository interfaces.
+2023-04-16T00:33:46.192+02:00  INFO 2528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9092 (http)
+2023-04-16T00:33:46.213+02:00  INFO 2528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-16T00:33:46.214+02:00  INFO 2528 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-16T00:33:46.406+02:00  INFO 2528 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-04-16T00:33:46.406+02:00  INFO 2528 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1927 ms
+2023-04-16T00:33:46.661+02:00  INFO 2528 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-16T00:33:46.737+02:00  INFO 2528 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-16T00:33:47.085+02:00  INFO 2528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-16T00:33:47.315+02:00  INFO 2528 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c0df4ab
+2023-04-16T00:33:47.321+02:00  INFO 2528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-16T00:33:47.346+02:00  WARN 2528 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.0.0 version for [org.hibernate.dialect.MySQL5Dialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-04-16T00:33:47.350+02:00  INFO 2528 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-04-16T00:33:47.352+02:00  WARN 2528 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL5Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-04-16T00:33:48.717+02:00  INFO 2528 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-16T00:33:48.729+02:00  INFO 2528 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-16T00:33:49.931+02:00  WARN 2528 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-16T00:33:51.349+02:00  INFO 2528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9092 (http) with context path '/dut_healthcare_clinic'
+2023-04-16T00:33:51.362+02:00  INFO 2528 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 7.517 seconds (process running for 8.134)
+2023-04-16T00:37:39.992+02:00  INFO 2528 --- [http-nio-192.168.8.119-9092-exec-1] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-16T00:37:39.993+02:00  INFO 2528 --- [http-nio-192.168.8.119-9092-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-16T00:37:39.994+02:00  INFO 2528 --- [http-nio-192.168.8.119-9092-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-16T00:38:26.994+02:00  INFO 2528 --- [http-nio-192.168.8.119-9092-exec-2] c.c.d.time_slot.TimeSlotService          : 4c4e785c-96e6-43d2-ae0c-3585eec580f9 : Start updating timeSlot
+2023-04-16T00:38:27.041+02:00  INFO 2528 --- [http-nio-192.168.8.119-9092-exec-2] c.c.d.time_slot.TimeSlotService          : 4c4e785c-96e6-43d2-ae0c-3585eec580f9 : Time slot was successfully updated
+2023-04-16T00:38:27.044+02:00  INFO 2528 --- [http-nio-192.168.8.119-9092-exec-2] c.c.d.time_slot.TimeSlotService          : 4c4e785c-96e6-43d2-ae0c-3585eec580f9 : Done updating time slot
+2023-04-16T00:38:35.874+02:00  INFO 2528 --- [http-nio-192.168.8.119-9092-exec-3] c.c.d.time_slot.TimeSlotService          : 39deabfa-659b-4f64-b071-41502dee8e33 : Start searching time slot
+2023-04-16T00:38:35.881+02:00  INFO 2528 --- [http-nio-192.168.8.119-9092-exec-3] c.c.d.time_slot.TimeSlotService          : 39deabfa-659b-4f64-b071-41502dee8e33 : Done fetching time slot
+2023-04-16T00:39:57.202+02:00  INFO 2528 --- [http-nio-192.168.8.119-9092-exec-5] c.c.d.time_slot.TimeSlotService          : 6ea65772-3fe6-41d2-a446-96e6256490c9 : Start searching time slot
+2023-04-16T00:39:57.209+02:00  INFO 2528 --- [http-nio-192.168.8.119-9092-exec-5] c.c.d.time_slot.TimeSlotService          : 6ea65772-3fe6-41d2-a446-96e6256490c9 : Done fetching time slot
