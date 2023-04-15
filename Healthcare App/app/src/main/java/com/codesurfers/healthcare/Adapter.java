@@ -9,15 +9,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.codesurfers.healthcare.model.Clinic;
+
 import java.util.ArrayList;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
-    ArrayList<ClinicModel> clinicModelArrayList;
+    ArrayList<Clinic> clinicModelArrayList;
     Context context;
     RecyclerViewClick listener;
 
-    public Adapter(Context context, ArrayList<ClinicModel> clinicModelArrayList, RecyclerViewClick listener) {
+    public Adapter(Context context, ArrayList<Clinic> clinicModelArrayList, RecyclerViewClick listener) {
         this.context = context;
         this.clinicModelArrayList = clinicModelArrayList;
         this.listener = listener;

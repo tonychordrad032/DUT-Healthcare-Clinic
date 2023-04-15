@@ -295,9 +295,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getClinics() {
-        Adapter adapter = new Adapter(this, arrayList, listener);
-        rv_1.setLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false));
-        rv_1.setAdapter(adapter);
 
         Call<List<Clinic>> call = ClinicAPI.getClinics();
 

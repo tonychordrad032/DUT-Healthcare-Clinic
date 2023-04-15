@@ -142,15 +142,15 @@ public class AppointmentService {
     public ResponseEntity listAppointmentByUserId(long userId, String correlationId){
         try {
             LOG.info("{} : Start searching appointments", correlationId);
-            List<Appointment> appointmentList = appointmentRepository.findAppointmentByUserId(userId);
+            /**List<Appointment> appointmentList = appointmentRepository.findAppointmentByUserId(userId);
 
             if (appointmentList.isEmpty()) {
                 throw new Exception("Appointment with for user id "+userId+ " not found");
             }
 
-            LOG.info("{} : appointment found", correlationId);
+            LOG.info("{} : appointment found", correlationId);*/
 
-            return ResponseEntity.ok().body(new ResponseResult(200, "Appointment was found", appointmentList));
+            return ResponseEntity.ok().body(new ResponseResult(200, "Appointment was found", null));
 
         }catch (Exception e){
             LOG.error("{} : Error while searching for appointments {}", correlationId, e);

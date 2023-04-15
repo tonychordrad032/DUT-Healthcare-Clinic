@@ -18,6 +18,8 @@ public class User {
 
     //@Transient
     private String password;
+
+    private String userType = "student";
     private int deleted = 0;
     private String profilePicture;
 

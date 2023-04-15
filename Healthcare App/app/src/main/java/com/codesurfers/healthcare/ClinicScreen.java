@@ -57,9 +57,11 @@ public class ClinicScreen extends AppCompatActivity {
             }
 
         });
+
         Adapter adapter = new Adapter(this, arrayList, listener);
         rv_1.setLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false));
         rv_1.setAdapter(adapter);
+
 
     }
 
@@ -83,7 +85,7 @@ public class ClinicScreen extends AppCompatActivity {
 
 
                 if (response.code() == 200) {
-                    arrayList.clear();
+                    //arrayList.clear();
                     List<Clinic> tempList = response.body();
                     for (int i = 0; i < tempList.size(); i++) {
                         arrayList.add(new Clinic(tempList.get(1).getClinicName(), tempList.get(i).getClinicDescription(), tempList.get(i).getClinicCampus(), tempList.get(i).getLatitude(), tempList.get(i).getLongitude()));
