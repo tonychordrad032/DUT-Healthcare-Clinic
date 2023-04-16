@@ -1,5 +1,6 @@
 package com.codesurfers.duthealthcareclinic.appointment;
 
+import com.codesurfers.duthealthcareclinic.time_slot.TimeSlot;
 import com.codesurfers.duthealthcareclinic.utils.helpers.ResponseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +13,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -91,7 +93,7 @@ public class AppointmentService {
             //_appontment.setStudentNumber(appointment.getStudentNumber());
             _appontment.setStatus(appointment.getStatus());
             //_appontment.setQualification(appointment.getQualification());
-            _appontment.setAppointmentDate(appointment.getAppointmentDate());
+            //_appontment.setAppointmentDate(appointment.getAppointmentDate());
 
 
             appointmentRepository.save(_appontment);
@@ -141,29 +143,26 @@ public class AppointmentService {
 
     public ResponseEntity listAppointmentByUserId(long userId, String correlationId){
         try {
-            LOG.info("{} : Start searching appointments", correlationId);
-            /**List<Appointment> appointmentList = appointmentRepository.findAppointmentByUserId(userId);
+            LOG.info("{} : Start searching appointment by user id", correlationId);
+
+            List<Appointment> appointmentList = appointmentRepository.findAll()
+                    .stream()
+                    .filter(appointment -> appointment.getDeleted() == 0 && Objects.equals(appointment.getPatient().getUserId(), userId))
+                    .toList();
 
             if (appointmentList.isEmpty()) {
-                throw new Exception("Appointment with for user id "+userId+ " not found");
+                throw new Exception("Appointment for user id "+userId+ " not found");
             }
 
-            LOG.info("{} : appointment found", correlationId);*/
+            LOG.info("{} : appointment found", correlationId);
 
-            return ResponseEntity.ok().body(new ResponseResult(200, "Appointment was found", null));
+            return ResponseEntity.ok().body(new ResponseResult(200, "Appointment was found", appointmentList));
 
         }catch (Exception e){
-            LOG.error("{} : Error while searching for appointments {}", correlationId, e);
+            LOG.error("{} : Error while searching for appointments by user id{}", correlationId, e);
             return ResponseEntity.badRequest().body(new ResponseResult(400, e.getMessage(), null));
         }finally {
-            LOG.info("{} : done searching appointment process", correlationId);
+            LOG.info("{} : done searching appointment by user id process", correlationId);
         }
     }
-
-    /**public List<Appointment> listAppointmentByUserId(){
-        return appointmentRepository.findAppointmentByUserId(long id)
-                .stream()
-                .filter(assetLocation -> assetLocation.getDeleted() == 0)
-                .collect(Collectors.toList());
-    }*/
 }

@@ -1,6 +1,7 @@
 package com.codesurfers.duthealthcareclinic.appointment;
 
 import com.codesurfers.duthealthcareclinic.clinic.Clinic;
+import com.codesurfers.duthealthcareclinic.time_slot.TimeSlot;
 import com.codesurfers.duthealthcareclinic.user.User;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -22,8 +23,8 @@ public class Appointment {
     private String notes;
 
     private int deleted = 0;
-    private LocalDateTime appointmentDate;
-    private LocalDateTime appointmentTime;
+    @OneToOne
+    private TimeSlot appointmentTime;
 
 
 }

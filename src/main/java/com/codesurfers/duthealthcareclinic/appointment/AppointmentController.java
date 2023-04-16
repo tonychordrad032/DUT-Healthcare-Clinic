@@ -40,8 +40,8 @@ public class AppointmentController {
         return appointmentService.delete(id, correlationId);
     }
 
-    @GetMapping("/findAppointmentByUserId/{patient}")
-    public ResponseEntity findAppointmentByUserId(@RequestParam("patient") long userId){
+    @GetMapping("/findAppointmentByUserId")
+    public ResponseEntity findAppointmentByUserId(@RequestParam("userId") long userId){
         String correlationId = UUID.randomUUID().toString();
         return appointmentService.listAppointmentByUserId(userId, correlationId);
     }
