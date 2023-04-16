@@ -70,9 +70,12 @@ public class MainActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String username1 = username.getText().toString();
+                /**String username1 = username.getText().toString();
                 String password1 = password.getText().toString();
-                loginUser(username1,password1);
+                loginUser(username1,password1);*/
+                Toast.makeText(MainActivity.this, "Login Successfully" , Toast.LENGTH_SHORT).show();
+                Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
+                startActivity(fp);
             }
         });
 

@@ -83,6 +83,7 @@
 
 
     <EditText
+        android:id="@+id/clinicField"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginTop="25dp"
@@ -95,7 +96,7 @@
         android:paddingRight="10dp"
         android:paddingLeft="10dp"
         android:drawablePadding="10dp"
-        android:id="@+id/clinicField"
+
 
         />
     <EditText
@@ -107,6 +108,8 @@
         android:layout_below="@+id/clinicField"
         android:hint="Appointment Date"
         android:inputType="textPassword"
+        android:clickable="true"
+        android:focusable="false"
         android:background="@drawable/edt_background"
         android:paddingRight="10dp"
         android:paddingLeft="10dp"
