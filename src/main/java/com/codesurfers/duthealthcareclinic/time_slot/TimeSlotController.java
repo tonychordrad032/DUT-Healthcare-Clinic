@@ -37,4 +37,11 @@ public class TimeSlotController {
         String correlationId = UUID.randomUUID().toString();
         return timeSlotService.update(timeSlot, correlationId);
     }
+
+    @GetMapping("/refresh-time-slot")
+    public ResponseEntity resetTimeSlots(){
+        String correlationId = UUID.randomUUID().toString();
+        return timeSlotService.resetTimeSlots(correlationId);
+    }
+
 }
