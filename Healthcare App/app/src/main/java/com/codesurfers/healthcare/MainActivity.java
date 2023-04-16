@@ -72,7 +72,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String username1 = username.getText().toString();
                 String password1 = password.getText().toString();
-                loginUser(username1,password1);
+                Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
+                startActivity(fp);
+                //loginUser(username1,password1);
             }
         });
 
