@@ -137,6 +137,41 @@ public class TimeSlotService {
         }
     }
 
+    public ResponseEntity resetTimeSlots(String correlationId){
+        try {
+            LOG.info("{} : Start refreshing timeSlots", correlationId);
+
+            List<TimeSlot> timeSlotList = timeSlotRepository.findAll()
+                    .stream()
+                    .filter(timeSlot -> timeSlot.getDeleted() == 0)
+                    .toList();
+
+            if (timeSlotList.isEmpty()){
+                LOG.warn("{} : no content", correlationId);
+                throw new Exception("Could finish the operation");
+            }
+
+            for (int i = 0; i < timeSlotList.size(); i++) {
+                TimeSlot timeSlot = timeSlotRepository.findById(timeSlotList.get(i).getTimeSlotId()).orElseThrow();
+                if (timeSlotList.get(i).isBooked()){
+                    timeSlot.setBooked(false);
+                    timeSlotRepository.flush();
+                }
+
+            }
+
+            LOG.info("{} : Time slots were successfully refreshed", correlationId);
+
+            return ResponseEntity.ok().body(new ResponseResult(200, "time slot were refreshed successfully", timeSlotList));
+
+        }catch (Exception e){
+            LOG.error("{} : Error while refreshing time slots", correlationId);
+            return ResponseEntity.badRequest().body(new ResponseResult(400, e.getMessage(), null));
+        }finally {
+            LOG.info("{} : Done refreshing time slots", correlationId);
+        }
+    }
+
 
 
 
