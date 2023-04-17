@@ -42,6 +42,8 @@ public class MakeAppointment extends AppCompatActivity {
         dateSelector.setOnClickListener(dateClickListener);
         editTextDate = findViewById(R.id.appointmentDate);
         appointmentTime= findViewById(R.id.appointmentTime);
+        editTextDate.setFocusable(false);
+        editTextDate.setClickable(false);
 
         //This is a list of options that will be used to feed the timeslots
         String[] options = {"TimeSlot 1", "TimeSlot 2", "Timeslot 3"};

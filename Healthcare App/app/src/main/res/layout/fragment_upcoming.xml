@@ -21,10 +21,6 @@
         android:layout_marginBottom="8dp"
         app:cardCornerRadius="15dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
 
 
         <ListView
@@ -35,6 +31,7 @@
             android:listSelector="#6200ED" />
 
         <TextView
+            android:id="@+id/noAppointment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
