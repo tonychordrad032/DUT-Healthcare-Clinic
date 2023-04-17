@@ -148,7 +148,7 @@ public class AppointmentService {
             List<Appointment> appointmentList = appointmentRepository.findAll()
                     .stream()
                     .filter(appointment -> appointment.getDeleted() == 0 && Objects.equals(appointment.getPatient().getUserId(), userId))
-                    .toList();
+                    .collect(Collectors.toList());
 
             if (appointmentList.isEmpty()) {
                 throw new Exception("Appointment for user id "+userId+ " not found");

@@ -83,7 +83,7 @@ public class TimeSlotService {
             List<TimeSlot> timeSlotList = timeSlotRepository.findAll()
                     .stream()
                     .filter(timeSlot -> !timeSlot.isBooked() && (Objects.equals(timeSlot.getDay().getAppointmentDayName(), day) && Objects.equals(timeSlot.getDay().isBooked(), false)))
-                    .toList();
+                    .collect(Collectors.toList());
 
             /*List<TimeSlot> availableTimeSlotList = null;
             for (int i = 0; i < timeSlotList.size(); i++) {
@@ -144,7 +144,7 @@ public class TimeSlotService {
             List<TimeSlot> timeSlotList = timeSlotRepository.findAll()
                     .stream()
                     .filter(timeSlot -> timeSlot.getDeleted() == 0)
-                    .toList();
+                    .collect(Collectors.toList());
 
             if (timeSlotList.isEmpty()){
                 LOG.warn("{} : no content", correlationId);

@@ -3,9 +3,9 @@ package com.codesurfers.duthealthcareclinic.appointment;
 import com.codesurfers.duthealthcareclinic.clinic.Clinic;
 import com.codesurfers.duthealthcareclinic.time_slot.TimeSlot;
 import com.codesurfers.duthealthcareclinic.user.User;
-import jakarta.persistence.*;
 import lombok.Data;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity(name = "tbl_appointments")

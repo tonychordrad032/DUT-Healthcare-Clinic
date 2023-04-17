@@ -1,7 +1,8 @@
 package com.codesurfers.duthealthcareclinic.user;
 
-import jakarta.persistence.*;
 import lombok.Data;
+
+import javax.persistence.*;
 
 @Entity(name = "tbl_users")
 @Data

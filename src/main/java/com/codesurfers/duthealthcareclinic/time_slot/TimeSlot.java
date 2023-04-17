@@ -1,7 +1,7 @@
 package com.codesurfers.duthealthcareclinic.time_slot;
 
 import com.codesurfers.duthealthcareclinic.appointment_day.AppointmentDay;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 
 @Entity(name = "tbl_time_slots")
