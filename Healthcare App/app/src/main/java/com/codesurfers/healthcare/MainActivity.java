@@ -6,13 +6,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.codesurfers.healthcare.constants.Constants;
 import com.codesurfers.healthcare.model.Appointment;
 import com.codesurfers.healthcare.model.Clinic;
 import com.codesurfers.healthcare.model.Feedback;
@@ -31,14 +34,21 @@ import retrofit2.Call;
 
 public class MainActivity extends AppCompatActivity {
     private IClinicAPI ClinicAPI;
-    TextView username, password;
+    EditText username, password;
 
 
     ArrayList<Clinic> arrayList = new ArrayList<>();
     Adapter.RecyclerViewClick listener;
     RecyclerView rv_1;
-    String URL = "http://192.168.8.119:9092/dut_healthcare_clinic/api/clinic";
+    String URL = "http://192.168.8.119:7070/dut_healthcare_clinic/api/";
     Button fetchClinicBtn;
+
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
+
+
+
+
 
 
 
@@ -52,31 +62,47 @@ public class MainActivity extends AppCompatActivity {
          * */
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.8.119:9092/dut_healthcare_clinic/api/")  // Set the baseUrl to your API
+                .baseUrl(Constants.BASE_URL)  // Set the baseUrl to your API
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         ClinicAPI = retrofit.create(IClinicAPI.class);
 
         // DECLARATION
+        preferences = getSharedPreferences("MyPreferences", MODE_PRIVATE);
+        editor = preferences.edit();
 
         TextView signUp = findViewById(R.id.signUpText);
+
         TextView resetPass = findViewById(R.id.resetPasswordText);
         username = findViewById(R.id.emailAddressField);
         password = findViewById(R.id.passwordField);
+        TextView studentNumber = findViewById(R.id.studentNumber);
+        TextView firstName = findViewById(R.id.firstName);
+        TextView lastName = findViewById(R.id.lastName);
+
 
 
         Button loginBtn = (Button) findViewById(R.id.loginBtn);
-        loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String username1 = username.getText().toString();
-                String password1 = password.getText().toString();
-                Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
-                startActivity(fp);
-                //loginUser(username1,password1);
-            }
-        });
+
+        if (preferences.contains("userId")){
+            Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
+            startActivity(fp);
+        }else {
+            loginBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String username1 = username.getText().toString();
+                    String password1 = password.getText().toString();
+                    //Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
+                    //startActivity(fp);
+                    loginUser(username1,password1);
+                }
+            });
+
+        }
+
+
 
 
 
@@ -115,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
      * HashMap<String, String> fields = new HashMap<String, String>();
      *
      * */
+
 
     // User
     private void getUser(long userId) {
@@ -174,11 +201,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
 
-                if (!response.isSuccessful()) {
-                    // Do something
-                    return;
+                if (response.code() == 201) {
+                    System.out.println(response.code());
+                    Toast.makeText(MainActivity.this, "Registered successfully" , Toast.LENGTH_SHORT).show();
+                }else {
+                    System.out.println(response.body());
+                    Toast.makeText(MainActivity.this, "Failed to register user" , Toast.LENGTH_SHORT).show();
+                    //Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
+                    //startActivity(fp);
                 }
-
                 // Do something else if response successful
                 // response.body() has the returned response data
             }
@@ -201,6 +232,8 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println(response.code());
                     Toast.makeText(MainActivity.this, "Incorrect username or password" , Toast.LENGTH_SHORT).show();
                 }else {
+                    editor.putLong("userId", response.body().getUserId());
+                    editor.commit();
                     System.out.println(response.body());
                     Toast.makeText(MainActivity.this, "Login Successfully" , Toast.LENGTH_SHORT).show();
                     Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
@@ -216,6 +249,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<User> call, Throwable t) {
                 System.out.println("FAILED");
+                System.out.println(t.getMessage());
                 t.getMessage();
                 Toast.makeText(MainActivity.this, "Incorrect username or password", Toast.LENGTH_SHORT).show();
             }

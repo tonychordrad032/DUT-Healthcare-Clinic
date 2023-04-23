@@ -1,10 +1,21 @@
 package com.codesurfers.healthcare;
 
 
+import android.app.Dialog;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,6 +37,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class HomeScreenActivity extends AppCompatActivity {
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
     private IClinicAPI ClinicAPI;
 
     ArrayList<Clinic> arrayList = new ArrayList<>();
@@ -47,6 +60,9 @@ public class HomeScreenActivity extends AppCompatActivity {
         setTitle("DUT Healthcare Clinic");
         //setContentView(R.layout.fragment_home_fragrament);
 
+
+        preferences = getSharedPreferences("MyPreferences", MODE_PRIVATE);
+        editor = preferences.edit();
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragrament).commit();
         BadgeDrawable badgeDrawable = bottomNavigationView.getOrCreateBadge(R.id.notifications);
@@ -72,6 +88,65 @@ public class HomeScreenActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.trailing_icon, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logout:
+                //String message = "Are you sure you want to log out?";
+                //showCustomDialog(message);
+                editor.clear();
+                editor.commit();
+                Intent fp = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(fp);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+    }
+
+    private void showCustomDialog(String message) {
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(false);
+        dialog.setContentView(R.layout.logout_dialog);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        TextView myMessage = findViewById(R.id.myMessage);
+        Button btnYes = findViewById(R.id.btnYes);
+        Button btnNo = findViewById(R.id.btnNo);
+
+        myMessage.setText(message);
+
+        btnYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editor.clear();
+                editor.commit();
+                Intent fp = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(fp);
+            }
+        });
+
+        btnNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
 
     }
 
