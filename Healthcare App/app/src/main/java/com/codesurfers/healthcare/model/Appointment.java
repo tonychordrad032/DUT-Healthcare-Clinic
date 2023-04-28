@@ -4,17 +4,28 @@ import java.time.LocalDateTime;
 
 public class Appointment {
     private long appointmentId;
-    private String studentNumber;
-    private String status;
-    private String qualification;
-    private LocalDateTime appointmentDate;
-    private LocalDateTime appointmentTime;
 
-    public Appointment(String studentNumber, String status, String qualification, LocalDateTime appointmentDate, LocalDateTime appointmentTime) {
-        this.studentNumber = studentNumber;
+    private User patient;
+
+    private Clinic clinic;
+    private String status;
+
+    private String notes;
+
+    private int deleted = 0;
+
+    private TimeSlot appointmentTime;
+
+    public Appointment() {
+    }
+
+    public Appointment(long appointmentId, User patient, Clinic clinic, String status, String notes, int deleted, TimeSlot appointmentTime) {
+        this.appointmentId = appointmentId;
+        this.patient = patient;
+        this.clinic = clinic;
         this.status = status;
-        this.qualification = qualification;
-        this.appointmentDate = appointmentDate;
+        this.notes = notes;
+        this.deleted = deleted;
         this.appointmentTime = appointmentTime;
     }
 
@@ -22,12 +33,24 @@ public class Appointment {
         return appointmentId;
     }
 
-    public String getStudentNumber() {
-        return studentNumber;
+    public void setAppointmentId(long appointmentId) {
+        this.appointmentId = appointmentId;
     }
 
-    public void setStudentNumber(String studentNumber) {
-        this.studentNumber = studentNumber;
+    public User getPatient() {
+        return patient;
+    }
+
+    public void setPatient(User patient) {
+        this.patient = patient;
+    }
+
+    public Clinic getClinic() {
+        return clinic;
+    }
+
+    public void setClinic(Clinic clinic) {
+        this.clinic = clinic;
     }
 
     public String getStatus() {
@@ -38,27 +61,40 @@ public class Appointment {
         this.status = status;
     }
 
-    public String getQualification() {
-        return qualification;
+    public String getNotes() {
+        return notes;
     }
 
-    public void setQualification(String qualification) {
-        this.qualification = qualification;
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 
-    public LocalDateTime getAppointmentDate() {
-        return appointmentDate;
+    public int getDeleted() {
+        return deleted;
     }
 
-    public void setAppointmentDate(LocalDateTime appointmentDate) {
-        this.appointmentDate = appointmentDate;
+    public void setDeleted(int deleted) {
+        this.deleted = deleted;
     }
 
-    public LocalDateTime getAppointmentTime() {
+    public TimeSlot getAppointmentTime() {
         return appointmentTime;
     }
 
-    public void setAppointmentTime(LocalDateTime appointmentTime) {
+    public void setAppointmentTime(TimeSlot appointmentTime) {
         this.appointmentTime = appointmentTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Appointment{" +
+                "appointmentId=" + appointmentId +
+                ", patient=" + patient +
+                ", clinic=" + clinic +
+                ", status='" + status + '\'' +
+                ", notes='" + notes + '\'' +
+                ", deleted=" + deleted +
+                ", appointmentTime=" + appointmentTime +
+                '}';
     }
 }

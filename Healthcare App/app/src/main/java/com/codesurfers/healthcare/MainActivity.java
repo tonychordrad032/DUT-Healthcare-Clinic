@@ -1,13 +1,13 @@
 package com.codesurfers.healthcare;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,12 +19,17 @@ import com.codesurfers.healthcare.constants.Constants;
 import com.codesurfers.healthcare.model.Appointment;
 import com.codesurfers.healthcare.model.Clinic;
 import com.codesurfers.healthcare.model.Feedback;
+import com.codesurfers.healthcare.model.ResponseResult;
 import com.codesurfers.healthcare.model.User;
 
-import java.time.LocalDateTime;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -68,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
         ClinicAPI = retrofit.create(IClinicAPI.class);
 
+
         // DECLARATION
         preferences = getSharedPreferences("MyPreferences", MODE_PRIVATE);
         editor = preferences.edit();
@@ -92,11 +98,16 @@ public class MainActivity extends AppCompatActivity {
             loginBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    String username1 = username.getText().toString();
-                    String password1 = password.getText().toString();
+                    User user = new User();
+                    user.setUsername(username.getText().toString());
+                    user.setPassword(password.getText().toString());
                     //Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
                     //startActivity(fp);
-                    loginUser(username1,password1);
+                    loginUser(user);
+                    //getUsers();
+                    //System.out.println("BEFORE");
+                    //getAppointmentByUserId(1);
+                    //System.out.println("AFTER");
                 }
             });
 
@@ -178,6 +189,14 @@ public class MainActivity extends AppCompatActivity {
                     // Do something
                     return;
                 }
+                List<User> users = response.body();
+
+                for (User u: users) {
+                    Log.d("firstName", u.getFirstName());
+                    Log.d("lastName", u.getLastName());
+                    Log.d("userType", u.getUserType());
+                }
+                System.out.println(users.get(0).getFirstName());
 
                 // Do something else if response successful
                 // response.body() has the returned response data
@@ -190,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void addUser(HashMap<String,String> fields) {
+    /**private void addUser(HashMap<String,String> fields) {
         User user = new User(fields.get("firstName"),fields.get("lastName"),
                 fields.get("dateOfBirth"),fields.get("username"),
                 fields.get("studentNumber"),fields.get("password"),
@@ -219,26 +238,46 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-    }
+    }*/
 
-    private void loginUser(String username, String password) {
-
-        User user = new User(username, password);
-        Call<User> call = ClinicAPI.loginUser(user);
-        call.enqueue(new Callback<User>() {
+    private void loginUser(User user) {
+        Call<ResponseResult> call = ClinicAPI.loginUser(user);
+        call.enqueue(new Callback<ResponseResult>() {
             @Override
-            public void onResponse(Call<User> call, Response<User> response) {
-                if (response.code() == 404) {
-                    System.out.println(response.code());
-                    Toast.makeText(MainActivity.this, "Incorrect username or password" , Toast.LENGTH_SHORT).show();
-                }else {
-                    editor.putLong("userId", response.body().getUserId());
-                    editor.commit();
-                    System.out.println(response.body());
-                    Toast.makeText(MainActivity.this, "Login Successfully" , Toast.LENGTH_SHORT).show();
-                    Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
-                    startActivity(fp);
+            public void onResponse(Call<ResponseResult> call, Response<ResponseResult> response) {
+                try {
+                    if (response.code() == 404) {
+                        System.out.println(response.code());
+                        Toast.makeText(MainActivity.this, "Incorrect username or password" , Toast.LENGTH_SHORT).show();
+                    }else {
+
+                        JSONObject object = new JSONObject((Map) response.body().getResults());
+                        String userType = (String) object.get("userType");
+
+                        //editor.putLong("userId", response.body().getUserId());
+                        //editor.commit();
+                        System.out.println(response);
+                        System.out.println("MY USERTYPE");
+                        System.out.println(response.code());
+                        System.out.println(response.body());
+                        System.out.println(userType);
+                        if (userType.equals("student")){
+                            System.out.println("TRUE");
+                            Toast.makeText(MainActivity.this, "Login Successfully" , Toast.LENGTH_SHORT).show();
+                            Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
+                            startActivity(fp);
+                        }else if (userType.equals("admin")){
+                            System.out.println("FALSE");
+                            Toast.makeText(MainActivity.this, "Login Successfully" , Toast.LENGTH_SHORT).show();
+                            Intent fp = new Intent(getApplicationContext(), AdminHomeActivity.class);
+                            startActivity(fp);
+                        }
+
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
+
 
 
 
@@ -247,7 +286,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<User> call, Throwable t) {
+            public void onFailure(Call<ResponseResult> call, Throwable t) {
                 System.out.println("FAILED");
                 System.out.println(t.getMessage());
                 t.getMessage();
@@ -256,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void updateUser(long userId, HashMap<String,String> fields){
+    /**private void updateUser(long userId, HashMap<String,String> fields){
         User user = new User(fields.get("firstName"),fields.get("lastName"),
                 fields.get("dateOfBirth"),fields.get("username"),
                 fields.get("studentNumber"),fields.get("password"),
@@ -281,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-    }
+    }*/
 
     private void deleteUser(long userId){
         Call<Void> call = ClinicAPI.deleteUser(userId);
@@ -603,7 +642,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void makeAppointment(HashMap<String,String> fields, LocalDateTime appointmentDate, LocalDateTime appointmentTime) {
+    /**private void makeAppointment(HashMap<String,String> fields, LocalDateTime appointmentDate, LocalDateTime appointmentTime) {
         Appointment appointment = new Appointment(fields.get("studentNumber"),fields.get("status"),
                 fields.get("qualification"),appointmentDate,
                 appointmentTime);
@@ -653,7 +692,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-    }
+    }*/
 
     private void deleteAppointment(long appointmentId){
         Call<Void> call = ClinicAPI.deleteAppointment(appointmentId);
@@ -677,6 +716,46 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    /**private void getAppointmentByUserId(long userId) {
+        Call<ResponseResult> call = ClinicAPI.getAppointmentByUserId(userId, myList);
+
+        call.enqueue(new Callback<ResponseResult>() {
+            @Override
+            public void onResponse(Call<ResponseResult> call, Response<ResponseResult> response) {
+                System.out.println("BEGIN");
+                if (!response.isSuccessful()) {
+                    System.out.println("NOT SUCCESS");
+                    System.out.println(response.code());
+                    System.out.println(response);
+                    // Do something
+                    return;
+                }
+
+                List<Appointment> myAppointmentList = (List<Appointment>) response.body().getResults();
+                System.out.println(response.body().getResponseMessage());
+                JSONArray object = new JSONArray(myAppointmentList);
+
+
+                for (int i = 0; i < object.length(); i++) {
+                    try {
+                        System.out.println(object.getJSONObject(i).get("status"));
+                    } catch (JSONException e) {
+                        throw new RuntimeException(e);
+                    }
+
+                }
+                System.out.println("METHPDDDDDD");
+
+            }
+
+            @Override
+            public void onFailure(Call<ResponseResult> call, Throwable t) {
+                System.out.println("FAILURE");
+
+            }
+        });
+    }*/
 
 
 }

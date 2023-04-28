@@ -3,6 +3,7 @@ package com.codesurfers.healthcare;
 import com.codesurfers.healthcare.model.Appointment;
 import com.codesurfers.healthcare.model.Clinic;
 import com.codesurfers.healthcare.model.Feedback;
+import com.codesurfers.healthcare.model.ResponseResult;
 import com.codesurfers.healthcare.model.User;
 
 import java.util.List;
@@ -28,7 +29,7 @@ public interface IClinicAPI {
     Call<User> addUser(@Body User user);
 
     @POST("user/login")
-    Call<User> loginUser(@Body User user);
+    Call<ResponseResult> loginUser(@Body User user);
 
     @PATCH("user/{id}")
     Call<User> updateUser(@Path("id") long userId, @Body User user);
@@ -77,6 +78,9 @@ public interface IClinicAPI {
 
     @POST("appointment")
     Call<Appointment> makeAppointment(@Body Appointment appointment);
+
+    @GET("appointment/findAppointmentByUserId")
+    Call<ResponseResult> getAppointmentByUserId (@Query("userId") long userId, List<String> myList);
 
     @PATCH("appointment/{id}")
     Call<Appointment> updateAppointment(@Path("id") long appointmentId, @Body Appointment appointment);

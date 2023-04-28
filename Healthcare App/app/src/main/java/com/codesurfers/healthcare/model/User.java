@@ -10,16 +10,22 @@ public class User {
     private String password;
     private String profilePicture;
 
+    private String userType;
+
     private String mobile;
     private String qualification;
 
-    public User(String firstName, String lastName, String dateOfBirth, String username, String studentNumber, String password, String mobile, String qualification) {
+    public User() {
+    }
+
+    public User(String firstName, String lastName, String dateOfBirth, String username, String studentNumber, String password, String userType, String mobile, String qualification) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
         this.username = username;
         this.studentNumber = studentNumber;
         this.password = password;
+        this.userType = userType;
         this.mobile = mobile;
         this.qualification = qualification;
     }
@@ -69,6 +75,10 @@ public class User {
         this.mobile = mobile;
     }
 
+    public void setUserType(String userType) {
+        this.userType = userType;
+    }
+
     public void setQualification(String qualification) {
         this.qualification = qualification;
     }
@@ -105,11 +115,32 @@ public class User {
         return profilePicture;
     }
 
+    public String getUserType() {
+        return userType;
+    }
+
     public String getMobile() {
         return mobile;
     }
 
     public String getQualification() {
         return qualification;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", username='" + username + '\'' +
+                ", studentNumber='" + studentNumber + '\'' +
+                ", password='" + password + '\'' +
+                ", profilePicture='" + profilePicture + '\'' +
+                ", userType='" + userType + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", qualification='" + qualification + '\'' +
+                '}';
     }
 }

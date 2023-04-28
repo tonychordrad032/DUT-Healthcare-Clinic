@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,15 +15,29 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.codesurfers.healthcare.IClinicAPI;
 import com.codesurfers.healthcare.MakeAppointment;
 import com.codesurfers.healthcare.R;
+import com.codesurfers.healthcare.model.Appointment;
+import com.codesurfers.healthcare.model.ResponseResult;
+import com.codesurfers.healthcare.model.User;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class UpcomingFragment extends Fragment {
+
 
 
     String[] appointmentList ={"Hello", "World","Good"} ;
@@ -32,6 +47,8 @@ public class UpcomingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
 
 
 
@@ -64,4 +81,5 @@ public class UpcomingFragment extends Fragment {
         return view;
 
     }
+
 }

@@ -15,6 +15,10 @@ import com.codesurfers.healthcare.ClinicScreen;
 import com.codesurfers.healthcare.FeedBackScreen;
 import com.codesurfers.healthcare.MedicalRecordScreen;
 import com.codesurfers.healthcare.R;
+import com.codesurfers.healthcare.constants.Services;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class HomeFragrament extends Fragment {
@@ -34,6 +38,10 @@ public class HomeFragrament extends Fragment {
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /**List<String> appointmentList = new ArrayList<>();
+                Services.getAppointmentByUserId(1, appointmentList);
+                System.out.println("My List => " + appointmentList);
+                System.out.println(appointmentList.size());*/
                 Intent fp=new Intent(getActivity(), AppointmentScreen.class);
                 startActivity(fp);
             }
