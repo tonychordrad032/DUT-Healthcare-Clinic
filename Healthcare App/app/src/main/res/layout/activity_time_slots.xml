@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/time_slots_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Timeslots"
+        android:textColor="#673AB7"
+        android:textSize="18sp" />
+
+    <TableLayout
+        android:id="@+id/time_slots_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Time"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="MON"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="TUES"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="WED"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="THURS"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="FRI"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <!-- Rows for each time slot -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="8:00 AM" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="OPEN"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+        </TableRow>
+
+        <!-- Additional rows for each time slot -->
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="9:00 AM" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+        </TableRow>
+
+        <!-- Additional rows for each time slot -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="10:00 AM" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+        </TableRow>
+
+        <!-- Additional rows for each time slot -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="11:00 AM" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+        </TableRow>
+
+        <!-- Additional rows for each time slot -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="12:00 PM" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+        </TableRow>
+
+        <!-- Additional rows for each time slot -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="13:00 PM" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+        </TableRow>
+
+        <!-- Additional rows for each time slot -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="14:00 PM" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+        </TableRow>
+
+        <!-- Additional rows for each time slot -->
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="15:00 PM" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/purple_500"
+                android:text="Open"
+                android:textSize="10sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+

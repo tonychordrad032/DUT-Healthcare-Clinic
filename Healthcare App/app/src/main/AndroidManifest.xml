@@ -15,6 +15,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".TimeSlotScreen"
             android:exported="false" />
         <activity
@@ -22,6 +23,12 @@
             android:exported="false" />
         <activity
             android:name=".AdminHomeActivity"
+=======
+            android:name=".AdminHomscreen"
+            android:exported="false" />
+        <activity
+            android:name=".TimeSlotsActivity2"
+>>>>>>> aef0b94e023291e09511fdd50d3add10cd975d5f
             android:exported="false" />
         <activity
             android:name=".AppointmentListView"

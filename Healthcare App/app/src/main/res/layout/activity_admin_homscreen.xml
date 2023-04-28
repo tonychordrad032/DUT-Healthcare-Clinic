@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminHomscreen">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:text="Timeslots"
+        android:textColor="#673AB7"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton7"
+        tools:layout_editor_absoluteX="38dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#E6E5E5"
+        app:srcCompat="@drawable/clinics"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="406dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#E6E5E5"
+        android:tint="#673AB7"
+        app:srcCompat="@android:drawable/ic_lock_idle_alarm"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="406dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#E6E5E5"
+        app:srcCompat="@drawable/appointments"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#E6E5E5"
+        app:srcCompat="@drawable/baseline_person_24"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="61dp"
+        android:layout_height="66dp"
+        android:clickable="true"
+        app:backgroundTint="#673AB7"
+        app:srcCompat="@drawable/baseline_settings_24"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="25dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="247dp"
+        android:layout_height="66dp"
+        android:text="Admin!"
+        android:textColor="#673AB7"
+        android:textSize="35sp"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="25dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="Users"
+        android:textColor="#673AB7"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        tools:layout_editor_absoluteX="38dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="Appointments"
+        android:textColor="#673AB7"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton6"
+        tools:layout_editor_absoluteX="230dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="Clinics"
+        android:textColor="#673AB7"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="560dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
