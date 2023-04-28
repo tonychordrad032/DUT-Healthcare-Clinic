@@ -160,4 +160,16 @@ public class UserService {
             LOG.info("{} : Finish logging in", correlationId);
         }
     }
+
+    /**
+     * Returns all the users
+     * @return
+     */
+    public List<User> loginUser() {
+
+        return userRepository.findAll()
+                .stream()
+                .filter(user -> user.getDeleted() == 0)
+                .collect(Collectors.toList());
+    }
 }

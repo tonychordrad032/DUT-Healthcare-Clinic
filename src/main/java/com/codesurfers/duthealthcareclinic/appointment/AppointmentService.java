@@ -39,6 +39,18 @@ public class AppointmentService {
                 return ResponseEntity.noContent().build();
             }
 
+            List<Appointment> appointmentList = appointmentRepository.findById(appointment.getPatient().getUserId())
+                    .stream()
+                    .filter(appointment1 -> appointment1.getDeleted() == 0 && Objects.equals(appointment1.getStatus(), "Open"))
+                    .collect(Collectors.toList());
+
+            if (appointmentList.size() > 0) {
+                LOG.warn("{} : You already have pending appointment");
+                return ResponseEntity.status(409).body(new ResponseResult(409, "You already have pending appointment", null));
+            }
+
+
+
             /**if (appointmentRepository.findByProjectName(project.getProjectName()) != null){
                 LOG.warn("{} : Project already exists", correlationId);
                 return ResponseEntity.status(409).body(new ResponseResult(409, "Project already exists", null));

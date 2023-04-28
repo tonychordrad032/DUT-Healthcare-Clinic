@@ -18,7 +18,7 @@ public class Services {
 
 
     public static void getAppointmentByUserId(long userId, List<String> myList) {
-        Call<ResponseResult> call = ClinicAPI.getAppointmentByUserId(userId, myList);
+        Call<ResponseResult> call = ClinicAPI.getAppointmentByUserId(userId);
 
         call.enqueue(new Callback<ResponseResult>() {
             @Override

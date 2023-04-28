@@ -13,22 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthcare"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        tools:ignore="ExtraText">
         <activity
-<<<<<<< HEAD
             android:name=".TimeSlotScreen"
             android:exported="false" />
         <activity
             android:name=".AdminAppointmentScreen"
             android:exported="false" />
         <activity
-            android:name=".AdminHomeActivity"
-=======
             android:name=".AdminHomscreen"
             android:exported="false" />
         <activity
             android:name=".TimeSlotsActivity2"
->>>>>>> aef0b94e023291e09511fdd50d3add10cd975d5f
             android:exported="false" />
         <activity
             android:name=".AppointmentListView"

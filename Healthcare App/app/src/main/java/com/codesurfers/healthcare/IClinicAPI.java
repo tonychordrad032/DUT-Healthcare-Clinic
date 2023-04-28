@@ -80,7 +80,7 @@ public interface IClinicAPI {
     Call<Appointment> makeAppointment(@Body Appointment appointment);
 
     @GET("appointment/findAppointmentByUserId")
-    Call<ResponseResult> getAppointmentByUserId (@Query("userId") long userId, List<String> myList);
+    Call<ResponseResult> getAppointmentByUserId (@Query("userId") long userId);
 
     @PATCH("appointment/{id}")
     Call<Appointment> updateAppointment(@Path("id") long appointmentId, @Body Appointment appointment);

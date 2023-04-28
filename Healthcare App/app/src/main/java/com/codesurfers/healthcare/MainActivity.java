@@ -1,5 +1,7 @@
 package com.codesurfers.healthcare;
 
+import static com.codesurfers.healthcare.constants.Constants.BASE_URL;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,6 +18,7 @@ import android.widget.Toast;
 
 
 import com.codesurfers.healthcare.constants.Constants;
+import com.codesurfers.healthcare.constants.RetrofitClient;
 import com.codesurfers.healthcare.model.Appointment;
 import com.codesurfers.healthcare.model.Clinic;
 import com.codesurfers.healthcare.model.Feedback;
@@ -66,12 +69,7 @@ public class MainActivity extends AppCompatActivity {
          * You need to set the baseUrl to your API
          * */
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constants.BASE_URL)  // Set the baseUrl to your API
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
 
-        ClinicAPI = retrofit.create(IClinicAPI.class);
 
 
         // DECLARATION
@@ -241,7 +239,8 @@ public class MainActivity extends AppCompatActivity {
     }*/
 
     private void loginUser(User user) {
-        Call<ResponseResult> call = ClinicAPI.loginUser(user);
+        RetrofitClient client = new RetrofitClient(BASE_URL);
+        Call<ResponseResult> call = client.getClinicAPI().loginUser(user);
         call.enqueue(new Callback<ResponseResult>() {
             @Override
             public void onResponse(Call<ResponseResult> call, Response<ResponseResult> response) {
