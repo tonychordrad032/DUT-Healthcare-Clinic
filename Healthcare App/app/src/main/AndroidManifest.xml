@@ -13,8 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthcare"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31"
-        tools:ignore="ExtraText">
+        tools:ignore="ExtraText"
+        tools:targetApi="31">
+        <activity
+            android:name=".ViewAppointmentScreen"
+            android:exported="false" />
         <activity
             android:name=".TimeSlotScreen"
             android:exported="false" />

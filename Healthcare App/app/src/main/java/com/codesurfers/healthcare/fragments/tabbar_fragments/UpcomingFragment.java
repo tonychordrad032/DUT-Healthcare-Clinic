@@ -2,19 +2,24 @@ package com.codesurfers.healthcare.fragments.tabbar_fragments;
 
 import static com.codesurfers.healthcare.constants.Constants.BASE_URL;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import com.codesurfers.healthcare.IClinicAPI;
+import com.codesurfers.healthcare.ListAdapter;
+import com.codesurfers.healthcare.constants.IClinicAPI;
 import com.codesurfers.healthcare.R;
 import com.codesurfers.healthcare.constants.RetrofitClient;
+import com.codesurfers.healthcare.databinding.ActivityMainBinding;
+import com.codesurfers.healthcare.model.Appoint;
 import com.codesurfers.healthcare.model.Appointment;
 import com.codesurfers.healthcare.model.ResponseResult;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -24,6 +29,7 @@ import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,21 +38,41 @@ import retrofit2.Response;
 
 public class UpcomingFragment extends Fragment {
 
-    private  IClinicAPI ClinicAPI;
-
-
-
-    List<String> appointmentList = new ArrayList<>();
+    ActivityMainBinding binding;
+    ArrayList<Appoint> appointmentList = new ArrayList<>();
     ListView listView;
-    TextView noAppointment;
+    TextView noAppointment, date, time, status;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+
         View view = inflater.inflate(R.layout.fragment_upcoming, container, false);
-        listView = view.findViewById(R.id.appointmentListView);
+        listView = view.findViewById(R.id.listView);
         noAppointment=view.findViewById(R.id.noAppointment);
+        date = (TextView) view.findViewById(R.id.dateTxt);
+        time = view.findViewById(R.id.timeTextView);
+        status = view.findViewById(R.id.statusTextView);
+        System.out.println(date);
+
+        ArrayList<Appoint> appointArrayList = new ArrayList<>();
+
+        appointArrayList.add(new Appoint("01 May 2023, Monday", "08:00", "Open"));
+        appointArrayList.add(new Appoint("02 May 2023, Monday", "10:00", "Open"));
+
+        //ListAdapter adapter = new ListAdapter(this.requireContext(), R.layout.activity_appointment_list_view, appointArrayList);
+        //listView.setAdapter(adapter);
+
+        getAppointmentByUserId(1);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+        });
 
 
 
@@ -92,8 +118,12 @@ public class UpcomingFragment extends Fragment {
                 for (int i = 0; i < object.length(); i++) {
                     try {
                         System.out.println(object.getJSONObject(i).get("status"));
-                        appointmentList.add((String) object.getJSONObject(i).get("status"));
-                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1,appointmentList);
+                        appointmentList.add(new Appoint("01 May 2023, Monday", "09:00", (String) object.getJSONObject(i).get("status")));
+                        System.out.println(appointmentList);
+                        ListAdapter adapter = new ListAdapter(getContext(), R.layout.activity_appointment_list_view, appointmentList);
+                        listView.setAdapter(adapter);
+
+
 
                         //If there are no items in the adapter then show the no appointments text else show the items
                         if (adapter==null){
@@ -101,6 +131,14 @@ public class UpcomingFragment extends Fragment {
 
 
                         }else{
+
+                            //date.setText("appointmentList.get(i).getDate()");
+                            //time.setText(appointmentList.get(i).getTime());
+                            //status.setText(appointmentList.get(i).getStatus());
+                            System.out.println(appointmentList.get(i).getDate());
+                            System.out.println(date);
+                            System.out.println(time);
+                            System.out.println(status);
                             listView.setAdapter(adapter);
                             noAppointment.setVisibility(View.GONE);
                         }

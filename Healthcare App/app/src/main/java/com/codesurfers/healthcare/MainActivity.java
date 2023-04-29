@@ -17,7 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.codesurfers.healthcare.constants.Constants;
+import com.codesurfers.healthcare.constants.IClinicAPI;
 import com.codesurfers.healthcare.constants.RetrofitClient;
 import com.codesurfers.healthcare.model.Appointment;
 import com.codesurfers.healthcare.model.Clinic;
@@ -25,8 +25,6 @@ import com.codesurfers.healthcare.model.Feedback;
 import com.codesurfers.healthcare.model.ResponseResult;
 import com.codesurfers.healthcare.model.User;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -36,8 +34,6 @@ import java.util.Map;
 
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.Retrofit;
 import retrofit2.Call;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     ArrayList<Clinic> arrayList = new ArrayList<>();
-    Adapter.RecyclerViewClick listener;
     RecyclerView rv_1;
     String URL = "http://192.168.8.119:7070/dut_healthcare_clinic/api/";
     Button fetchClinicBtn;

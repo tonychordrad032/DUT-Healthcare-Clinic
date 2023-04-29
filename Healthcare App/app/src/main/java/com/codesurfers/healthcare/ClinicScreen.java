@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.codesurfers.healthcare.constants.IClinicAPI;
 import com.codesurfers.healthcare.model.Clinic;
 
 import java.util.ArrayList;
@@ -27,7 +28,6 @@ public class ClinicScreen extends AppCompatActivity {
     private IClinicAPI ClinicAPI;
 
     ArrayList<Clinic> arrayList = new ArrayList<>();
-    Adapter.RecyclerViewClick listener;
     RecyclerView rv_1;
     String URL = "http://192.168.8.119:9092/dut_healthcare_clinic/api/clinic";
     Button fetchClinicBtn;
@@ -47,7 +47,6 @@ public class ClinicScreen extends AppCompatActivity {
         ClinicAPI = retrofit.create(IClinicAPI.class);
         rv_1 = findViewById(R.id.rv_1);
         fetchClinicBtn = findViewById(R.id.fetchClinic);
-        onClick();
         fetchClinicBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,22 +57,9 @@ public class ClinicScreen extends AppCompatActivity {
 
         });
 
-        Adapter adapter = new Adapter(this, arrayList, listener);
-        rv_1.setLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.VERTICAL, false));
-        rv_1.setAdapter(adapter);
 
 
-    }
 
-    private void onClick() {
-        listener = new Adapter.RecyclerViewClick() {
-            @Override
-            public void click(View v, int position) {
-                Log.v(arrayList.get(position).getClinicName(), "cc");
-                System.out.println(arrayList.get(position).getClinicName());
-                Toast.makeText(ClinicScreen.this, "clinic name"+arrayList.get(position).getClinicName(), Toast.LENGTH_SHORT).show();
-            }
-        };
     }
     private void getClinics() {
         Call<List<Clinic>> call = ClinicAPI.getClinics();

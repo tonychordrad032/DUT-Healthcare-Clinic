@@ -1,4 +1,4 @@
-package com.codesurfers.healthcare;
+package com.codesurfers.healthcare.constants;
 
 import com.codesurfers.healthcare.model.Appointment;
 import com.codesurfers.healthcare.model.Clinic;

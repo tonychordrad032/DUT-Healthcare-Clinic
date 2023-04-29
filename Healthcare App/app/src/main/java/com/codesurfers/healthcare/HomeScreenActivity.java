@@ -17,9 +17,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.codesurfers.healthcare.constants.IClinicAPI;
 import com.codesurfers.healthcare.fragments.HomeFragrament;
 import com.codesurfers.healthcare.fragments.NotificationFragment;
 import com.codesurfers.healthcare.fragments.ProfileFragment;
@@ -42,7 +42,6 @@ public class HomeScreenActivity extends AppCompatActivity {
     private IClinicAPI ClinicAPI;
 
     ArrayList<Clinic> arrayList = new ArrayList<>();
-    Adapter.RecyclerViewClick listener;
     RecyclerView rv_1;
     String URL = "http://192.168.8.119:9092/dut_healthcare_clinic/api/clinic";
     BottomNavigationView bottomNavigationView;

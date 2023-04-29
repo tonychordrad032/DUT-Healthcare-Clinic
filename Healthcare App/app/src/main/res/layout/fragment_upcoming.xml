@@ -21,14 +21,15 @@
         android:layout_marginBottom="8dp"
         app:cardCornerRadius="15dp">
 
-
-
         <ListView
-            android:id="@+id/appointmentListView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:divider="@color/black"
-            android:listSelector="#6200ED" />
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/activity_appointment_list_view"
+            android:id="@+id/listView"/>
+
+
+
+
 
         <TextView
             android:id="@+id/noAppointment"
@@ -54,7 +55,7 @@
             app:fabSize="normal" />
 
 
-    </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>-->
 
 
 </RelativeLayout>

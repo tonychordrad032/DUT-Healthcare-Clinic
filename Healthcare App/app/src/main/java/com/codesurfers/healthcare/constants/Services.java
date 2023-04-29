@@ -1,6 +1,5 @@
 package com.codesurfers.healthcare.constants;
 
-import com.codesurfers.healthcare.IClinicAPI;
 import com.codesurfers.healthcare.model.Appointment;
 import com.codesurfers.healthcare.model.ResponseResult;
 

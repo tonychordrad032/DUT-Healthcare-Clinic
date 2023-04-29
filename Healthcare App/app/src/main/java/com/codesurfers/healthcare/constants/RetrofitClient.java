@@ -1,7 +1,5 @@
 package com.codesurfers.healthcare.constants;
 
-import com.codesurfers.healthcare.IClinicAPI;
-
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
