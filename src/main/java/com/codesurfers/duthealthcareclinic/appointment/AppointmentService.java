@@ -104,6 +104,7 @@ public class AppointmentService {
 
             //_appontment.setStudentNumber(appointment.getStudentNumber());
             _appontment.setStatus(appointment.getStatus());
+            _appontment.setNotes(appointment.getNotes());
             //_appontment.setQualification(appointment.getQualification());
             //_appontment.setAppointmentDate(appointment.getAppointmentDate());
 

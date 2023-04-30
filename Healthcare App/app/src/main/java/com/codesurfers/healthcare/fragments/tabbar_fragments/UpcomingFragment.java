@@ -137,7 +137,7 @@ public class UpcomingFragment extends Fragment {
 
 
                         //If there are no items in the adapter then show the no appointments text else show the items
-                        if (adapter==null){
+                        if (adapter==null || appointmentList.isEmpty()){
                             noAppointment.setVisibility(View.VISIBLE);
 
 
