@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
@@ -28,7 +30,7 @@ public class MakeAppointment extends AppCompatActivity {
     AutoCompleteTextView autoCompleteTextView;
 
     ArrayAdapter<String> adapterClinics;*/
-    TextView editTextDate ;
+    TextView editTextDate, studentNo, firstName, lastName, qualification;
     ImageButton dateSelector;
     DatePickerDialog datePickerDialog;
     Spinner appointmentTime;
@@ -38,12 +40,31 @@ public class MakeAppointment extends AppCompatActivity {
         setContentView(R.layout.activity_make_appointment);
         setTitle("Schedule Appointment");
 
+        studentNo = findViewById(R.id.studentNumberTxt);
+        firstName = findViewById(R.id.firstNameTxt);
+        lastName = findViewById(R.id.lastNameTxt);
+        qualification = findViewById(R.id.qualificationTxt);
+
+        SharedPreferences sp = getApplicationContext().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+        String studentNumber = sp.getString("studentNumber", "");
+        String name = sp.getString("firstName", "");
+        String surname = sp.getString("lastName", "");
+        String qual = sp.getString("qualification", "");
+
+        studentNo.setText(studentNumber);
+        firstName.setText(name);
+        lastName.setText(surname);
+        qualification.setText(qual);
+
+
+
         dateSelector = findViewById(R.id.dateSelector);
         dateSelector.setOnClickListener(dateClickListener);
         editTextDate = findViewById(R.id.appointmentDate);
         appointmentTime= findViewById(R.id.appointmentTime);
         editTextDate.setFocusable(false);
         editTextDate.setClickable(false);
+
 
         //This is a list of options that will be used to feed the timeslots
         String[] options = {"TimeSlot 1", "TimeSlot 2", "Timeslot 3"};

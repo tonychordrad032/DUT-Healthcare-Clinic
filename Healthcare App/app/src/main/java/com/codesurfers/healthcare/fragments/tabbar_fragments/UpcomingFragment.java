@@ -3,7 +3,9 @@ package com.codesurfers.healthcare.fragments.tabbar_fragments;
 import static com.codesurfers.healthcare.constants.Constants.BASE_URL;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -68,8 +70,12 @@ public class UpcomingFragment extends Fragment {
 
         //ListAdapter adapter = new ListAdapter(this.requireContext(), R.layout.activity_appointment_list_view, appointArrayList);
         //listView.setAdapter(adapter);
+        SharedPreferences sp = getContext().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
 
-        getAppointmentByUserId(1);
+        long userId = sp.getInt("userId", 1);
+        System.out.println("MY USER ID IS => " + userId);
+
+        getAppointmentByUserId(userId);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -247,10 +247,25 @@ public class MainActivity extends AppCompatActivity {
 
                         JSONObject object = new JSONObject((Map) response.body().getResults());
                         String userType = (String) object.get("userType");
+                        Double id = Double.valueOf(object.getDouble("userId"));
+                        double id2 = id.doubleValue();
+                        int int1 = (int) id2;
+                        Integer userId = Integer.valueOf(int1);
 
-                        //editor.putLong("userId", response.body().getUserId());
-                        //editor.commit();
+                        editor.putInt("userId", userId);
+                        editor.putString("firstName", (String) object.get("firstName"));
+                        editor.putString("lastName", (String) object.get("lastName"));
+                        editor.putString("studentNumber", (String) object.get("studentNumber"));
+                        editor.putString("mobile", (String) object.get("mobile"));
+                        editor.putString("qualification", (String) object.get("qualification"));
+                        editor.commit();
                         System.out.println(response);
+                        System.out.println(object.get("userId"));
+                        System.out.println(object.get("firstName"));
+                        System.out.println(object.get("lastName"));
+                        System.out.println(object.get("studentNumber"));
+                        System.out.println(object.get("mobile"));
+                        System.out.println(object.get("qualification"));
                         System.out.println("MY USERTYPE");
                         System.out.println(response.code());
                         System.out.println(response.body());

@@ -3,7 +3,9 @@ package com.codesurfers.healthcare.fragments.tabbar_fragments;
 import static com.codesurfers.healthcare.constants.Constants.BASE_URL;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -37,7 +39,7 @@ public class HistoryFragment extends Fragment {
 
     ArrayList<Appoint> appointmentList = new ArrayList<>();
     ListView listView;
-    TextView noAppointment, date, time, status;
+    TextView history, date, time, status;
 
 
     @SuppressLint("MissingInflatedId")
@@ -47,12 +49,17 @@ public class HistoryFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_upcoming, container, false);
         listView = view.findViewById(R.id.listView);
-        noAppointment=view.findViewById(R.id.noAppointment);
+        history=view.findViewById(R.id.appointmentHistory);
         date = (TextView) view.findViewById(R.id.dateTxt);
         time = view.findViewById(R.id.timeTextView);
         status = view.findViewById(R.id.statusTextView);
 
-        getAppointmentByUserId(1);
+        SharedPreferences sp = getContext().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+
+        long userId = sp.getInt("userId", 1);
+        System.out.println("MY USER ID IS => " + userId);
+
+        getAppointmentByUserId(userId);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -102,8 +109,8 @@ public class HistoryFragment extends Fragment {
 
 
                         //If there are no items in the adapter then show the no appointments text else show the items
-                        if (adapter==null){
-                            noAppointment.setVisibility(View.VISIBLE);
+                        if (adapter==null || appointmentList.isEmpty()){
+                            history.setVisibility(View.VISIBLE);
 
 
                         }else{
@@ -116,7 +123,7 @@ public class HistoryFragment extends Fragment {
                             System.out.println(time);
                             System.out.println(status);
                             listView.setAdapter(adapter);
-                            noAppointment.setVisibility(View.GONE);
+                            history.setVisibility(View.GONE);
                         }
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
