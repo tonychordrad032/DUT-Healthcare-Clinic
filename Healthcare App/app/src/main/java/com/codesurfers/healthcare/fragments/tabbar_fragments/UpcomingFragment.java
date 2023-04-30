@@ -3,6 +3,7 @@ package com.codesurfers.healthcare.fragments.tabbar_fragments;
 import static com.codesurfers.healthcare.constants.Constants.BASE_URL;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +15,9 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.codesurfers.healthcare.HomeScreenActivity;
 import com.codesurfers.healthcare.ListAdapter;
+import com.codesurfers.healthcare.ViewAppointmentScreen;
 import com.codesurfers.healthcare.constants.IClinicAPI;
 import com.codesurfers.healthcare.R;
 import com.codesurfers.healthcare.constants.RetrofitClient;
@@ -70,7 +73,8 @@ public class UpcomingFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                Intent fp = new Intent(getContext(), ViewAppointmentScreen.class);
+                startActivity(fp);
             }
         });
 
@@ -117,9 +121,15 @@ public class UpcomingFragment extends Fragment {
 
                 for (int i = 0; i < object.length(); i++) {
                     try {
+                        System.out.println("My STATUS");
                         System.out.println(object.getJSONObject(i).get("status"));
-                        appointmentList.add(new Appoint("01 May 2023, Monday", "09:00", (String) object.getJSONObject(i).get("status")));
-                        System.out.println(appointmentList);
+                        if (object.getJSONObject(i).get("status").toString().equals("Open")){
+                            System.out.println("INSIDE IF");
+                            appointmentList.add(new Appoint("01 May 2023, Monday", "09:00", (String) object.getJSONObject(i).get("status")));
+                            System.out.println(appointmentList);
+
+                        }
+
                         ListAdapter adapter = new ListAdapter(getContext(), R.layout.activity_appointment_list_view, appointmentList);
                         listView.setAdapter(adapter);
 
@@ -135,7 +145,7 @@ public class UpcomingFragment extends Fragment {
                             //date.setText("appointmentList.get(i).getDate()");
                             //time.setText(appointmentList.get(i).getTime());
                             //status.setText(appointmentList.get(i).getStatus());
-                            System.out.println(appointmentList.get(i).getDate());
+                            //System.out.println(appointmentList.get(i).getDate());
                             System.out.println(date);
                             System.out.println(time);
                             System.out.println(status);
