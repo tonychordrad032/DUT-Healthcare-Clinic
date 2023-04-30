@@ -49,6 +49,12 @@ public class MakeAppointment extends AppCompatActivity {
         String[] options = {"TimeSlot 1", "TimeSlot 2", "Timeslot 3"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_gallery_item, options);
         appointmentTime.setAdapter(adapter);
+        /**editTextDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                datePickerDialog.show();
+            }
+        });*/
 
 
 

@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 
 import com.codesurfers.healthcare.HomeScreenActivity;
 import com.codesurfers.healthcare.ListAdapter;
+import com.codesurfers.healthcare.MakeAppointment;
 import com.codesurfers.healthcare.ViewAppointmentScreen;
 import com.codesurfers.healthcare.constants.IClinicAPI;
 import com.codesurfers.healthcare.R;
@@ -86,9 +87,9 @@ public class UpcomingFragment extends Fragment {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getAppointmentByUserId(1);
-                //Intent fp=new Intent(getActivity(), MakeAppointment.class);
-                //startActivity(fp);
+                //getAppointmentByUserId(1);
+                Intent fp=new Intent(getActivity(), MakeAppointment.class);
+                startActivity(fp);
             }
         });
 
