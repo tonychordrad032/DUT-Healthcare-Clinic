@@ -19,12 +19,15 @@ import android.widget.Toast;
 
 import com.codesurfers.healthcare.constants.IClinicAPI;
 import com.codesurfers.healthcare.constants.RetrofitClient;
+import com.codesurfers.healthcare.model.Appoint;
 import com.codesurfers.healthcare.model.Appointment;
 import com.codesurfers.healthcare.model.Clinic;
 import com.codesurfers.healthcare.model.Feedback;
 import com.codesurfers.healthcare.model.ResponseResult;
 import com.codesurfers.healthcare.model.User;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -765,6 +768,38 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }*/
+
+    private void getAppointmentByDay(String day) {
+        RetrofitClient client = new RetrofitClient(BASE_URL);
+        Call<ResponseResult> call = client.getClinicAPI().getAppointmentByDay(day);
+
+        call.enqueue(new Callback<ResponseResult>() {
+            @Override
+            public void onResponse(Call<ResponseResult> call, Response<ResponseResult> response) {
+                System.out.println("BEGIN");
+                if (!response.isSuccessful()) {
+                    System.out.println("NOT SUCCESS");
+                    System.out.println(response.code());
+                    System.out.println(response);
+                    // Do something
+                    return;
+                }
+
+                List<Appointment> myAppointmentList = (List<Appointment>) response.body().getResults();
+                System.out.println(response.body().getResponseMessage());
+                JSONArray object = new JSONArray(myAppointmentList);
+
+
+            }
+
+            @Override
+            public void onFailure(Call<ResponseResult> call, Throwable t) {
+                System.out.println("FAILURE");
+
+            }
+        });
+    }
+
 
 
 }
