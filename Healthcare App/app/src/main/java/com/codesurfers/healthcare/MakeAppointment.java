@@ -2,6 +2,10 @@ package com.codesurfers.healthcare;
 
 
 
+import static com.codesurfers.healthcare.constants.Constants.BASE_URL;
+
+import static java.security.AccessController.getContext;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -19,9 +23,25 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 import android.widget.DatePicker;
+
+import com.codesurfers.healthcare.constants.RetrofitClient;
+import com.codesurfers.healthcare.model.Appoint;
+import com.codesurfers.healthcare.model.Appointment;
+import com.codesurfers.healthcare.model.ResponseResult;
+import com.codesurfers.healthcare.model.TimeSlot;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MakeAppointment extends AppCompatActivity {
 
@@ -34,6 +54,9 @@ public class MakeAppointment extends AppCompatActivity {
     ImageButton dateSelector;
     DatePickerDialog datePickerDialog;
     Spinner appointmentTime;
+    List<TimeSlot> timeSlots = new ArrayList<>();
+    List<String> times = new ArrayList<>();
+    String dayOfTheWeek;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,8 +90,9 @@ public class MakeAppointment extends AppCompatActivity {
 
 
         //This is a list of options that will be used to feed the timeslots
-        String[] options = {"TimeSlot 1", "TimeSlot 2", "Timeslot 3"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_gallery_item, options);
+
+        //ArrayAdapter<TimeSlot> adapter = new ArrayAdapter<TimeSlot>(this, android.R.layout.simple_gallery_item, timeSlots);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_gallery_item, times);
         appointmentTime.setAdapter(adapter);
         /**editTextDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,7 +123,26 @@ public class MakeAppointment extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, monthOfYear, dayOfMonth);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
-        editTextDate.setText(sdf.format(calendar.getTime()));
+        System.out.println("MY DAY OF THE WEEK");
+        if (calendar.get(Calendar.DAY_OF_WEEK) == 1){
+            dayOfTheWeek = "Sunday";
+        } else if (calendar.get(Calendar.DAY_OF_WEEK) == 2) {
+            dayOfTheWeek = "Monday";
+        } else if (calendar.get(Calendar.DAY_OF_WEEK) == 3) {
+            dayOfTheWeek = "Tuesday";
+        } else if (calendar.get(Calendar.DAY_OF_WEEK) == 4) {
+            dayOfTheWeek = "Wednesday";
+        } else if (calendar.get(Calendar.DAY_OF_WEEK) == 5) {
+            dayOfTheWeek = "Thursday";
+        } else if (calendar.get(Calendar.DAY_OF_WEEK) == 6) {
+            dayOfTheWeek = "Friday";
+        } else if (calendar.get(Calendar.DAY_OF_WEEK) == 7) {
+            dayOfTheWeek = "Saturday";
+        }
+        System.out.println(dayOfTheWeek);
+        editTextDate.setText(sdf.format(calendar.getTime()) + ", "+dayOfTheWeek);
+        getTimeSlotByDay(dayOfTheWeek);
+
     };
 
     private View.OnClickListener dateClickListener = v -> {
@@ -115,6 +158,49 @@ public class MakeAppointment extends AppCompatActivity {
         datePickerDialog.getDatePicker().setMinDate(calendar.getTimeInMillis());
         datePickerDialog.show();
     };
+
+    private void getTimeSlotByDay(String day) {
+        RetrofitClient client = new RetrofitClient(BASE_URL);
+        System.out.println("Start");
+        Call<ResponseResult> call = client.getClinicAPI().getTimeSlotByDay(day);
+
+        call.enqueue(new Callback<ResponseResult>() {
+            @Override
+            public void onResponse(Call<ResponseResult> call, Response<ResponseResult> response) {
+                System.out.println("BEGIN");
+                if (!response.isSuccessful()) {
+                    System.out.println("NOT SUCCESS");
+                    System.out.println(response.code());
+                    System.out.println(response);
+                    // Do something
+                    return;
+                }
+
+                List<TimeSlot> timeSlotList = (List<TimeSlot>) response.body().getResults();
+                System.out.println(response.body().getResponseMessage());
+                JSONArray object = new JSONArray(timeSlotList);
+                times.clear();
+                for (int i = 0; i < object.length(); i++) {
+                    try {
+                        System.out.println("My STATUS");
+                        System.out.println(object.getJSONObject(i).get("time"));
+                        times.add((String) object.getJSONObject(i).get("time"));
+                    } catch (JSONException e) {
+                        throw new RuntimeException(e);
+                    }
+
+                }
+                System.out.println("METHPDDDDDD");
+
+            }
+
+            @Override
+            public void onFailure(Call<ResponseResult> call, Throwable t) {
+                System.out.println("FAILURE");
+
+            }
+        });
+    }
 
 }
 

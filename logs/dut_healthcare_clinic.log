@@ -1,250 +1,827 @@
-2023-04-30 00:01:29.674  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-30 00:01:29.682  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-30 00:01:29.690  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2023-04-30 00:01:30.581  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.user.UserService                   : 028225af-e32b-43de-96d5-13dd6812a317 : Start logging in
-2023-04-30 00:01:30.716  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.user.UserService                   : 028225af-e32b-43de-96d5-13dd6812a317 : Login successfully
-2023-04-30 00:01:30.723  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.user.UserService                   : 028225af-e32b-43de-96d5-13dd6812a317 : Finish logging in
-2023-04-30 00:01:40.029  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : b8a401aa-f79f-4c8e-af9b-3d098a338aa4 : Start searching appointment by user id
-2023-04-30 00:01:40.122  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : b8a401aa-f79f-4c8e-af9b-3d098a338aa4 : appointment found
-2023-04-30 00:01:40.123  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : b8a401aa-f79f-4c8e-af9b-3d098a338aa4 : done searching appointment by user id process
-2023-04-30 00:08:19.046  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 864378b8-e90c-4389-a240-6c934764032b : Start logging in
-2023-04-30 00:08:19.051  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 864378b8-e90c-4389-a240-6c934764032b : Login successfully
-2023-04-30 00:08:19.053  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 864378b8-e90c-4389-a240-6c934764032b : Finish logging in
-2023-04-30 00:13:50.450  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 56c046d7-50b4-412e-ba76-921b71051633 : Start searching appointment by user id
-2023-04-30 00:13:50.465  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 56c046d7-50b4-412e-ba76-921b71051633 : appointment found
-2023-04-30 00:13:50.466  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 56c046d7-50b4-412e-ba76-921b71051633 : done searching appointment by user id process
-2023-04-30 00:14:28.400  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : 9155b6b3-3228-48ec-a507-683298f854a3 : Start logging in
-2023-04-30 00:14:28.404  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : 9155b6b3-3228-48ec-a507-683298f854a3 : Login successfully
-2023-04-30 00:14:28.405  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : 9155b6b3-3228-48ec-a507-683298f854a3 : Finish logging in
-2023-04-30 00:15:28.784  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 79a169c3-3243-48f0-9b1d-7581fc20d248 : Start searching appointment by user id
-2023-04-30 00:15:28.797  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 79a169c3-3243-48f0-9b1d-7581fc20d248 : appointment found
-2023-04-30 00:15:28.797  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 79a169c3-3243-48f0-9b1d-7581fc20d248 : done searching appointment by user id process
-2023-04-30 00:15:42.583  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : db93a2fd-9f29-4f38-998a-161dd004f5e4 : Start logging in
-2023-04-30 00:15:42.586  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : db93a2fd-9f29-4f38-998a-161dd004f5e4 : Login successfully
-2023-04-30 00:15:42.587  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : db93a2fd-9f29-4f38-998a-161dd004f5e4 : Finish logging in
-2023-04-30 00:15:48.935  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 8887bd01-bf13-40b6-b9a7-45fb4f56b36e : Start searching appointment by user id
-2023-04-30 00:15:48.943  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 8887bd01-bf13-40b6-b9a7-45fb4f56b36e : appointment found
-2023-04-30 00:15:48.944  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 8887bd01-bf13-40b6-b9a7-45fb4f56b36e : done searching appointment by user id process
-2023-04-30 00:18:50.923  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : 54e9b6ba-6bdc-47d7-8806-ca7ef6286a9b : Start logging in
-2023-04-30 00:18:50.930  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : 54e9b6ba-6bdc-47d7-8806-ca7ef6286a9b : Login successfully
-2023-04-30 00:18:50.931  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : 54e9b6ba-6bdc-47d7-8806-ca7ef6286a9b : Finish logging in
-2023-04-30 00:24:21.493  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 5df11e71-eba4-4ea5-9d64-166f6731c0b7 : Start searching appointment by user id
-2023-04-30 00:24:21.507  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 5df11e71-eba4-4ea5-9d64-166f6731c0b7 : appointment found
-2023-04-30 00:24:21.508  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 5df11e71-eba4-4ea5-9d64-166f6731c0b7 : done searching appointment by user id process
-2023-04-30 00:25:21.449  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.user.UserService                   : d12b2e05-c3a6-4d6a-9db4-e27fed09ef99 : Start logging in
-2023-04-30 00:25:21.453  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.user.UserService                   : d12b2e05-c3a6-4d6a-9db4-e27fed09ef99 : Login successfully
-2023-04-30 00:25:21.453  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.user.UserService                   : d12b2e05-c3a6-4d6a-9db4-e27fed09ef99 : Finish logging in
-2023-04-30 00:25:26.238  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 2f662a62-7c8a-467d-89cd-5762d1853841 : Start searching appointment by user id
-2023-04-30 00:25:26.247  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 2f662a62-7c8a-467d-89cd-5762d1853841 : appointment found
-2023-04-30 00:25:26.247  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 2f662a62-7c8a-467d-89cd-5762d1853841 : done searching appointment by user id process
-2023-04-30 00:26:58.542  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 8a8e44e3-a810-4e11-9a07-00fa780d2baa : Start logging in
-2023-04-30 00:26:58.545  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 8a8e44e3-a810-4e11-9a07-00fa780d2baa : Login successfully
-2023-04-30 00:26:58.547  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 8a8e44e3-a810-4e11-9a07-00fa780d2baa : Finish logging in
-2023-04-30 00:27:02.220  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 9e0debc4-f371-41bd-bab9-3b32a2888d5c : Start searching appointment by user id
-2023-04-30 00:27:02.229  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 9e0debc4-f371-41bd-bab9-3b32a2888d5c : appointment found
-2023-04-30 00:27:02.230  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 9e0debc4-f371-41bd-bab9-3b32a2888d5c : done searching appointment by user id process
-2023-04-30 00:27:42.074  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : 2088ebd3-fa34-4644-b394-21080aad2f6c : Start logging in
-2023-04-30 00:27:42.076  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : 2088ebd3-fa34-4644-b394-21080aad2f6c : Login successfully
-2023-04-30 00:27:42.077  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : 2088ebd3-fa34-4644-b394-21080aad2f6c : Finish logging in
-2023-04-30 00:27:46.673  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 9011aae7-3bac-46c3-9576-4c7d2221e6be : Start searching appointment by user id
-2023-04-30 00:27:46.682  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 9011aae7-3bac-46c3-9576-4c7d2221e6be : appointment found
-2023-04-30 00:27:46.683  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 9011aae7-3bac-46c3-9576-4c7d2221e6be : done searching appointment by user id process
-2023-04-30 00:53:06.693  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : a57b06c4-403f-4e7a-9207-73eef96a2c07 : Start logging in
-2023-04-30 00:53:06.711  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : a57b06c4-403f-4e7a-9207-73eef96a2c07 : Login successfully
-2023-04-30 00:53:06.711  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : a57b06c4-403f-4e7a-9207-73eef96a2c07 : Finish logging in
-2023-04-30 00:53:09.807  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 9824fe4d-8a9a-44d0-8743-d4c9c45a66bf : Start searching appointment by user id
-2023-04-30 00:53:09.817  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 9824fe4d-8a9a-44d0-8743-d4c9c45a66bf : appointment found
-2023-04-30 00:53:09.818  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 9824fe4d-8a9a-44d0-8743-d4c9c45a66bf : done searching appointment by user id process
-2023-04-30 00:57:09.863  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : 007ba353-a5d5-4d88-9625-8d4eb1b1d524 : Start logging in
-2023-04-30 00:57:09.873  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : 007ba353-a5d5-4d88-9625-8d4eb1b1d524 : Login successfully
-2023-04-30 00:57:09.874  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : 007ba353-a5d5-4d88-9625-8d4eb1b1d524 : Finish logging in
-2023-04-30 00:57:34.429  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : 49159969-c4d5-4d29-b9c6-d4671bbd5e08 : Start logging in
-2023-04-30 00:57:34.433  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : 49159969-c4d5-4d29-b9c6-d4671bbd5e08 : Login successfully
-2023-04-30 00:57:34.433  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : 49159969-c4d5-4d29-b9c6-d4671bbd5e08 : Finish logging in
-2023-04-30 00:57:37.321  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 3f322906-cf8e-4d70-92c3-8586429295c4 : Start searching appointment by user id
-2023-04-30 00:57:37.334  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 3f322906-cf8e-4d70-92c3-8586429295c4 : appointment found
-2023-04-30 00:57:37.334  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 3f322906-cf8e-4d70-92c3-8586429295c4 : done searching appointment by user id process
-2023-04-30 01:00:21.811  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : 7ea1b40e-c116-49d0-aad5-063896212e0f : Start logging in
-2023-04-30 01:00:21.814  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : 7ea1b40e-c116-49d0-aad5-063896212e0f : Login successfully
-2023-04-30 01:00:21.815  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : 7ea1b40e-c116-49d0-aad5-063896212e0f : Finish logging in
-2023-04-30 01:01:11.469  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 7b35dfef-e5a5-48d4-91ab-597712ca8362 : Start logging in
-2023-04-30 01:01:11.472  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 7b35dfef-e5a5-48d4-91ab-597712ca8362 : Login successfully
-2023-04-30 01:01:11.472  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 7b35dfef-e5a5-48d4-91ab-597712ca8362 : Finish logging in
-2023-04-30 01:11:37.374  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : 2e0b6f4a-097e-46dd-b2ec-25744767ee56 : Start logging in
-2023-04-30 01:11:37.381  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : 2e0b6f4a-097e-46dd-b2ec-25744767ee56 : Login successfully
-2023-04-30 01:11:37.381  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : 2e0b6f4a-097e-46dd-b2ec-25744767ee56 : Finish logging in
-2023-04-30 01:15:16.209  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : dd8259fb-cf9e-4a0a-be6d-838a9d9c3044 : Start logging in
-2023-04-30 01:15:16.212  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : dd8259fb-cf9e-4a0a-be6d-838a9d9c3044 : Login successfully
-2023-04-30 01:15:16.213  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : dd8259fb-cf9e-4a0a-be6d-838a9d9c3044 : Finish logging in
-2023-04-30 01:15:18.955  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : cd945516-b664-4b10-960b-47e54d76d47b : Start searching appointment by user id
-2023-04-30 01:15:18.961  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : cd945516-b664-4b10-960b-47e54d76d47b : appointment found
-2023-04-30 01:15:18.962  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : cd945516-b664-4b10-960b-47e54d76d47b : done searching appointment by user id process
-2023-04-30 01:43:23.949  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : 03984d94-ed85-4080-a620-6a3ff8f6e40b : Start logging in
-2023-04-30 01:43:23.955  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : 03984d94-ed85-4080-a620-6a3ff8f6e40b : Login successfully
-2023-04-30 01:43:23.956  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : 03984d94-ed85-4080-a620-6a3ff8f6e40b : Finish logging in
-2023-04-30 01:43:26.646  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 7e60e260-151b-40a6-9465-11ae92b40fc5 : Start searching appointment by user id
-2023-04-30 01:43:26.660  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 7e60e260-151b-40a6-9465-11ae92b40fc5 : appointment found
-2023-04-30 01:43:26.663  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 7e60e260-151b-40a6-9465-11ae92b40fc5 : done searching appointment by user id process
-2023-04-30 01:55:03.079  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 150d2d9b-c293-478b-8c53-57e41b1410be : Start saving project Appointment(appointmentId=1, patient=User(userId=1, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Closed, notes=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
-2023-04-30 01:55:03.480  WARN 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : {} : You already have pending appointment
-2023-04-30 01:55:03.484  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 150d2d9b-c293-478b-8c53-57e41b1410be : done creating appointment process
-2023-04-30 01:55:12.630  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 3a758721-4125-4c72-989d-9eabeda3bed7 : Start saving project Appointment(appointmentId=1, patient=User(userId=1, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Closed, notes=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
-2023-04-30 01:55:12.644  WARN 7628 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : {} : You already have pending appointment
-2023-04-30 01:55:12.645  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 3a758721-4125-4c72-989d-9eabeda3bed7 : done creating appointment process
-2023-04-30 01:58:44.337  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.user.UserService                   : 865ebbc4-ab16-4a26-baef-2ab2aea4c6f5 : Start logging in
-2023-04-30 01:58:44.347  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.user.UserService                   : 865ebbc4-ab16-4a26-baef-2ab2aea4c6f5 : Login successfully
-2023-04-30 01:58:44.350  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.user.UserService                   : 865ebbc4-ab16-4a26-baef-2ab2aea4c6f5 : Finish logging in
-2023-04-30 01:58:48.931  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : a88fba0f-ab10-4a05-9a25-01dd46f2e5b1 : Start searching appointment by user id
-2023-04-30 01:58:48.960  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : a88fba0f-ab10-4a05-9a25-01dd46f2e5b1 : appointment found
-2023-04-30 01:58:48.960  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : a88fba0f-ab10-4a05-9a25-01dd46f2e5b1 : done searching appointment by user id process
-2023-04-30 01:59:15.391  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.user.UserService                   : e991da1b-feab-45c2-9cfa-095b1b0de0e4 : Start logging in
-2023-04-30 01:59:15.399  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.user.UserService                   : e991da1b-feab-45c2-9cfa-095b1b0de0e4 : Login successfully
-2023-04-30 01:59:15.401  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.user.UserService                   : e991da1b-feab-45c2-9cfa-095b1b0de0e4 : Finish logging in
-2023-04-30 01:59:21.100  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 52502525-c4b4-4e72-b3b8-f37bbb84390d : Start searching appointment by user id
-2023-04-30 01:59:21.149  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 52502525-c4b4-4e72-b3b8-f37bbb84390d : appointment found
-2023-04-30 01:59:21.150  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 52502525-c4b4-4e72-b3b8-f37bbb84390d : done searching appointment by user id process
-2023-04-30 02:00:28.788  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.user.UserService                   : 168cda92-0215-40cc-82db-dd4d3455b881 : Start logging in
-2023-04-30 02:00:28.798  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.user.UserService                   : 168cda92-0215-40cc-82db-dd4d3455b881 : Login successfully
-2023-04-30 02:00:28.800  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.user.UserService                   : 168cda92-0215-40cc-82db-dd4d3455b881 : Finish logging in
-2023-04-30 02:00:34.800  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : c9dc9420-6391-4e71-ae57-0d07c321362d : Start searching appointment by user id
-2023-04-30 02:00:34.840  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : c9dc9420-6391-4e71-ae57-0d07c321362d : appointment found
-2023-04-30 02:00:34.841  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : c9dc9420-6391-4e71-ae57-0d07c321362d : done searching appointment by user id process
-2023-04-30 02:00:47.827  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : 5bb585e8-d06e-4445-8423-b273533864a0 : Start logging in
-2023-04-30 02:00:47.834  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : 5bb585e8-d06e-4445-8423-b273533864a0 : Login successfully
-2023-04-30 02:00:47.834  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.user.UserService                   : 5bb585e8-d06e-4445-8423-b273533864a0 : Finish logging in
-2023-04-30 02:00:56.563  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 4dc3097c-15b5-4479-95b9-c050555398f0 : Start searching appointment by user id
-2023-04-30 02:00:56.598  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 4dc3097c-15b5-4479-95b9-c050555398f0 : appointment found
-2023-04-30 02:00:56.599  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 4dc3097c-15b5-4479-95b9-c050555398f0 : done searching appointment by user id process
-2023-04-30 02:02:16.596  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : cd4e6592-d86a-4314-a6e2-545303f36980 : Start logging in
-2023-04-30 02:02:16.609  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : cd4e6592-d86a-4314-a6e2-545303f36980 : Login successfully
-2023-04-30 02:02:16.610  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : cd4e6592-d86a-4314-a6e2-545303f36980 : Finish logging in
-2023-04-30 02:02:35.495  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : e379d5d6-3d32-4ac2-99d1-ca55ff217aa3 : Start searching appointment by user id
-2023-04-30 02:02:35.531  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : e379d5d6-3d32-4ac2-99d1-ca55ff217aa3 : appointment found
-2023-04-30 02:02:35.531  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : e379d5d6-3d32-4ac2-99d1-ca55ff217aa3 : done searching appointment by user id process
-2023-04-30 02:02:51.658  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 07a5d0a7-729d-41e4-8ca8-cdd40dde736f : Start searching appointment by user id
-2023-04-30 02:02:51.676  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 07a5d0a7-729d-41e4-8ca8-cdd40dde736f : appointment found
-2023-04-30 02:02:51.678  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 07a5d0a7-729d-41e4-8ca8-cdd40dde736f : done searching appointment by user id process
-2023-04-30 02:03:30.317  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : ea4a09cc-a01e-4aca-92b4-f7c9b980b92e : Start searching appointment by user id
-2023-04-30 02:03:30.358  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : ea4a09cc-a01e-4aca-92b4-f7c9b980b92e : appointment found
-2023-04-30 02:03:30.359  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : ea4a09cc-a01e-4aca-92b4-f7c9b980b92e : done searching appointment by user id process
-2023-04-30 02:03:39.117  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 3db75c9b-47b4-46c2-9b98-c416c8b7d9a1 : Start searching appointment by user id
-2023-04-30 02:03:39.144  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 3db75c9b-47b4-46c2-9b98-c416c8b7d9a1 : appointment found
-2023-04-30 02:03:39.145  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 3db75c9b-47b4-46c2-9b98-c416c8b7d9a1 : done searching appointment by user id process
-2023-04-30 02:04:16.874  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 1ac20a1f-6059-499a-a280-5fb9af44e435 : Start searching appointment by user id
-2023-04-30 02:04:16.908  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 1ac20a1f-6059-499a-a280-5fb9af44e435 : appointment found
-2023-04-30 02:04:16.909  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 1ac20a1f-6059-499a-a280-5fb9af44e435 : done searching appointment by user id process
-2023-04-30 02:04:53.356  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 06ee9082-b95a-41c0-bf19-657e83769bad : Start searching appointment by user id
-2023-04-30 02:04:53.387  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 06ee9082-b95a-41c0-bf19-657e83769bad : appointment found
-2023-04-30 02:04:53.389  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 06ee9082-b95a-41c0-bf19-657e83769bad : done searching appointment by user id process
-2023-04-30 02:06:08.170  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.user.UserService                   : 4cefe5a7-3bd0-45d9-ab51-6052cfae8e59 : Start logging in
-2023-04-30 02:06:08.179  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.user.UserService                   : 4cefe5a7-3bd0-45d9-ab51-6052cfae8e59 : Login successfully
-2023-04-30 02:06:08.180  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.user.UserService                   : 4cefe5a7-3bd0-45d9-ab51-6052cfae8e59 : Finish logging in
-2023-04-30 02:06:13.000  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 90860da4-9617-40bd-b185-e019c10b23a5 : Start searching appointment by user id
-2023-04-30 02:06:13.016  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 90860da4-9617-40bd-b185-e019c10b23a5 : appointment found
-2023-04-30 02:06:13.018  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 90860da4-9617-40bd-b185-e019c10b23a5 : done searching appointment by user id process
-2023-04-30 02:08:09.687  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : d80d6be8-1f73-4d88-b2c1-ebaa4332222c : Start searching appointment by user id
-2023-04-30 02:08:09.703  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : d80d6be8-1f73-4d88-b2c1-ebaa4332222c : appointment found
-2023-04-30 02:08:09.703  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : d80d6be8-1f73-4d88-b2c1-ebaa4332222c : done searching appointment by user id process
-2023-04-30 02:08:27.468  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 3f5f06ac-c872-4b43-8d2f-22b268a4b387 : Start searching appointment by user id
-2023-04-30 02:08:27.486  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 3f5f06ac-c872-4b43-8d2f-22b268a4b387 : appointment found
-2023-04-30 02:08:27.487  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 3f5f06ac-c872-4b43-8d2f-22b268a4b387 : done searching appointment by user id process
-2023-04-30 02:09:59.289  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 3ce31441-d5e1-447b-a38e-ecb4abd923f9 : Start searching appointment by user id
-2023-04-30 02:09:59.315  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 3ce31441-d5e1-447b-a38e-ecb4abd923f9 : appointment found
-2023-04-30 02:09:59.316  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 3ce31441-d5e1-447b-a38e-ecb4abd923f9 : done searching appointment by user id process
-2023-04-30 02:15:27.995  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : e383e25b-f87b-466b-a9a0-22b2d42e3b7a : Start searching appointment by user id
-2023-04-30 02:15:28.012  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : e383e25b-f87b-466b-a9a0-22b2d42e3b7a : appointment found
-2023-04-30 02:15:28.013  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : e383e25b-f87b-466b-a9a0-22b2d42e3b7a : done searching appointment by user id process
-2023-04-30 02:16:10.865  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 0feb2673-7167-43b2-a124-f288dfff8363 : Start searching appointment by user id
-2023-04-30 02:16:10.884  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 0feb2673-7167-43b2-a124-f288dfff8363 : appointment found
-2023-04-30 02:16:10.886  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 0feb2673-7167-43b2-a124-f288dfff8363 : done searching appointment by user id process
-2023-04-30 02:16:29.318  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 4045f141-0c93-445a-ae51-0bd84775e0ef : Start searching appointment by user id
-2023-04-30 02:16:29.377  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 4045f141-0c93-445a-ae51-0bd84775e0ef : appointment found
-2023-04-30 02:16:29.378  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 4045f141-0c93-445a-ae51-0bd84775e0ef : done searching appointment by user id process
-2023-04-30 03:26:20.302  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.user.UserService                   : ee86eba2-14e6-447c-81da-19779ea8058c : Start logging in
-2023-04-30 03:26:20.365  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.user.UserService                   : ee86eba2-14e6-447c-81da-19779ea8058c : Login successfully
-2023-04-30 03:26:20.366  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.user.UserService                   : ee86eba2-14e6-447c-81da-19779ea8058c : Finish logging in
-2023-04-30 03:26:26.321  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 0fa17c5e-661e-4368-b55b-9f0675e8d66e : Start searching appointment by user id
-2023-04-30 03:26:26.391  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 0fa17c5e-661e-4368-b55b-9f0675e8d66e : appointment found
-2023-04-30 03:26:26.392  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 0fa17c5e-661e-4368-b55b-9f0675e8d66e : done searching appointment by user id process
-2023-04-30 03:26:30.067  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 33b2dc1d-a817-4b0a-831e-9c7e69c43b7f : Start searching appointment by user id
-2023-04-30 03:26:30.087  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 33b2dc1d-a817-4b0a-831e-9c7e69c43b7f : appointment found
-2023-04-30 03:26:30.087  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 33b2dc1d-a817-4b0a-831e-9c7e69c43b7f : done searching appointment by user id process
-2023-04-30 03:27:27.998  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.user.UserService                   : 603a947a-8506-4e8e-b256-fc879a0387d0 : Start logging in
-2023-04-30 03:27:28.003  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.user.UserService                   : 603a947a-8506-4e8e-b256-fc879a0387d0 : Login successfully
-2023-04-30 03:27:28.003  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.user.UserService                   : 603a947a-8506-4e8e-b256-fc879a0387d0 : Finish logging in
-2023-04-30 03:27:33.460  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 90e02c43-1154-43fb-8c14-3909362facd9 : Start searching appointment by user id
-2023-04-30 03:27:33.486  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 90e02c43-1154-43fb-8c14-3909362facd9 : appointment found
-2023-04-30 03:27:33.486  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 90e02c43-1154-43fb-8c14-3909362facd9 : done searching appointment by user id process
-2023-04-30 03:38:17.696  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.user.UserService                   : ecdec921-ae68-4fa8-82f0-f66efca30208 : Start logging in
-2023-04-30 03:38:17.705  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.user.UserService                   : ecdec921-ae68-4fa8-82f0-f66efca30208 : Login successfully
-2023-04-30 03:38:17.706  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.user.UserService                   : ecdec921-ae68-4fa8-82f0-f66efca30208 : Finish logging in
-2023-04-30 03:38:27.340  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 73cfd3b5-0232-4b66-a2b1-3fcbdccc4ba1 : Start searching appointment by user id
-2023-04-30 03:38:27.368  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 73cfd3b5-0232-4b66-a2b1-3fcbdccc4ba1 : appointment found
-2023-04-30 03:38:27.369  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 73cfd3b5-0232-4b66-a2b1-3fcbdccc4ba1 : done searching appointment by user id process
-2023-04-30 03:39:51.106  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 3d9bc9a6-05db-4429-b8fe-5b6bf426df9e : Start searching appointment by user id
-2023-04-30 03:39:51.120  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 3d9bc9a6-05db-4429-b8fe-5b6bf426df9e : appointment found
-2023-04-30 03:39:51.121  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 3d9bc9a6-05db-4429-b8fe-5b6bf426df9e : done searching appointment by user id process
-2023-04-30 03:44:08.194  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 0109827a-fc16-4392-9384-44d90cbe3856 : Start searching appointment by user id
-2023-04-30 03:44:08.260  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 0109827a-fc16-4392-9384-44d90cbe3856 : appointment found
-2023-04-30 03:44:08.260  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 0109827a-fc16-4392-9384-44d90cbe3856 : done searching appointment by user id process
-2023-04-30 03:44:13.996  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 5913cbe3-1375-4c2e-96d6-ccb73a70178a : Start searching appointment by user id
-2023-04-30 03:44:14.017  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 5913cbe3-1375-4c2e-96d6-ccb73a70178a : appointment found
-2023-04-30 03:44:14.018  INFO 7628 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 5913cbe3-1375-4c2e-96d6-ccb73a70178a : done searching appointment by user id process
-2023-04-30 03:53:05.952  INFO 7628 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-04-30 03:53:05.987  INFO 7628 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-04-30 03:53:06.005  INFO 7628 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-04-30 21:38:39.151  INFO 9872 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 on Zamambo-Telecoms with PID 9872 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
-2023-04-30 21:38:39.156  INFO 9872 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
-2023-04-30 21:38:40.347  INFO 9872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-04-30 21:38:40.446  INFO 9872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 6 JPA repository interfaces.
-2023-04-30 21:38:41.201  INFO 9872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (http)
-2023-04-30 21:38:41.218  INFO 9872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-04-30 21:38:41.219  INFO 9872 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
-2023-04-30 21:38:41.352  INFO 9872 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
-2023-04-30 21:38:41.353  INFO 9872 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2132 ms
-2023-04-30 21:38:41.604  INFO 9872 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-04-30 21:38:41.674  INFO 9872 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2023-04-30 21:38:41.910  INFO 9872 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-04-30 21:38:42.037  INFO 9872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-04-30 21:38:42.235  INFO 9872 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-04-30 21:38:42.253  INFO 9872 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2023-04-30 21:38:43.127  INFO 9872 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-04-30 21:38:43.134  INFO 9872 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-04-30 21:38:44.019  WARN 9872 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-04-30 21:38:45.211  INFO 9872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (http) with context path '/dut_healthcare_clinic'
-2023-04-30 21:38:45.223  INFO 9872 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 6.565 seconds (JVM running for 10.04)
-2023-04-30 21:43:54.117  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-1] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-04-30 21:43:54.117  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-04-30 21:43:54.119  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-04-30 21:43:54.262  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.user.UserService                   : 74b3e52f-ffbb-4ace-9b91-f551e2114a41 : Start logging in
-2023-04-30 21:43:54.374  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.user.UserService                   : 74b3e52f-ffbb-4ace-9b91-f551e2114a41 : Login successfully
-2023-04-30 21:43:54.382  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.user.UserService                   : 74b3e52f-ffbb-4ace-9b91-f551e2114a41 : Finish logging in
-2023-04-30 21:45:53.229  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 468fda9c-84d5-41c5-b7ce-dc36e6834012 : Start searching appointment by user id
-2023-04-30 21:45:53.349  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 468fda9c-84d5-41c5-b7ce-dc36e6834012 : appointment found
-2023-04-30 21:45:53.350  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 468fda9c-84d5-41c5-b7ce-dc36e6834012 : done searching appointment by user id process
-2023-04-30 21:57:31.572  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : f10a5f21-34b0-45a6-84ed-ac5f4b7f411f : Start searching appointment by user id
-2023-04-30 21:57:31.582  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : f10a5f21-34b0-45a6-84ed-ac5f4b7f411f : appointment found
-2023-04-30 21:57:31.582  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : f10a5f21-34b0-45a6-84ed-ac5f4b7f411f : done searching appointment by user id process
-2023-04-30 21:57:54.500  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 19100c51-7313-49c4-8a29-1e64c467e37c : Start searching appointment by user id
-2023-04-30 21:57:54.510  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 19100c51-7313-49c4-8a29-1e64c467e37c : appointment found
-2023-04-30 21:57:54.511  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 19100c51-7313-49c4-8a29-1e64c467e37c : done searching appointment by user id process
-2023-04-30 21:58:24.236  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 38ea2eea-a240-4788-b039-3ebf55e50bfb : Start Updating Appointment Appointment(appointmentId=1, patient=null, clinic=null, status=Closed, notes=You need to see me next week, deleted=0, appointmentTime=null) -> 
-2023-04-30 21:58:24.288  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 38ea2eea-a240-4788-b039-3ebf55e50bfb : done updating appointment process Appointment(appointmentId=1, patient=null, clinic=null, status=Closed, notes=You need to see me next week, deleted=0, appointmentTime=null)
-2023-04-30 21:58:34.525  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : e027a9d1-e9b4-454b-bd40-7bed1021c32b : Start searching appointment by user id
-2023-04-30 21:58:34.534  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : e027a9d1-e9b4-454b-bd40-7bed1021c32b : appointment found
-2023-04-30 21:58:34.535  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : e027a9d1-e9b4-454b-bd40-7bed1021c32b : done searching appointment by user id process
-2023-04-30 21:59:05.592  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 812e84a8-3aa4-4629-8237-fee6caa29587 : Start searching appointment by user id
-2023-04-30 21:59:05.602  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 812e84a8-3aa4-4629-8237-fee6caa29587 : appointment found
-2023-04-30 21:59:05.603  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 812e84a8-3aa4-4629-8237-fee6caa29587 : done searching appointment by user id process
-2023-04-30 21:59:08.896  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : f73d6a1a-2278-414a-8a5c-eb3dc6157c5b : Start searching appointment by user id
-2023-04-30 21:59:08.912  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : f73d6a1a-2278-414a-8a5c-eb3dc6157c5b : appointment found
-2023-04-30 21:59:08.912  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : f73d6a1a-2278-414a-8a5c-eb3dc6157c5b : done searching appointment by user id process
-2023-04-30 22:00:11.274  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 79ffe0da-3148-4f77-980f-156ec56b4620 : Start searching appointment by user id
-2023-04-30 22:00:11.287  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 79ffe0da-3148-4f77-980f-156ec56b4620 : appointment found
-2023-04-30 22:00:11.288  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 79ffe0da-3148-4f77-980f-156ec56b4620 : done searching appointment by user id process
-2023-04-30 22:00:11.332  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : f6ba8339-44ce-4ea3-8e10-d5fa781e833b : Start searching appointment by user id
-2023-04-30 22:00:11.349  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : f6ba8339-44ce-4ea3-8e10-d5fa781e833b : appointment found
-2023-04-30 22:00:11.349  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : f6ba8339-44ce-4ea3-8e10-d5fa781e833b : done searching appointment by user id process
-2023-04-30 22:00:23.121  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : beb6ebf3-64a1-48ff-8848-ec9cf94743a1 : Start searching appointment by user id
-2023-04-30 22:00:23.132  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : beb6ebf3-64a1-48ff-8848-ec9cf94743a1 : appointment found
-2023-04-30 22:00:23.133  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : beb6ebf3-64a1-48ff-8848-ec9cf94743a1 : done searching appointment by user id process
+2023-05-01 00:02:25.030  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 21ba1a64-6ff9-4d58-bbe2-134604713ecb : Start searching appointment by user id
+2023-05-01 00:02:25.082 ERROR 9872 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 21ba1a64-6ff9-4d58-bbe2-134604713ecb : Error while searching for appointments by user id{}
+
+java.lang.Exception: Appointment for user id 5 not found
+	at com.codesurfers.duthealthcareclinic.appointment.AppointmentService.listAppointmentByUserId(AppointmentService.java:166) ~[classes/:na]
+	at com.codesurfers.duthealthcareclinic.appointment.AppointmentController.findAppointmentByUserId(AppointmentController.java:46) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.64.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.64.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-05-01 00:02:25.087  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 21ba1a64-6ff9-4d58-bbe2-134604713ecb : done searching appointment by user id process
+2023-05-01 00:02:43.169  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 0fcce7c9-ad02-4a4e-a267-3e3f90a6528f : Start searching appointment by user id
+2023-05-01 00:02:43.207 ERROR 9872 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 0fcce7c9-ad02-4a4e-a267-3e3f90a6528f : Error while searching for appointments by user id{}
+
+java.lang.Exception: Appointment for user id 5 not found
+	at com.codesurfers.duthealthcareclinic.appointment.AppointmentService.listAppointmentByUserId(AppointmentService.java:166) ~[classes/:na]
+	at com.codesurfers.duthealthcareclinic.appointment.AppointmentController.findAppointmentByUserId(AppointmentController.java:46) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.64.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.64.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-05-01 00:02:43.214  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 0fcce7c9-ad02-4a4e-a267-3e3f90a6528f : done searching appointment by user id process
+2023-05-01 00:02:58.858  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 87f6e7e7-1f9f-4003-9ecc-91840bf0cf1a : Start searching appointment by user id
+2023-05-01 00:02:58.905 ERROR 9872 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 87f6e7e7-1f9f-4003-9ecc-91840bf0cf1a : Error while searching for appointments by user id{}
+
+java.lang.Exception: Appointment for user id 5 not found
+	at com.codesurfers.duthealthcareclinic.appointment.AppointmentService.listAppointmentByUserId(AppointmentService.java:166) ~[classes/:na]
+	at com.codesurfers.duthealthcareclinic.appointment.AppointmentController.findAppointmentByUserId(AppointmentController.java:46) ~[classes/:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor140.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.64.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.21.jar:5.3.21]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.64.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.21.jar:5.3.21]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.64.jar:9.0.64]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-05-01 00:02:58.908  INFO 9872 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 87f6e7e7-1f9f-4003-9ecc-91840bf0cf1a : done searching appointment by user id process
+2023-05-01 00:03:48.391  INFO 9872 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 00:03:48.419  INFO 9872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 00:03:48.431  INFO 9872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 00:04:01.072  INFO 37412 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 on Zamambo-Telecoms with PID 37412 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
+2023-05-01 00:04:01.078  INFO 37412 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-05-01 00:04:03.314  INFO 37412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 00:04:03.460  INFO 37412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 6 JPA repository interfaces.
+2023-05-01 00:04:05.001  INFO 37412 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (http)
+2023-05-01 00:04:05.034  INFO 37412 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 00:04:05.035  INFO 37412 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-01 00:04:05.309  INFO 37412 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-05-01 00:04:05.310  INFO 37412 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4079 ms
+2023-05-01 00:04:05.839  INFO 37412 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 00:04:06.022  INFO 37412 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-01 00:04:06.582  INFO 37412 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 00:04:06.811  INFO 37412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 00:04:07.405  INFO 37412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 00:04:07.442  INFO 37412 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-05-01 00:04:09.607  INFO 37412 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 00:04:09.661  INFO 37412 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 00:04:11.676  WARN 37412 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 00:04:13.865  INFO 37412 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (http) with context path '/dut_healthcare_clinic'
+2023-05-01 00:04:13.889  INFO 37412 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 13.77 seconds (JVM running for 14.823)
+2023-05-01 00:04:23.865  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 00:04:23.865  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 00:04:23.869  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-05-01 00:04:23.958  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 4c00f3ad-6bd3-45b4-ba9e-d4560c9b609c : Start searching appointment by user id
+2023-05-01 00:04:24.260  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 4c00f3ad-6bd3-45b4-ba9e-d4560c9b609c : done searching appointment by user id process
+2023-05-01 00:04:45.392  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : a9e962eb-88ea-46ee-ac83-3c24b4c6ee3f : Start searching appointment by user id
+2023-05-01 00:04:45.412  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : a9e962eb-88ea-46ee-ac83-3c24b4c6ee3f : appointment found
+2023-05-01 00:04:45.412  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : a9e962eb-88ea-46ee-ac83-3c24b4c6ee3f : done searching appointment by user id process
+2023-05-01 00:06:18.543  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : fbfaad02-0b23-423d-9772-ece3b4802edc : Start searching appointment by user id
+2023-05-01 00:06:18.556  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : fbfaad02-0b23-423d-9772-ece3b4802edc : done searching appointment by user id process
+2023-05-01 00:06:18.611  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 06d43a0e-2d72-4705-9ad9-c349e6e45644 : Start searching appointment by user id
+2023-05-01 00:06:18.626  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 06d43a0e-2d72-4705-9ad9-c349e6e45644 : done searching appointment by user id process
+2023-05-01 00:06:46.221  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 60c585ae-9f41-4894-8310-f49959040cbc : Start searching appointment by user id
+2023-05-01 00:06:46.246  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 60c585ae-9f41-4894-8310-f49959040cbc : done searching appointment by user id process
+2023-05-01 00:06:49.387  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : ab4f551e-53f0-46e1-96ec-960e36da654e : Start searching appointment by user id
+2023-05-01 00:06:49.406  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : ab4f551e-53f0-46e1-96ec-960e36da654e : done searching appointment by user id process
+2023-05-01 00:10:39.713  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : de9723be-700b-4388-b062-be220940401f : Start searching appointment by user id
+2023-05-01 00:10:39.738  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : de9723be-700b-4388-b062-be220940401f : done searching appointment by user id process
+2023-05-01 00:10:42.218  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 94d18af6-b82c-4943-a97f-8ac692dbb0c6 : Start searching appointment by user id
+2023-05-01 00:10:42.235  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 94d18af6-b82c-4943-a97f-8ac692dbb0c6 : done searching appointment by user id process
+2023-05-01 00:12:16.563  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 998e8510-f733-4b6b-b9a8-c384d23bb4ef : Start searching appointment by user id
+2023-05-01 00:12:16.602  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 998e8510-f733-4b6b-b9a8-c384d23bb4ef : done searching appointment by user id process
+2023-05-01 00:12:19.963  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 502a9839-3fe1-46b0-9502-de7b1fcdebe5 : Start searching appointment by user id
+2023-05-01 00:12:19.979  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 502a9839-3fe1-46b0-9502-de7b1fcdebe5 : done searching appointment by user id process
+2023-05-01 00:13:02.424  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 26f7e9d8-b04d-4d00-8801-d59bb6b34911 : Start searching appointment by user id
+2023-05-01 00:13:02.435  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 3dc8ddd9-23d3-4818-9128-cb9838bd6a35 : Start searching appointment by user id
+2023-05-01 00:13:02.439  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 26f7e9d8-b04d-4d00-8801-d59bb6b34911 : done searching appointment by user id process
+2023-05-01 00:13:02.469  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 3dc8ddd9-23d3-4818-9128-cb9838bd6a35 : done searching appointment by user id process
+2023-05-01 00:13:07.160  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : f85ae3b8-6b3b-4088-9c08-095d979c28e4 : Start searching appointment by user id
+2023-05-01 00:13:07.177  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : f85ae3b8-6b3b-4088-9c08-095d979c28e4 : done searching appointment by user id process
+2023-05-01 00:13:09.028  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 9daccd43-221c-4f39-8426-856263666a06 : Start searching appointment by user id
+2023-05-01 00:13:09.049  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 9daccd43-221c-4f39-8426-856263666a06 : done searching appointment by user id process
+2023-05-01 00:31:49.435  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.time_slot.TimeSlotService          : d9ea69c1-0b23-42e8-9cf9-0a3234b718c1 : Start searching time slot
+2023-05-01 00:31:49.473  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.time_slot.TimeSlotService          : d9ea69c1-0b23-42e8-9cf9-0a3234b718c1 : Done fetching time slot
+2023-05-01 00:39:50.908  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 4d290fa0-a77b-43d4-a351-dccda166d9b5 : Start searching appointment by user id
+2023-05-01 00:39:50.972  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 4d290fa0-a77b-43d4-a351-dccda166d9b5 : done searching appointment by user id process
+2023-05-01 00:39:51.025  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 81466ce7-26e4-46f5-9a2d-373952c8c70c : Start searching appointment by user id
+2023-05-01 00:39:51.053  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 81466ce7-26e4-46f5-9a2d-373952c8c70c : done searching appointment by user id process
+2023-05-01 00:39:51.792  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 345e18e9-cc3b-4fa0-8fc9-e55e9bae0248 : Start searching appointment by user id
+2023-05-01 00:39:51.808  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 345e18e9-cc3b-4fa0-8fc9-e55e9bae0248 : done searching appointment by user id process
+2023-05-01 00:39:51.842  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 1b79f3fd-b271-48e0-84e9-b04c720066cd : Start searching appointment by user id
+2023-05-01 00:39:51.858  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 1b79f3fd-b271-48e0-84e9-b04c720066cd : done searching appointment by user id process
+2023-05-01 00:39:56.044  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 9897f56d-ed8a-4553-951e-76cec5fdb48a : Start searching appointment by user id
+2023-05-01 00:39:56.058  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 9897f56d-ed8a-4553-951e-76cec5fdb48a : done searching appointment by user id process
+2023-05-01 00:45:13.260  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 939eb140-2d69-437f-8477-64dc98856890 : Start searching appointment by user id
+2023-05-01 00:45:13.275  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 939eb140-2d69-437f-8477-64dc98856890 : done searching appointment by user id process
+2023-05-01 00:45:13.296  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 61ef46e4-4598-4577-a1a1-bc77d1314d55 : Start searching appointment by user id
+2023-05-01 00:45:13.315  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 61ef46e4-4598-4577-a1a1-bc77d1314d55 : done searching appointment by user id process
+2023-05-01 00:45:13.670  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : d3242460-5aa2-46a1-8fed-3dc8a2321e0a : Start searching appointment by user id
+2023-05-01 00:45:13.688  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : d3242460-5aa2-46a1-8fed-3dc8a2321e0a : done searching appointment by user id process
+2023-05-01 00:45:14.466  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 3c616b4f-9ed5-45eb-9937-865707d7932a : Start searching appointment by user id
+2023-05-01 00:45:14.480  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 3c616b4f-9ed5-45eb-9937-865707d7932a : done searching appointment by user id process
+2023-05-01 00:45:14.491  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 7e526484-9b3e-48f0-b0f3-e067cded9d95 : Start searching appointment by user id
+2023-05-01 00:45:14.504  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 7e526484-9b3e-48f0-b0f3-e067cded9d95 : done searching appointment by user id process
+2023-05-01 00:45:19.009  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 89a4f23b-339e-4c52-bb21-a9ec89f241b8 : Start searching appointment by user id
+2023-05-01 00:45:19.028  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 89a4f23b-339e-4c52-bb21-a9ec89f241b8 : done searching appointment by user id process
+2023-05-01 00:46:17.218  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : ff8e9a67-116b-45c3-8e10-5eadccf3962a : Start searching appointment by user id
+2023-05-01 00:46:17.221  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 237495cb-e7c8-466f-8196-ebc8eebd09c2 : Start searching appointment by user id
+2023-05-01 00:46:17.234  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : ff8e9a67-116b-45c3-8e10-5eadccf3962a : done searching appointment by user id process
+2023-05-01 00:46:17.241  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 237495cb-e7c8-466f-8196-ebc8eebd09c2 : done searching appointment by user id process
+2023-05-01 00:46:17.567  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : fe745b55-19dc-4ac0-b91e-4f1b576e2feb : Start searching appointment by user id
+2023-05-01 00:46:17.585  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : fe745b55-19dc-4ac0-b91e-4f1b576e2feb : done searching appointment by user id process
+2023-05-01 00:46:18.058  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 92c3bffd-d12a-4c9f-b29a-db1f669ca660 : Start searching appointment by user id
+2023-05-01 00:46:18.071  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 92c3bffd-d12a-4c9f-b29a-db1f669ca660 : done searching appointment by user id process
+2023-05-01 00:46:18.096  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : dd762809-3c77-41c8-8d94-8c5bb19cee64 : Start searching appointment by user id
+2023-05-01 00:46:18.108  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : dd762809-3c77-41c8-8d94-8c5bb19cee64 : done searching appointment by user id process
+2023-05-01 00:46:18.985  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 4f89c630-729d-495d-ad85-412d09483a42 : Start searching appointment by user id
+2023-05-01 00:46:19.000  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 4f89c630-729d-495d-ad85-412d09483a42 : done searching appointment by user id process
+2023-05-01 00:46:23.466  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 17e899ab-9460-4b84-b82b-6da623d38b2d : Start searching appointment by user id
+2023-05-01 00:46:23.498  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 17e899ab-9460-4b84-b82b-6da623d38b2d : done searching appointment by user id process
+2023-05-01 00:46:59.178  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : f92657a7-ed12-4ad2-b9c9-8cf0ee11afa2 : Start searching appointment by user id
+2023-05-01 00:46:59.190  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : f92657a7-ed12-4ad2-b9c9-8cf0ee11afa2 : done searching appointment by user id process
+2023-05-01 00:46:59.207  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 8be29fad-5936-4317-a34a-fa78520a981b : Start searching appointment by user id
+2023-05-01 00:46:59.226  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 8be29fad-5936-4317-a34a-fa78520a981b : done searching appointment by user id process
+2023-05-01 00:46:59.907  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : e46942c7-03ee-4b7f-9e76-f46636ddd291 : Start searching appointment by user id
+2023-05-01 00:46:59.925  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : e46942c7-03ee-4b7f-9e76-f46636ddd291 : done searching appointment by user id process
+2023-05-01 00:47:00.450  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : aecf329b-fad9-4ea0-8e90-5513a4dab7f1 : Start searching appointment by user id
+2023-05-01 00:47:00.461  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : aecf329b-fad9-4ea0-8e90-5513a4dab7f1 : done searching appointment by user id process
+2023-05-01 00:47:00.833  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 899f634e-ac52-4e0d-a4d3-bf4650fc6714 : Start searching appointment by user id
+2023-05-01 00:47:00.846  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 899f634e-ac52-4e0d-a4d3-bf4650fc6714 : done searching appointment by user id process
+2023-05-01 00:47:00.855  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 3db0ca91-7a58-4162-aba5-d0b725082d19 : Start searching appointment by user id
+2023-05-01 00:47:00.868  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 3db0ca91-7a58-4162-aba5-d0b725082d19 : done searching appointment by user id process
+2023-05-01 00:47:02.189  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : eada6527-4496-4f28-be20-5d6d625ca9bd : Start searching appointment by user id
+2023-05-01 00:47:02.218  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : eada6527-4496-4f28-be20-5d6d625ca9bd : done searching appointment by user id process
+2023-05-01 00:47:05.799  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 3195755e-2c6c-4d79-9112-1e18606ac118 : Start searching appointment by user id
+2023-05-01 00:47:05.817  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 3195755e-2c6c-4d79-9112-1e18606ac118 : done searching appointment by user id process
+2023-05-01 00:48:06.809  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 4c31a835-d9a9-4472-b902-a0ca25301650 : Start searching appointment by user id
+2023-05-01 00:48:06.832  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 4c31a835-d9a9-4472-b902-a0ca25301650 : done searching appointment by user id process
+2023-05-01 00:48:06.836  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : a605f811-1342-42e1-973c-8343700dc12c : Start searching appointment by user id
+2023-05-01 00:48:06.855  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : a605f811-1342-42e1-973c-8343700dc12c : done searching appointment by user id process
+2023-05-01 00:48:07.630  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 7464c1ed-0293-438b-9356-ed9421b009e8 : Start searching appointment by user id
+2023-05-01 00:48:07.641  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 7464c1ed-0293-438b-9356-ed9421b009e8 : done searching appointment by user id process
+2023-05-01 00:48:08.005  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 8740bc1d-a5e3-48d0-86d4-679e018efc29 : Start searching appointment by user id
+2023-05-01 00:48:08.021  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 8740bc1d-a5e3-48d0-86d4-679e018efc29 : done searching appointment by user id process
+2023-05-01 00:48:08.451  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 26e350de-6563-459f-a749-1a5c07581951 : Start searching appointment by user id
+2023-05-01 00:48:08.467  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : 26e350de-6563-459f-a749-1a5c07581951 : done searching appointment by user id process
+2023-05-01 00:48:08.490  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 27861210-cba8-40b7-b73f-eafbcacca8bd : Start searching appointment by user id
+2023-05-01 00:48:08.506  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 27861210-cba8-40b7-b73f-eafbcacca8bd : done searching appointment by user id process
+2023-05-01 00:48:09.667  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 58e71683-65ee-4f4e-b089-704904030c96 : Start searching appointment by user id
+2023-05-01 00:48:09.698  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 58e71683-65ee-4f4e-b089-704904030c96 : done searching appointment by user id process
+2023-05-01 00:48:10.573  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : c2cb8a88-47f2-4b84-b0e5-527979e60b71 : Start searching appointment by user id
+2023-05-01 00:48:10.602  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : c2cb8a88-47f2-4b84-b0e5-527979e60b71 : done searching appointment by user id process
+2023-05-01 00:48:14.903  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 85f8f6a4-4929-4941-805c-8220039e6b57 : Start searching appointment by user id
+2023-05-01 00:48:14.921  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 85f8f6a4-4929-4941-805c-8220039e6b57 : done searching appointment by user id process
+2023-05-01 00:54:29.800  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 56dea246-0fd7-471b-9de9-aec9900815b9 : Start searching appointment by user id
+2023-05-01 00:54:29.816  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 56dea246-0fd7-471b-9de9-aec9900815b9 : done searching appointment by user id process
+2023-05-01 00:54:30.110  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : cb54ea56-f7a1-42b2-ab57-fdc286033269 : Start searching appointment by user id
+2023-05-01 00:54:30.118  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : af70d716-0b37-463a-abd9-2a1deec640ed : Start searching appointment by user id
+2023-05-01 00:54:30.122  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : cb54ea56-f7a1-42b2-ab57-fdc286033269 : done searching appointment by user id process
+2023-05-01 00:54:30.133  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : af70d716-0b37-463a-abd9-2a1deec640ed : done searching appointment by user id process
+2023-05-01 00:54:30.640  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 8af04ab4-c58e-4d48-85ec-948b4fc9527f : Start searching appointment by user id
+2023-05-01 00:54:30.657  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 8af04ab4-c58e-4d48-85ec-948b4fc9527f : done searching appointment by user id process
+2023-05-01 00:54:30.914  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 67ea293e-5f8e-4ed4-9966-1694baa60fec : Start searching appointment by user id
+2023-05-01 00:54:30.931  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 67ea293e-5f8e-4ed4-9966-1694baa60fec : done searching appointment by user id process
+2023-05-01 00:54:31.259  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 6460cd7c-346f-4b17-acb8-82ad7e55eee1 : Start searching appointment by user id
+2023-05-01 00:54:31.262  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : df29abd0-0c9c-4397-8c0b-465c22564a82 : Start searching appointment by user id
+2023-05-01 00:54:31.269  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 6460cd7c-346f-4b17-acb8-82ad7e55eee1 : done searching appointment by user id process
+2023-05-01 00:54:31.273  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : df29abd0-0c9c-4397-8c0b-465c22564a82 : done searching appointment by user id process
+2023-05-01 00:54:32.063  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : b2b15e9c-a8e3-4d02-a40a-6b0421e669dc : Start searching appointment by user id
+2023-05-01 00:54:32.081  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : b2b15e9c-a8e3-4d02-a40a-6b0421e669dc : done searching appointment by user id process
+2023-05-01 00:54:33.167  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 70a49908-f715-4d5f-bcd6-25883cc8cfe6 : Start searching appointment by user id
+2023-05-01 00:54:33.194  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 70a49908-f715-4d5f-bcd6-25883cc8cfe6 : done searching appointment by user id process
+2023-05-01 00:54:39.163  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 6aeb1999-59bc-472f-b757-6c31b88e89d6 : Start searching appointment by user id
+2023-05-01 00:54:39.178  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 6aeb1999-59bc-472f-b757-6c31b88e89d6 : done searching appointment by user id process
+2023-05-01 00:54:51.069  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : c2621d6b-2c15-4c9f-9e90-42e6761c68c2 : Start searching appointment by user id
+2023-05-01 00:54:51.080  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : c2621d6b-2c15-4c9f-9e90-42e6761c68c2 : done searching appointment by user id process
+2023-05-01 01:07:31.314  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 0d132ac1-021b-4ee7-9add-55c51d980038 : Start searching appointment by user id
+2023-05-01 01:07:31.398  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 0d132ac1-021b-4ee7-9add-55c51d980038 : done searching appointment by user id process
+2023-05-01 01:08:22.677  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : c8f7770f-5be9-471d-b7f3-b1afe65aee74 : Start searching appointment by user id
+2023-05-01 01:08:22.692  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : c8f7770f-5be9-471d-b7f3-b1afe65aee74 : done searching appointment by user id process
+2023-05-01 01:09:08.044  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : a8ce1717-e6f1-412b-a654-2c06701f931f : Start searching appointment by user id
+2023-05-01 01:09:08.074  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : a8ce1717-e6f1-412b-a654-2c06701f931f : done searching appointment by user id process
+2023-05-01 01:09:42.365  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 4f81d584-b6cd-4cfc-8f1c-ce135920e719 : Start searching appointment by user id
+2023-05-01 01:09:42.382  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 4f81d584-b6cd-4cfc-8f1c-ce135920e719 : done searching appointment by user id process
+2023-05-01 01:09:53.718  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : f44a0337-7f31-4698-a9df-61581b8c3031 : Start searching appointment by user id
+2023-05-01 01:09:53.743  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : f44a0337-7f31-4698-a9df-61581b8c3031 : done searching appointment by user id process
+2023-05-01 01:11:31.743  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 85c24fd4-4c48-4916-8a8c-c02533dfed55 : Start searching appointment by user id
+2023-05-01 01:11:31.807  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 85c24fd4-4c48-4916-8a8c-c02533dfed55 : done searching appointment by user id process
+2023-05-01 01:48:25.947  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 2f12f540-f3e1-4a66-a895-97eb11339151 : Start searching appointment by user id
+2023-05-01 01:48:25.984  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 2f12f540-f3e1-4a66-a895-97eb11339151 : done searching appointment by user id process
+2023-05-01 02:31:22.812  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : b45d6c31-505b-4412-8331-078c7e7c829d : Start searching appointment by user id
+2023-05-01 02:31:22.858  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : b45d6c31-505b-4412-8331-078c7e7c829d : done searching appointment by user id process
+2023-05-01 02:31:27.697  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 74a7572b-7fa3-4a06-ae54-fbe6c0266ec3 : Start searching appointment by user id
+2023-05-01 02:31:27.715  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 74a7572b-7fa3-4a06-ae54-fbe6c0266ec3 : done searching appointment by user id process
+2023-05-01 02:41:23.371  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 03875e53-82c3-477e-815a-fdf1d3b008ac : Start searching appointment by user id
+2023-05-01 02:41:23.385  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 03875e53-82c3-477e-815a-fdf1d3b008ac : done searching appointment by user id process
+2023-05-01 02:41:23.578  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 828808e0-60c6-4b1e-acd1-5a62a44aecfa : Start searching appointment by user id
+2023-05-01 02:41:23.592  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 828808e0-60c6-4b1e-acd1-5a62a44aecfa : done searching appointment by user id process
+2023-05-01 02:41:28.582  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : c92988ee-3f77-40a2-bf96-b9da9fc9631d : Start searching appointment by user id
+2023-05-01 02:41:28.593  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : c92988ee-3f77-40a2-bf96-b9da9fc9631d : done searching appointment by user id process
+2023-05-01 02:41:35.710  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.time_slot.TimeSlotService          : 6dca7b00-0e31-45de-8b6d-9a4cf1c77c29 : Start searching time slot
+2023-05-01 02:41:35.731  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.time_slot.TimeSlotService          : 6dca7b00-0e31-45de-8b6d-9a4cf1c77c29 : Done fetching time slot
+2023-05-01 02:44:02.094  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 83a77f3b-fc93-479c-828f-dbd2f94cef69 : Start searching appointment by user id
+2023-05-01 02:44:02.113  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 83a77f3b-fc93-479c-828f-dbd2f94cef69 : done searching appointment by user id process
+2023-05-01 02:44:09.339  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.time_slot.TimeSlotService          : 59c926fd-63ce-4d51-837e-8eb0add7701a : Start searching time slot
+2023-05-01 02:44:09.344  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.time_slot.TimeSlotService          : 59c926fd-63ce-4d51-837e-8eb0add7701a : Done fetching time slot
+2023-05-01 02:44:32.255  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.time_slot.TimeSlotService          : d05e57e6-0297-4fcd-8707-0832470960ee : Start searching time slot
+2023-05-01 02:44:32.267  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.time_slot.TimeSlotService          : d05e57e6-0297-4fcd-8707-0832470960ee : Done fetching time slot
+2023-05-01 02:44:44.691  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.time_slot.TimeSlotService          : 72bb9683-183d-42f6-81d9-4952624a150e : Start searching time slot
+2023-05-01 02:44:44.699  INFO 37412 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.time_slot.TimeSlotService          : 72bb9683-183d-42f6-81d9-4952624a150e : Done fetching time slot
+2023-05-01 02:46:53.720  INFO 37412 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 02:46:53.743  INFO 37412 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 02:46:53.751  INFO 37412 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 02:47:05.214  INFO 34364 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 on Zamambo-Telecoms with PID 34364 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
+2023-05-01 02:47:05.218  INFO 34364 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-05-01 02:47:06.516  INFO 34364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 02:47:06.594  INFO 34364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 6 JPA repository interfaces.
+2023-05-01 02:47:07.324  INFO 34364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (http)
+2023-05-01 02:47:07.341  INFO 34364 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 02:47:07.341  INFO 34364 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-01 02:47:07.469  INFO 34364 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-05-01 02:47:07.470  INFO 34364 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2190 ms
+2023-05-01 02:47:07.751  INFO 34364 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 02:47:07.817  INFO 34364 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-01 02:47:08.050  INFO 34364 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 02:47:08.187  INFO 34364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 02:47:08.366  INFO 34364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 02:47:08.387  INFO 34364 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-05-01 02:47:09.407  INFO 34364 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 02:47:09.418  INFO 34364 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 02:47:10.348  WARN 34364 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 02:47:13.990  INFO 34364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (http) with context path '/dut_healthcare_clinic'
+2023-05-01 02:47:14.009  INFO 34364 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 9.337 seconds (JVM running for 10.066)
+2023-05-01 02:49:26.450  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-1] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 02:49:26.453  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 02:49:26.462  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-05-01 02:49:26.571  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 8403645a-3a5c-4195-89f9-6545ac0ba59f : Start searching appointment by user id
+2023-05-01 02:49:26.826  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 8403645a-3a5c-4195-89f9-6545ac0ba59f : done searching appointment by user id process
+2023-05-01 02:49:29.573  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : d53a7269-d511-4cc5-af85-13a7e5a57c58 : Start searching appointment by user id
+2023-05-01 02:49:29.586  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : d53a7269-d511-4cc5-af85-13a7e5a57c58 : done searching appointment by user id process
+2023-05-01 02:49:40.391  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.time_slot.TimeSlotService          : 781aacdf-c701-4762-a016-963ddeb31f3d : Start searching time slot
+2023-05-01 02:49:40.409  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.time_slot.TimeSlotService          : 781aacdf-c701-4762-a016-963ddeb31f3d : Done fetching time slot
+2023-05-01 02:49:48.430  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.time_slot.TimeSlotService          : bc9a0906-8115-47ac-a754-b5c78dcad5ff : Start searching time slot
+2023-05-01 02:49:48.439  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.time_slot.TimeSlotService          : bc9a0906-8115-47ac-a754-b5c78dcad5ff : Done fetching time slot
+2023-05-01 02:52:44.748  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 3b4ec2a4-0991-47d3-820e-d2148504c643 : Start saving project Appointment(appointmentId=1, patient=User(userId=1, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 02:52:44.902  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 3b4ec2a4-0991-47d3-820e-d2148504c643 : appointment created successfully
+2023-05-01 02:52:44.920  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 3b4ec2a4-0991-47d3-820e-d2148504c643 : done creating appointment process
+2023-05-01 02:52:55.396  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.time_slot.TimeSlotService          : 59d4abba-9980-42fd-ab09-ef30ca181f6c : Start searching time slot
+2023-05-01 02:52:55.403  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.time_slot.TimeSlotService          : 59d4abba-9980-42fd-ab09-ef30ca181f6c : Done fetching time slot
+2023-05-01 02:53:01.216  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.time_slot.TimeSlotService          : 1b86453b-5fb4-4207-bc3d-425608376f10 : Start searching time slot
+2023-05-01 02:53:01.221  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.time_slot.TimeSlotService          : 1b86453b-5fb4-4207-bc3d-425608376f10 : Done fetching time slot
+2023-05-01 02:54:19.235  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 77d2edac-830a-48e8-8c5d-3cd1c7ac19cf : Start searching appointment by user id
+2023-05-01 02:54:19.248  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 77d2edac-830a-48e8-8c5d-3cd1c7ac19cf : appointment found
+2023-05-01 02:54:19.248  INFO 34364 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 77d2edac-830a-48e8-8c5d-3cd1c7ac19cf : done searching appointment by user id process
+2023-05-01 03:02:12.152  INFO 34364 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 03:02:12.154  INFO 34364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 03:02:12.164  INFO 34364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 03:02:16.990  INFO 34468 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 on Zamambo-Telecoms with PID 34468 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
+2023-05-01 03:02:16.993  INFO 34468 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-05-01 03:02:17.921  INFO 34468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 03:02:18.003  INFO 34468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 6 JPA repository interfaces.
+2023-05-01 03:02:18.711  INFO 34468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (http)
+2023-05-01 03:02:18.725  INFO 34468 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 03:02:18.726  INFO 34468 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-01 03:02:18.866  INFO 34468 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-05-01 03:02:18.866  INFO 34468 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1818 ms
+2023-05-01 03:02:19.120  INFO 34468 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 03:02:19.184  INFO 34468 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-01 03:02:19.361  INFO 34468 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 03:02:19.464  INFO 34468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 03:02:19.660  INFO 34468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 03:02:19.681  INFO 34468 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-05-01 03:02:20.498  INFO 34468 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 03:02:20.507  INFO 34468 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 03:02:21.337  WARN 34468 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 03:02:22.681  INFO 34468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (http) with context path '/dut_healthcare_clinic'
+2023-05-01 03:02:22.699  INFO 34468 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 6.247 seconds (JVM running for 6.771)
+2023-05-01 03:03:37.874  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-1] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 03:03:37.875  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 03:03:37.877  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-05-01 03:03:37.981  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 2d5e41d0-6443-44b2-a3c8-56447fe24089 : Start saving project Appointment(appointmentId=1, patient=User(userId=1, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 03:03:38.101  WARN 34468 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : {} : You already have pending appointment
+2023-05-01 03:03:38.108  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 2d5e41d0-6443-44b2-a3c8-56447fe24089 : done creating appointment process
+2023-05-01 03:04:09.925  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : a3bf2887-c9cb-4299-8240-c0867afb0146 : Start saving project Appointment(appointmentId=1, patient=User(userId=1, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 03:04:09.971  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : a3bf2887-c9cb-4299-8240-c0867afb0146 : appointment created successfully
+2023-05-01 03:04:09.978  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : a3bf2887-c9cb-4299-8240-c0867afb0146 : done creating appointment process
+2023-05-01 03:04:39.417  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.time_slot.TimeSlotService          : 71c3be12-44a0-4ceb-808b-81227bf54fce : Start searching time slot
+2023-05-01 03:04:39.431  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.time_slot.TimeSlotService          : 71c3be12-44a0-4ceb-808b-81227bf54fce : Done fetching time slot
+2023-05-01 03:04:45.374  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 126b6871-543e-424e-a5fc-0e9c70cf49c1 : Start searching appointment by user id
+2023-05-01 03:04:45.396  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 126b6871-543e-424e-a5fc-0e9c70cf49c1 : done searching appointment by user id process
+2023-05-01 03:04:46.906  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : c49d079c-d695-494f-a2c5-6054a5ca2b72 : Start searching appointment by user id
+2023-05-01 03:04:46.915  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : c49d079c-d695-494f-a2c5-6054a5ca2b72 : done searching appointment by user id process
+2023-05-01 03:04:46.996  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : bc988493-9b48-4edb-b3fe-34889060a8e3 : Start searching appointment by user id
+2023-05-01 03:04:47.006  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : bc988493-9b48-4edb-b3fe-34889060a8e3 : done searching appointment by user id process
+2023-05-01 03:04:51.454  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : fa058b37-eea5-4bd6-ac01-e40332ff6e50 : Start searching appointment by user id
+2023-05-01 03:04:51.465  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : fa058b37-eea5-4bd6-ac01-e40332ff6e50 : done searching appointment by user id process
+2023-05-01 03:04:56.221  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.time_slot.TimeSlotService          : 63b9cc3a-9731-4d57-8b0b-dad18bdbab77 : Start searching time slot
+2023-05-01 03:04:56.227  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.time_slot.TimeSlotService          : 63b9cc3a-9731-4d57-8b0b-dad18bdbab77 : Done fetching time slot
+2023-05-01 03:11:05.981  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : fe34ed5f-4b38-4e1f-8241-370ad7443d52 : Start searching appointment by user id
+2023-05-01 03:11:05.999  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : fe34ed5f-4b38-4e1f-8241-370ad7443d52 : done searching appointment by user id process
+2023-05-01 03:11:06.175  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : b41f319c-9c1c-41f8-96b6-911c8cb6dc0a : Start searching appointment by user id
+2023-05-01 03:11:06.194  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : b41f319c-9c1c-41f8-96b6-911c8cb6dc0a : done searching appointment by user id process
+2023-05-01 03:11:07.103  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : feb4f2dc-23cd-483d-9137-7ea8d6d73754 : Start searching appointment by user id
+2023-05-01 03:11:07.113  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : feb4f2dc-23cd-483d-9137-7ea8d6d73754 : done searching appointment by user id process
+2023-05-01 03:11:09.224  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : dd6a7135-1650-443a-9822-4b8394d08252 : Start searching appointment by user id
+2023-05-01 03:11:09.235  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : dd6a7135-1650-443a-9822-4b8394d08252 : done searching appointment by user id process
+2023-05-01 03:11:16.278  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.time_slot.TimeSlotService          : 59b16cb8-b771-4b3e-83ad-cc3bf8360d6d : Start searching time slot
+2023-05-01 03:11:16.288  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.time_slot.TimeSlotService          : 59b16cb8-b771-4b3e-83ad-cc3bf8360d6d : Done fetching time slot
+2023-05-01 03:11:47.601  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : cdb42378-8b6d-4bc4-9653-42a5f2147144 : Start saving project Appointment(appointmentId=0, patient=User(userId=5, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 03:11:47.635  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : cdb42378-8b6d-4bc4-9653-42a5f2147144 : appointment created successfully
+2023-05-01 03:11:47.636  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : cdb42378-8b6d-4bc4-9653-42a5f2147144 : done creating appointment process
+2023-05-01 03:12:02.966  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : be13995f-d9c6-4eb9-9bc4-141d1911989b : Start searching appointment by user id
+2023-05-01 03:12:02.988  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : be13995f-d9c6-4eb9-9bc4-141d1911989b : appointment found
+2023-05-01 03:12:02.989  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : be13995f-d9c6-4eb9-9bc4-141d1911989b : done searching appointment by user id process
+2023-05-01 03:12:14.287  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 3073304d-bb17-4964-98a0-e1436479a2d6 : Start searching appointment by user id
+2023-05-01 03:12:14.304  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 3073304d-bb17-4964-98a0-e1436479a2d6 : appointment found
+2023-05-01 03:12:14.305  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.appointment.Appointment            : 3073304d-bb17-4964-98a0-e1436479a2d6 : done searching appointment by user id process
+2023-05-01 03:12:18.151  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : abc2edc0-18dd-4ee7-895e-84a25dc06f99 : Start searching appointment by user id
+2023-05-01 03:12:18.161  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : abc2edc0-18dd-4ee7-895e-84a25dc06f99 : appointment found
+2023-05-01 03:12:18.161  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : abc2edc0-18dd-4ee7-895e-84a25dc06f99 : done searching appointment by user id process
+2023-05-01 03:13:57.169  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 907143b7-ec17-42dd-a466-f0f51dedd097 : Start saving project Appointment(appointmentId=0, patient=User(userId=5, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 03:13:57.178  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 907143b7-ec17-42dd-a466-f0f51dedd097 : appointment created successfully
+2023-05-01 03:13:57.179  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 907143b7-ec17-42dd-a466-f0f51dedd097 : done creating appointment process
+2023-05-01 03:14:04.033  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 86893cd2-b8e2-4356-a9fc-a5b827f93189 : Start searching appointment by user id
+2023-05-01 03:14:04.044  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 86893cd2-b8e2-4356-a9fc-a5b827f93189 : appointment found
+2023-05-01 03:14:04.045  INFO 34468 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : 86893cd2-b8e2-4356-a9fc-a5b827f93189 : done searching appointment by user id process
+2023-05-01 03:27:40.504  INFO 34468 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 03:27:40.506  INFO 34468 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 03:27:40.517  INFO 34468 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 10:41:04.205  INFO 25276 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 on Zamambo-Telecoms with PID 25276 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
+2023-05-01 10:41:04.212  INFO 25276 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-05-01 10:41:06.759  INFO 25276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 10:41:07.018  INFO 25276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 233 ms. Found 6 JPA repository interfaces.
+2023-05-01 10:41:08.768  INFO 25276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (http)
+2023-05-01 10:41:08.798  INFO 25276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 10:41:08.799  INFO 25276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-01 10:41:09.104  INFO 25276 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-05-01 10:41:09.105  INFO 25276 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4758 ms
+2023-05-01 10:41:09.670  INFO 25276 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 10:41:09.800  INFO 25276 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-01 10:41:10.295  INFO 25276 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 10:41:10.570  INFO 25276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 10:41:11.002  INFO 25276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 10:41:11.051  INFO 25276 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-05-01 10:41:13.151  INFO 25276 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 10:41:13.168  INFO 25276 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 10:41:16.405  WARN 25276 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 10:41:19.972  INFO 25276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (http) with context path '/dut_healthcare_clinic'
+2023-05-01 10:41:20.004  INFO 25276 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 16.912 seconds (JVM running for 23.806)
+2023-05-01 10:55:31.917  INFO 25276 --- [http-nio-192.168.8.119-7070-exec-1] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 10:55:31.918  INFO 25276 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 10:55:31.924  INFO 25276 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-05-01 10:55:31.987  INFO 25276 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 01371c9c-24ef-4545-9261-f43c3f86e2d7 : Start searching appointment by user id
+2023-05-01 10:55:32.204  INFO 25276 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 01371c9c-24ef-4545-9261-f43c3f86e2d7 : appointment found
+2023-05-01 10:55:32.223  INFO 25276 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 01371c9c-24ef-4545-9261-f43c3f86e2d7 : done searching appointment by user id process
+2023-05-01 10:56:01.438  INFO 25276 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : b9aeac72-08ce-40d2-a568-918df37f031b : Start searching appointment by user id
+2023-05-01 10:56:01.478  INFO 25276 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : b9aeac72-08ce-40d2-a568-918df37f031b : appointment found
+2023-05-01 10:56:01.479  INFO 25276 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : b9aeac72-08ce-40d2-a568-918df37f031b : done searching appointment by user id process
+2023-05-01 11:13:21.781  INFO 25276 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 11:13:21.790  INFO 25276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 11:13:21.804  INFO 25276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 11:13:32.391  INFO 25616 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 on Zamambo-Telecoms with PID 25616 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
+2023-05-01 11:13:32.403  INFO 25616 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-05-01 11:13:34.382  INFO 25616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 11:13:34.602  INFO 25616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 193 ms. Found 6 JPA repository interfaces.
+2023-05-01 11:13:36.140  INFO 25616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (http)
+2023-05-01 11:13:36.174  INFO 25616 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 11:13:36.175  INFO 25616 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-01 11:13:36.463  INFO 25616 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-05-01 11:13:36.464  INFO 25616 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3945 ms
+2023-05-01 11:13:37.082  INFO 25616 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 11:13:37.160  INFO 25616 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-01 11:13:37.700  INFO 25616 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 11:13:37.996  INFO 25616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 11:13:38.480  INFO 25616 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 11:13:38.540  INFO 25616 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-05-01 11:13:40.591  INFO 25616 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 11:13:40.627  INFO 25616 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 11:13:42.142  WARN 25616 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 11:13:43.946  INFO 25616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (http) with context path '/dut_healthcare_clinic'
+2023-05-01 11:13:43.968  INFO 25616 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 12.505 seconds (JVM running for 13.374)
+2023-05-01 11:14:41.664  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-1] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 11:14:41.665  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 11:14:41.670  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-05-01 11:14:41.905  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : f4e3c7ec-587c-44bd-af8f-c2215c6a3236 : Start saving project Appointment(appointmentId=0, patient=User(userId=5, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 11:14:42.295  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : f4e3c7ec-587c-44bd-af8f-c2215c6a3236 : appointment created successfully
+2023-05-01 11:14:42.324  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : f4e3c7ec-587c-44bd-af8f-c2215c6a3236 : done creating appointment process
+2023-05-01 11:14:55.288  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 173a4611-ed4b-48fe-b8fa-d4d4e065be62 : Start searching appointment by user id
+2023-05-01 11:14:55.342  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 173a4611-ed4b-48fe-b8fa-d4d4e065be62 : appointment found
+2023-05-01 11:14:55.343  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 173a4611-ed4b-48fe-b8fa-d4d4e065be62 : done searching appointment by user id process
+2023-05-01 11:15:59.989  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : d80779c0-f578-4add-93bb-0a378e986c98 : Start saving project Appointment(appointmentId=0, patient=User(userId=1, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 11:16:00.001  WARN 25616 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : {} : You already have pending appointment
+2023-05-01 11:16:00.002  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : d80779c0-f578-4add-93bb-0a378e986c98 : done creating appointment process
+2023-05-01 11:31:23.556  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 6777559d-f551-482e-b5a4-655faafc4624 : Start saving project Appointment(appointmentId=0, patient=User(userId=5, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 11:31:23.570  WARN 25616 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : {} : You already have pending appointment
+2023-05-01 11:31:23.571  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 6777559d-f551-482e-b5a4-655faafc4624 : done creating appointment process
+2023-05-01 11:34:21.153  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 4fa9f0a5-d401-43a2-b138-7664a16e23e1 : Start saving project Appointment(appointmentId=0, patient=User(userId=5, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 11:34:21.176  WARN 25616 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : {} : You already have pending appointment
+2023-05-01 11:34:21.177  INFO 25616 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.appointment.Appointment            : 4fa9f0a5-d401-43a2-b138-7664a16e23e1 : done creating appointment process
+2023-05-01 11:34:53.067  INFO 25616 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 11:34:53.072  INFO 25616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 11:34:53.099  INFO 25616 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 11:35:04.037  INFO 1216 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 on Zamambo-Telecoms with PID 1216 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
+2023-05-01 11:35:04.042  INFO 1216 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-05-01 11:35:05.844  INFO 1216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 11:35:06.051  INFO 1216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 174 ms. Found 6 JPA repository interfaces.
+2023-05-01 11:35:07.376  INFO 1216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (http)
+2023-05-01 11:35:07.406  INFO 1216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 11:35:07.407  INFO 1216 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-01 11:35:07.667  INFO 1216 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-05-01 11:35:07.668  INFO 1216 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3527 ms
+2023-05-01 11:35:08.227  INFO 1216 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 11:35:08.337  INFO 1216 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-01 11:35:08.744  INFO 1216 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 11:35:09.114  INFO 1216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 11:35:09.559  INFO 1216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 11:35:09.589  INFO 1216 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-05-01 11:35:11.566  INFO 1216 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 11:35:11.579  INFO 1216 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 11:35:12.955  WARN 1216 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 11:35:14.911  INFO 1216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (http) with context path '/dut_healthcare_clinic'
+2023-05-01 11:35:14.930  INFO 1216 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 11.825 seconds (JVM running for 12.719)
+2023-05-01 11:36:07.364  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-1] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 11:36:07.367  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 11:36:07.373  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-05-01 11:36:07.634  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : e3ee4202-0174-478b-a97f-8bbc6ee46db1 : Start saving Appointment(appointmentId=0, patient=User(userId=5, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 11:36:07.706  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : e3ee4202-0174-478b-a97f-8bbc6ee46db1 : BEDORE SEARCHING Appointment(appointmentId=0, patient=User(userId=5, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 11:36:07.849  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : e3ee4202-0174-478b-a97f-8bbc6ee46db1 : AFTER SEARCHING 1 
+2023-05-01 11:36:07.850  WARN 1216 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : {} : You already have pending appointment
+2023-05-01 11:36:07.852  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : e3ee4202-0174-478b-a97f-8bbc6ee46db1 : done creating appointment process
+2023-05-01 11:36:44.760  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 9ba6e687-136e-4121-a8e3-e58fcf3db77d : Start searching appointment by user id
+2023-05-01 11:36:44.822  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 9ba6e687-136e-4121-a8e3-e58fcf3db77d : appointment found
+2023-05-01 11:36:44.824  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 9ba6e687-136e-4121-a8e3-e58fcf3db77d : done searching appointment by user id process
+2023-05-01 12:02:03.718  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : d280d0f3-3334-4548-904e-9fc6c692c6ca : Start searching appointment by user id
+2023-05-01 12:02:03.743  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : d280d0f3-3334-4548-904e-9fc6c692c6ca : appointment found
+2023-05-01 12:02:03.744  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : d280d0f3-3334-4548-904e-9fc6c692c6ca : done searching appointment by user id process
+2023-05-01 12:15:44.826  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : af297d97-cfe8-42ef-bdd0-9be54491cfc7 : Start searching appointment by user id
+2023-05-01 12:15:44.851  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : af297d97-cfe8-42ef-bdd0-9be54491cfc7 : appointment found
+2023-05-01 12:15:44.852  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : af297d97-cfe8-42ef-bdd0-9be54491cfc7 : done searching appointment by user id process
+2023-05-01 12:15:57.129  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : d257aea4-b6ce-4fba-b41b-b29ce9cc47a6 : Start searching appointment by user id
+2023-05-01 12:15:57.150  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : d257aea4-b6ce-4fba-b41b-b29ce9cc47a6 : appointment found
+2023-05-01 12:15:57.151  INFO 1216 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.appointment.Appointment            : d257aea4-b6ce-4fba-b41b-b29ce9cc47a6 : done searching appointment by user id process
+2023-05-01 12:26:07.754  INFO 1216 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 12:26:07.765  INFO 1216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 12:26:07.783  INFO 1216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 12:26:17.310  INFO 25276 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 on Zamambo-Telecoms with PID 25276 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
+2023-05-01 12:26:17.316  INFO 25276 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-05-01 12:26:18.859  INFO 25276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 12:26:19.000  INFO 25276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 6 JPA repository interfaces.
+2023-05-01 12:26:20.357  INFO 25276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (http)
+2023-05-01 12:26:20.384  INFO 25276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 12:26:20.385  INFO 25276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-01 12:26:20.630  INFO 25276 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-05-01 12:26:20.632  INFO 25276 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3190 ms
+2023-05-01 12:26:21.176  INFO 25276 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 12:26:21.279  INFO 25276 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-01 12:26:21.803  INFO 25276 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 12:26:21.999  INFO 25276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 12:26:22.360  INFO 25276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 12:26:22.409  INFO 25276 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-05-01 12:26:24.566  INFO 25276 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 12:26:24.601  INFO 25276 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 12:26:26.084  WARN 25276 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 12:26:28.040  INFO 25276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (http) with context path '/dut_healthcare_clinic'
+2023-05-01 12:26:28.060  INFO 25276 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 11.593 seconds (JVM running for 12.487)
+2023-05-01 12:27:24.501  INFO 25276 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 12:27:24.504  INFO 25276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 12:27:24.541  INFO 25276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 12:27:29.737  INFO 25508 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 on Zamambo-Telecoms with PID 25508 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
+2023-05-01 12:27:29.742  INFO 25508 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-05-01 12:27:31.754  INFO 25508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 12:27:31.966  INFO 25508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 176 ms. Found 6 JPA repository interfaces.
+2023-05-01 12:27:33.542  INFO 25508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (http)
+2023-05-01 12:27:33.575  INFO 25508 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 12:27:33.576  INFO 25508 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-01 12:27:33.821  INFO 25508 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-05-01 12:27:33.822  INFO 25508 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3979 ms
+2023-05-01 12:27:34.276  INFO 25508 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 12:27:34.391  INFO 25508 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-01 12:27:34.797  INFO 25508 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 12:27:35.202  INFO 25508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 12:27:35.648  INFO 25508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 12:27:35.696  INFO 25508 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-05-01 12:27:37.568  INFO 25508 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 12:27:37.597  INFO 25508 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 12:27:39.076  WARN 25508 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 12:27:40.998  INFO 25508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (http) with context path '/dut_healthcare_clinic'
+2023-05-01 12:27:41.014  INFO 25508 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 12.144 seconds (JVM running for 13.027)
+2023-05-01 12:35:25.273  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-1] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 12:35:25.275  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 12:35:25.332  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2023-05-01 12:35:25.717  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 8a306e78-848f-4f0a-a38b-0bd732f8f51a : Start saving Appointment(appointmentId=0, patient=User(userId=5, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 12:35:25.813  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 8a306e78-848f-4f0a-a38b-0bd732f8f51a : BEDORE SEARCHING Appointment(appointmentId=0, patient=User(userId=5, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 12:35:26.050  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 8a306e78-848f-4f0a-a38b-0bd732f8f51a : AFTER SEARCHING 1 
+2023-05-01 12:35:26.051  WARN 25508 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : {} : You already have pending appointment
+2023-05-01 12:35:26.058  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 8a306e78-848f-4f0a-a38b-0bd732f8f51a : done creating appointment process
+2023-05-01 13:02:50.913  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 83d3fe30-684a-4040-962f-16b77c079095 : Start saving Appointment(appointmentId=0, patient=User(userId=4, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 13:02:50.914  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 83d3fe30-684a-4040-962f-16b77c079095 : BEDORE SEARCHING Appointment(appointmentId=0, patient=User(userId=4, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 13:02:50.922  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 83d3fe30-684a-4040-962f-16b77c079095 : AFTER SEARCHING 1 
+2023-05-01 13:02:50.922  WARN 25508 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : {} : You already have pending appointment
+2023-05-01 13:02:50.922  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 83d3fe30-684a-4040-962f-16b77c079095 : done creating appointment process
+2023-05-01 13:18:18.907  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 0026d7fe-645d-49c8-b03e-1f10a84ed4c7 : Start saving Appointment(appointmentId=0, patient=User(userId=3, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 13:18:18.907  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 0026d7fe-645d-49c8-b03e-1f10a84ed4c7 : BEDORE SEARCHING Appointment(appointmentId=0, patient=User(userId=3, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 13:18:18.916  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 0026d7fe-645d-49c8-b03e-1f10a84ed4c7 : AFTER SEARCHING 1 
+2023-05-01 13:18:18.917  WARN 25508 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : {} : You already have pending appointment
+2023-05-01 13:18:18.917  INFO 25508 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 0026d7fe-645d-49c8-b03e-1f10a84ed4c7 : done creating appointment process
+2023-05-01 13:45:56.504  INFO 25508 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 13:45:56.511  INFO 25508 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 13:45:56.522  INFO 25508 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 13:46:07.846  INFO 38652 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 on Zamambo-Telecoms with PID 38652 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
+2023-05-01 13:46:07.849  INFO 38652 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-05-01 13:46:09.457  INFO 38652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 13:46:09.554  INFO 38652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 6 JPA repository interfaces.
+2023-05-01 13:46:10.509  INFO 38652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (http)
+2023-05-01 13:46:10.528  INFO 38652 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 13:46:10.528  INFO 38652 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-01 13:46:10.694  INFO 38652 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-05-01 13:46:10.695  INFO 38652 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2767 ms
+2023-05-01 13:46:11.039  INFO 38652 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 13:46:11.161  INFO 38652 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-01 13:46:11.456  INFO 38652 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 13:46:11.620  INFO 38652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 13:46:11.905  INFO 38652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 13:46:11.929  INFO 38652 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-05-01 13:46:13.216  INFO 38652 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 13:46:13.226  INFO 38652 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 13:46:14.602  WARN 38652 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 13:46:16.572  INFO 38652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (http) with context path '/dut_healthcare_clinic'
+2023-05-01 13:46:16.589  INFO 38652 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 9.378 seconds (JVM running for 10.29)
+2023-05-01 13:46:38.313  INFO 38652 --- [http-nio-192.168.8.119-7070-exec-1] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 13:46:38.314  INFO 38652 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 13:46:38.316  INFO 38652 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-05-01 13:46:38.425  INFO 38652 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : bb50c067-479c-4260-88c1-c9c8898603da : Start saving Appointment(appointmentId=0, patient=User(userId=3, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 13:46:38.458  INFO 38652 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : bb50c067-479c-4260-88c1-c9c8898603da : BEDORE SEARCHING Appointment(appointmentId=0, patient=User(userId=3, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 13:46:38.655  INFO 38652 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : bb50c067-479c-4260-88c1-c9c8898603da : AFTER SEARCHING [Appointment(appointmentId=3, patient=User(userId=5, firstName=Mxolisi, lastName=Mdletshe, dateOfBirth=null, username=mxolisi@gmail.com, studentNumber=24034567, password=123456, userType=student, deleted=0, profilePicture=null, mobile=0717144431, qualification=Diploma in Taxation), clinic=Clinic(clinicId=1, clinicName=Isolempilo clinic, clinicDescription=Clinic for all students based in Ritson campus, clinicCampus=Ritson Campus, deleted=0, latitude=-29.85384874149134, longitude=31.006392537309328, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=09:00, day=AppointmentDay(appointmentDayId=1, appointmentDayName=Monday, booked=false, deleted=0), booked=true, deleted=0))] 
+2023-05-01 13:46:38.660  WARN 38652 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : {} : You already have pending appointment
+2023-05-01 13:46:38.661  INFO 38652 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : bb50c067-479c-4260-88c1-c9c8898603da : done creating appointment process
+2023-05-01 13:52:08.822  INFO 38652 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 13:52:08.826  INFO 38652 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 13:52:08.842  INFO 38652 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 13:52:14.655  INFO 27588 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 on Zamambo-Telecoms with PID 27588 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
+2023-05-01 13:52:14.662  INFO 27588 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-05-01 13:52:15.740  INFO 27588 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 13:52:15.836  INFO 27588 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 6 JPA repository interfaces.
+2023-05-01 13:52:16.808  INFO 27588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (http)
+2023-05-01 13:52:16.830  INFO 27588 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 13:52:16.832  INFO 27588 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-01 13:52:17.004  INFO 27588 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-05-01 13:52:17.005  INFO 27588 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2271 ms
+2023-05-01 13:52:17.298  INFO 27588 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 13:52:17.368  INFO 27588 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-01 13:52:17.587  INFO 27588 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 13:52:17.728  INFO 27588 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 13:52:17.937  INFO 27588 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 13:52:17.961  INFO 27588 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-05-01 13:52:18.907  INFO 27588 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 13:52:18.916  INFO 27588 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 13:52:20.167  WARN 27588 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 13:52:22.132  INFO 27588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (http) with context path '/dut_healthcare_clinic'
+2023-05-01 13:52:22.148  INFO 27588 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 8.133 seconds (JVM running for 8.787)
+2023-05-01 13:52:54.897  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 13:52:54.897  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 13:52:54.899  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-05-01 13:52:55.180  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 34132416-bc36-41c7-936f-e871866b4c2c : Start saving Appointment(appointmentId=0, patient=User(userId=3, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 
+2023-05-01 13:52:55.252  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 34132416-bc36-41c7-936f-e871866b4c2c : BEDORE SEARCHING Appointment(appointmentId=0, patient=User(userId=3, firstName=null, lastName=null, dateOfBirth=null, username=null, studentNumber=null, password=null, userType=student, deleted=0, profilePicture=null, mobile=null, qualification=null), clinic=Clinic(clinicId=1, clinicName=null, clinicDescription=null, clinicCampus=null, deleted=0, latitude=null, longitude=null, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=null, day=null, booked=false, deleted=0)) 3
+2023-05-01 13:52:55.436  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 34132416-bc36-41c7-936f-e871866b4c2c : AFTER SEARCHING [Appointment(appointmentId=3, patient=User(userId=5, firstName=Mxolisi, lastName=Mdletshe, dateOfBirth=null, username=mxolisi@gmail.com, studentNumber=24034567, password=123456, userType=student, deleted=0, profilePicture=null, mobile=0717144431, qualification=Diploma in Taxation), clinic=Clinic(clinicId=1, clinicName=Isolempilo clinic, clinicDescription=Clinic for all students based in Ritson campus, clinicCampus=Ritson Campus, deleted=0, latitude=-29.85384874149134, longitude=31.006392537309328, addedDate=null), status=Open, notes=null, reason=null, deleted=0, appointmentTime=TimeSlot(timeSlotId=2, time=09:00, day=AppointmentDay(appointmentDayId=1, appointmentDayName=Monday, booked=false, deleted=0), booked=true, deleted=0))] 
+2023-05-01 13:52:55.446  WARN 27588 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : {} : You already have pending appointment
+2023-05-01 13:52:55.459  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 34132416-bc36-41c7-936f-e871866b4c2c : done creating appointment process
+2023-05-01 14:36:02.787  WARN 27588 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m44s101ms985µs700ns).
+2023-05-01 14:43:38.592  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 667de17a-962e-49f7-8272-938acf66c02f : Start searching appointment by user id
+2023-05-01 14:43:38.625  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 667de17a-962e-49f7-8272-938acf66c02f : appointment found
+2023-05-01 14:43:38.626  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.appointment.Appointment            : 667de17a-962e-49f7-8272-938acf66c02f : done searching appointment by user id process
+2023-05-01 14:43:43.306  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 69fcce24-69de-4da6-b0e7-e28d7a168dac : Start searching appointment by user id
+2023-05-01 14:43:43.324  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 69fcce24-69de-4da6-b0e7-e28d7a168dac : appointment found
+2023-05-01 14:43:43.324  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 69fcce24-69de-4da6-b0e7-e28d7a168dac : done searching appointment by user id process
+2023-05-01 14:43:47.928  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : d9db7d6f-b96e-4523-89bf-b2ecc0e3d709 : Start searching appointment by user id
+2023-05-01 14:43:47.946  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : d9db7d6f-b96e-4523-89bf-b2ecc0e3d709 : appointment found
+2023-05-01 14:43:47.947  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : d9db7d6f-b96e-4523-89bf-b2ecc0e3d709 : done searching appointment by user id process
+2023-05-01 14:44:41.418  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.time_slot.TimeSlotService          : 5fe4f0f1-1d53-43dc-ada7-b106ac3d841f : Start searching time slot
+2023-05-01 14:44:41.451  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-8] c.c.d.time_slot.TimeSlotService          : 5fe4f0f1-1d53-43dc-ada7-b106ac3d841f : Done fetching time slot
+2023-05-01 14:44:54.735  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.time_slot.TimeSlotService          : 3670f06e-8b1d-4b90-86e7-cebc6065e4d0 : Start searching time slot
+2023-05-01 14:44:54.748  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-10] c.c.d.time_slot.TimeSlotService          : 3670f06e-8b1d-4b90-86e7-cebc6065e4d0 : Done fetching time slot
+2023-05-01 14:45:17.806  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 9b8e193b-51b7-4e88-ba09-c6124d641ec6 : Start searching appointment by user id
+2023-05-01 14:45:17.834  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 9b8e193b-51b7-4e88-ba09-c6124d641ec6 : appointment found
+2023-05-01 14:45:17.835  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 9b8e193b-51b7-4e88-ba09-c6124d641ec6 : done searching appointment by user id process
+2023-05-01 14:46:17.656  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.user.UserService                   : 8443d070-25e8-4fc9-8b1a-add1ec5ae393 : Start logging in
+2023-05-01 14:46:17.703  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.user.UserService                   : 8443d070-25e8-4fc9-8b1a-add1ec5ae393 : Login successfully
+2023-05-01 14:46:17.704  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.user.UserService                   : 8443d070-25e8-4fc9-8b1a-add1ec5ae393 : Finish logging in
+2023-05-01 14:47:12.339  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : acd136b0-3d26-4467-b27e-47d6c8613453 : Start logging in
+2023-05-01 14:47:12.349  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : acd136b0-3d26-4467-b27e-47d6c8613453 : Login successfully
+2023-05-01 14:47:12.351  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : acd136b0-3d26-4467-b27e-47d6c8613453 : Finish logging in
+2023-05-01 14:48:25.377  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : 27f8a7d4-6a47-44d0-85f1-87a4c37523e6 : Start logging in
+2023-05-01 14:48:25.386  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : 27f8a7d4-6a47-44d0-85f1-87a4c37523e6 : Login successfully
+2023-05-01 14:48:25.387  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-9] c.c.d.user.UserService                   : 27f8a7d4-6a47-44d0-85f1-87a4c37523e6 : Finish logging in
+2023-05-01 14:51:11.893  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.user.UserService                   : 5f4b9697-65f4-47e4-ad9c-150ba72dea8d : Start logging in
+2023-05-01 14:51:11.898  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.user.UserService                   : 5f4b9697-65f4-47e4-ad9c-150ba72dea8d : Login successfully
+2023-05-01 14:51:11.899  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.user.UserService                   : 5f4b9697-65f4-47e4-ad9c-150ba72dea8d : Finish logging in
+2023-05-01 14:54:57.171  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 887e6ba9-64eb-461e-a75a-2500780f7271 : Start logging in
+2023-05-01 14:54:57.182  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 887e6ba9-64eb-461e-a75a-2500780f7271 : Login successfully
+2023-05-01 14:54:57.183  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 887e6ba9-64eb-461e-a75a-2500780f7271 : Finish logging in
+2023-05-01 14:57:16.680  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 3195220c-77cb-432e-9c88-4c2fbcccfd90 : Start searching appointment by user id
+2023-05-01 14:57:16.718  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 3195220c-77cb-432e-9c88-4c2fbcccfd90 : appointment found
+2023-05-01 14:57:16.720  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-5] c.c.d.appointment.Appointment            : 3195220c-77cb-432e-9c88-4c2fbcccfd90 : done searching appointment by user id process
+2023-05-01 14:57:22.210  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : ae42f292-c567-4227-80d6-e7d73ef79a0b : Start searching appointment by user id
+2023-05-01 14:57:22.245  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : ae42f292-c567-4227-80d6-e7d73ef79a0b : appointment found
+2023-05-01 14:57:22.246  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-6] c.c.d.appointment.Appointment            : ae42f292-c567-4227-80d6-e7d73ef79a0b : done searching appointment by user id process
+2023-05-01 14:57:25.034  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 7aec48a2-c59e-4972-b7cd-908b9fcaaa92 : Start searching appointment by user id
+2023-05-01 14:57:25.072  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 7aec48a2-c59e-4972-b7cd-908b9fcaaa92 : appointment found
+2023-05-01 14:57:25.074  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.appointment.Appointment            : 7aec48a2-c59e-4972-b7cd-908b9fcaaa92 : done searching appointment by user id process
+2023-05-01 14:57:57.590  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.user.UserService                   : db339d81-2d63-4cdd-8e3f-76682b7470e1 : Start logging in
+2023-05-01 14:57:57.602  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.user.UserService                   : db339d81-2d63-4cdd-8e3f-76682b7470e1 : Login successfully
+2023-05-01 14:57:57.603  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.user.UserService                   : db339d81-2d63-4cdd-8e3f-76682b7470e1 : Finish logging in
+2023-05-01 15:01:59.549  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 03fbcd4a-5f38-4711-9145-6a814312db00 : Start logging in
+2023-05-01 15:01:59.552  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 03fbcd4a-5f38-4711-9145-6a814312db00 : Login successfully
+2023-05-01 15:01:59.553  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-3] c.c.d.user.UserService                   : 03fbcd4a-5f38-4711-9145-6a814312db00 : Finish logging in
+2023-05-01 15:02:02.773  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : c50a79f7-12d3-40cc-9aca-2102d37d04a8 : Start searching appointment by user id
+2023-05-01 15:02:02.795  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : c50a79f7-12d3-40cc-9aca-2102d37d04a8 : appointment found
+2023-05-01 15:02:02.795  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : c50a79f7-12d3-40cc-9aca-2102d37d04a8 : done searching appointment by user id process
+2023-05-01 15:05:27.580  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : a3eb1289-b4a2-47c8-9df4-4e28be1defab : Start logging in
+2023-05-01 15:05:27.590  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : a3eb1289-b4a2-47c8-9df4-4e28be1defab : Login successfully
+2023-05-01 15:05:27.592  INFO 27588 --- [http-nio-192.168.8.119-7070-exec-7] c.c.d.user.UserService                   : a3eb1289-b4a2-47c8-9df4-4e28be1defab : Finish logging in
+2023-05-01 15:53:44.029  INFO 27588 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 15:53:44.043  INFO 27588 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 15:53:44.047  INFO 27588 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 15:53:52.435  INFO 24804 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 on Zamambo-Telecoms with PID 24804 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
+2023-05-01 15:53:52.442  INFO 24804 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-05-01 15:53:54.216  INFO 24804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 15:53:54.349  INFO 24804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 6 JPA repository interfaces.
+2023-05-01 15:53:55.695  INFO 24804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (http)
+2023-05-01 15:53:55.720  INFO 24804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 15:53:55.721  INFO 24804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-01 15:53:56.012  INFO 24804 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-05-01 15:53:56.013  INFO 24804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3442 ms
+2023-05-01 15:53:56.469  INFO 24804 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 15:53:56.567  INFO 24804 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-01 15:53:56.931  INFO 24804 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 15:53:57.127  INFO 24804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 15:53:57.477  INFO 24804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 15:53:57.519  INFO 24804 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-05-01 15:53:59.177  INFO 24804 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 15:53:59.191  INFO 24804 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 15:54:00.868  WARN 24804 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 15:54:03.013  INFO 24804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (http) with context path '/dut_healthcare_clinic'
+2023-05-01 15:54:03.041  INFO 24804 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 11.611 seconds (JVM running for 12.561)
+2023-05-01 15:58:05.783  INFO 24804 --- [http-nio-192.168.8.119-7070-exec-1] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 15:58:05.783  INFO 24804 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 15:58:05.785  INFO 24804 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-05-01 15:58:05.839  INFO 24804 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : eb83ae8b-155c-4868-bbca-7416b536d5a3 : Start searching appointment
+2023-05-01 15:58:05.986  INFO 24804 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : eb83ae8b-155c-4868-bbca-7416b536d5a3 : Done fetching appointments
+2023-05-01 16:00:33.780  INFO 24804 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 3aef88da-0364-4bb7-ac3d-c092a1c88bc1 : Start searching appointment
+2023-05-01 16:00:33.800  INFO 24804 --- [http-nio-192.168.8.119-7070-exec-4] c.c.d.appointment.Appointment            : 3aef88da-0364-4bb7-ac3d-c092a1c88bc1 : Done fetching appointments
+2023-05-01 16:01:12.020  INFO 24804 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 99a84d9a-2419-4b9a-b390-9e01c5134217 : Start searching appointment
+2023-05-01 16:01:12.037  INFO 24804 --- [http-nio-192.168.8.119-7070-exec-2] c.c.d.appointment.Appointment            : 99a84d9a-2419-4b9a-b390-9e01c5134217 : Done fetching appointments
+2023-05-01 16:01:49.852  INFO 24804 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 16:01:49.856  INFO 24804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 16:01:49.874  INFO 24804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 16:01:58.151  INFO 30704 --- [main] c.c.d.DutHealthcareClinicApplication     : Starting DutHealthcareClinicApplication using Java 17.0.6 on Zamambo-Telecoms with PID 30704 (C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic\target\classes started by tonyc in C:\Users\tonyc\Desktop\Final\DUT-Healthcare-Clinic)
+2023-05-01 16:01:58.157  INFO 30704 --- [main] c.c.d.DutHealthcareClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-05-01 16:01:59.759  INFO 30704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 16:01:59.873  INFO 30704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 6 JPA repository interfaces.
+2023-05-01 16:02:01.275  INFO 30704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7070 (http)
+2023-05-01 16:02:01.304  INFO 30704 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 16:02:01.305  INFO 30704 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2023-05-01 16:02:01.558  INFO 30704 --- [main] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring embedded WebApplicationContext
+2023-05-01 16:02:01.558  INFO 30704 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3293 ms
+2023-05-01 16:02:01.971  INFO 30704 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 16:02:02.084  INFO 30704 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-05-01 16:02:02.456  INFO 30704 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 16:02:02.682  INFO 30704 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 16:02:03.002  INFO 30704 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 16:02:03.026  INFO 30704 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-05-01 16:02:04.386  INFO 30704 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 16:02:04.401  INFO 30704 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 16:02:05.959  WARN 30704 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 16:02:08.089  INFO 30704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7070 (http) with context path '/dut_healthcare_clinic'
+2023-05-01 16:02:08.116  INFO 30704 --- [main] c.c.d.DutHealthcareClinicApplication     : Started DutHealthcareClinicApplication in 10.977 seconds (JVM running for 11.983)
+2023-05-01 16:02:22.885  INFO 30704 --- [http-nio-192.168.8.119-7070-exec-1] o.a.c.c.C.[.[.[/dut_healthcare_clinic]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 16:02:22.886  INFO 30704 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 16:02:22.892  INFO 30704 --- [http-nio-192.168.8.119-7070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-05-01 16:02:23.019  INFO 30704 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 6eed739e-983e-4cd4-b1a6-6d73ab404eba : Start searching appointment
+2023-05-01 16:02:23.353  INFO 30704 --- [http-nio-192.168.8.119-7070-exec-1] c.c.d.appointment.Appointment            : 6eed739e-983e-4cd4-b1a6-6d73ab404eba : Done fetching appointments

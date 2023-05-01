@@ -1,6 +1,7 @@
 package com.codesurfers.duthealthcareclinic.appointment;
 
 import com.codesurfers.duthealthcareclinic.time_slot.TimeSlot;
+import com.codesurfers.duthealthcareclinic.time_slot.TimeSlotRepository;
 import com.codesurfers.duthealthcareclinic.utils.helpers.ResponseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,8 +13,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -22,6 +25,9 @@ public class AppointmentService {
 
     @Autowired
     private AppointmentRepository appointmentRepository;
+
+    @Autowired
+    private TimeSlotRepository timeSlotRepository;
 
 
     /**
@@ -32,17 +38,22 @@ public class AppointmentService {
 
     public ResponseEntity save(Appointment appointment, String correlationId) {
         try {
-            LOG.info("{} : Start saving project {} ", correlationId, appointment);
+            LOG.info("{} : Start saving {} ", correlationId, appointment);
 
             if (appointment == null){
                 LOG.warn("{} : no content", correlationId);
                 return ResponseEntity.noContent().build();
             }
 
-            List<Appointment> appointmentList = appointmentRepository.findById(appointment.getPatient().getUserId())
+            LOG.info("{} : BEDORE SEARCHING {} " + appointment.getPatient().getUserId(), correlationId, appointment);
+
+            List<Appointment> appointmentList = appointmentRepository.findAllById(Collections.singleton(appointment.getPatient().getUserId()))
                     .stream()
                     .filter(appointment1 -> appointment1.getDeleted() == 0 && Objects.equals(appointment1.getStatus(), "Open"))
                     .collect(Collectors.toList());
+
+            LOG.info("{} : AFTER SEARCHING {} ", correlationId, appointmentList);
+
 
             if (appointmentList.size() > 0) {
                 LOG.warn("{} : You already have pending appointment");
@@ -51,14 +62,19 @@ public class AppointmentService {
 
 
 
-            /**if (appointmentRepository.findByProjectName(project.getProjectName()) != null){
-                LOG.warn("{} : Project already exists", correlationId);
-                return ResponseEntity.status(409).body(new ResponseResult(409, "Project already exists", null));
+
+            TimeSlot bookedTimeSlot = timeSlotRepository.findById(appointment.getAppointmentTime().getTimeSlotId()).orElseThrow();
+            LOG.info("{} : SEARCHING TIME SLOT ", correlationId, bookedTimeSlot);
+            if(bookedTimeSlot != null){
+                bookedTimeSlot.setBooked(true);
+            }
+            LOG.info("{} : AFTER SEARCHING TIME SLOT ", correlationId, bookedTimeSlot);
+
+            if (appointment.getAppointmentTime().isBooked()){
+                return ResponseEntity.status(409).body(new ResponseResult(409, "Time slot "+ appointment.getAppointmentTime().getTime() + " already booked", null));
             }
 
-            AppUser appUser = appUserService.getUserByHttpRequest(request);
-            project.setCreatedBy(appUser);
-            project.setLastUpdatedBy(appUser);*/
+
 
             appointmentRepository.save(appointment);
             LOG.info("{} : appointment created successfully", correlationId);
@@ -164,7 +180,7 @@ public class AppointmentService {
                     .collect(Collectors.toList());
 
             if (appointmentList.isEmpty()) {
-                throw new Exception("Appointment for user id "+userId+ " not found");
+                return ResponseEntity.ok().body(new ResponseResult(200, "No appointment found", appointmentList));
             }
 
             LOG.info("{} : appointment found", correlationId);
@@ -177,5 +193,36 @@ public class AppointmentService {
         }finally {
             LOG.info("{} : done searching appointment by user id process", correlationId);
         }
+    }
+
+    public ResponseEntity findAppointmentByDay(String day, String correlationId){
+        try {
+            LOG.info("{} : Start searching appointment", correlationId);
+
+            if (day == null) {
+                LOG.warn("{} : no content", correlationId);
+                return ResponseEntity.noContent().build();
+            }
+
+            List<Appointment> appointmentList = appointmentRepository.findAll()
+                    .stream()
+                    .filter(appointment -> appointment.getDeleted() == 0 && (Objects.equals(appointment.getAppointmentTime().getDay().getAppointmentDayName(), day) && Objects.equals(appointment.getStatus(), "Open")))
+                    .collect(Collectors.toList());
+
+
+            if (appointmentList.isEmpty()) {
+                //LOG.warn("{} : time slot already exist");
+                return ResponseEntity.ok().body(new ResponseResult(200, "There are no appointments available for " + day, appointmentList));
+
+            }
+
+            return ResponseEntity.ok().body(new ResponseResult(200, "There are "+appointmentList.size()+ " appointments available for "+ day, appointmentList));
+        }catch (Exception e){
+            LOG.error("{} : Error while fetching appointment", correlationId, e);
+            return ResponseEntity.badRequest().body(new ResponseResult(400, e.getMessage(), null));
+        }finally {
+            LOG.info("{} : Done fetching appointments", correlationId);
+        }
+
     }
 }

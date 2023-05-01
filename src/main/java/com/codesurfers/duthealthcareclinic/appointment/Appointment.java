@@ -20,7 +20,7 @@ public class Appointment {
     private Clinic clinic;
     private String status;
 
-    private String notes;
+    private String notes, reason;
 
     private int deleted = 0;
     @OneToOne

@@ -45,4 +45,10 @@ public class AppointmentController {
         String correlationId = UUID.randomUUID().toString();
         return appointmentService.listAppointmentByUserId(userId, correlationId);
     }
+
+    @GetMapping("/findAppointmentDay")
+    public ResponseEntity findAppointmentDay(@RequestParam("day") String day){
+        String correlationId = UUID.randomUUID().toString();
+        return appointmentService.findAppointmentByDay(day, correlationId);
+    }
 }

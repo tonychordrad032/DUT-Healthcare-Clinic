@@ -82,6 +82,9 @@ public interface IClinicAPI {
     @GET("appointment/findAppointmentByUserId")
     Call<ResponseResult> getAppointmentByUserId (@Query("userId") long userId);
 
+    @GET("time-slot/find-by-day")
+    Call<ResponseResult> getTimeSlotByDay (@Query("day") String day);
+
     @PATCH("appointment/{id}")
     Call<Appointment> updateAppointment(@Path("id") long appointmentId, @Body Appointment appointment);
 

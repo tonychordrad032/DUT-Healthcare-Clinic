@@ -76,10 +76,6 @@ public class TimeSlotService {
                 return ResponseEntity.noContent().build();
             }
 
-
-
-
-
             List<TimeSlot> timeSlotList = timeSlotRepository.findAll()
                     .stream()
                     .filter(timeSlot -> !timeSlot.isBooked() && (Objects.equals(timeSlot.getDay().getAppointmentDayName(), day) && Objects.equals(timeSlot.getDay().isBooked(), false)))
@@ -95,7 +91,7 @@ public class TimeSlotService {
 
             if (timeSlotList.isEmpty()) {
                 //LOG.warn("{} : time slot already exist");
-                return ResponseEntity.status(409).body(new ResponseResult(409, "There are no time slot available for today", null));
+                return ResponseEntity.ok().body(new ResponseResult(200, "There are no time slot available for today", timeSlotList));
 
             }
 
