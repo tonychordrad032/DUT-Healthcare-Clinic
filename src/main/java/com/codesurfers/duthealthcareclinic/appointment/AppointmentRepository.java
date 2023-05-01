@@ -15,4 +15,8 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Long> 
 
     /**@Query("FROM tbl_appointments a WHERE a.deleted = 0 AND a.appointment_day = :userId")
     List<Appointment> findAppointmentByUserId(long userId);*/
+
+
+    @Query("FROM tbl_appointments a WHERE a.deleted = 0 AND a.patient.userId= :userId AND status = 'Open'")
+    List<Appointment> findOpenBookingsByUserId(long userId);
 }

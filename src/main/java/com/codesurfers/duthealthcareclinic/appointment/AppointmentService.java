@@ -47,10 +47,12 @@ public class AppointmentService {
 
             LOG.info("{} : BEDORE SEARCHING {} " + appointment.getPatient().getUserId(), correlationId, appointment);
 
-            List<Appointment> appointmentList = appointmentRepository.findAllById(Collections.singleton(appointment.getPatient().getUserId()))
+            /**List<Appointment> appointmentList = appointmentRepository.findAllById(Collections.singleton(appointment.getPatient().getUserId()))
                     .stream()
                     .filter(appointment1 -> appointment1.getDeleted() == 0 && Objects.equals(appointment1.getStatus(), "Open"))
-                    .collect(Collectors.toList());
+                    .collect(Collectors.toList());*/
+
+            List<Appointment> appointmentList = appointmentRepository.findOpenBookingsByUserId(appointment.getPatient().getUserId());
 
             LOG.info("{} : AFTER SEARCHING {} ", correlationId, appointmentList);
 

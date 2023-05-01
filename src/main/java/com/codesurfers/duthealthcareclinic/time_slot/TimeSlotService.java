@@ -1,5 +1,7 @@
 package com.codesurfers.duthealthcareclinic.time_slot;
 
+import com.codesurfers.duthealthcareclinic.appointment_day.AppointmentDay;
+import com.codesurfers.duthealthcareclinic.appointment_day.AppointmentDayRepository;
 import com.codesurfers.duthealthcareclinic.utils.helpers.ResponseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,8 +11,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -19,6 +23,9 @@ public class TimeSlotService {
 
     @Autowired
     private TimeSlotRepository timeSlotRepository;
+
+    @Autowired
+    private AppointmentDayRepository appointmentDayRepository;
 
 
     public ResponseEntity save(TimeSlot timeSlot, String correlationId){
@@ -30,12 +37,28 @@ public class TimeSlotService {
                 return ResponseEntity.noContent().build();
             }
 
-            TimeSlot timeSlot1 = timeSlotRepository.findByTime(timeSlot.getTime());
+            AppointmentDay myDay = appointmentDayRepository.findById(timeSlot.getDay().getAppointmentDayId()).orElseThrow();
+            String day = myDay.getAppointmentDayName();
+            System.out.println("MY DAY => " + day);
 
-            if (timeSlot1 != null) {
-                LOG.warn("{} : time slot already exist");
-                return ResponseEntity.status(409).body(new ResponseResult(409, "Time slot Already exist", null));
+            List<TimeSlot> timeSlotList = timeSlotRepository.findAll()
+                    .stream()
+                    .filter(timeSlot1 -> !timeSlot1.isBooked() && (Objects.equals(timeSlot1.getDay().getAppointmentDayName(), day) && Objects.equals(timeSlot1.getDay().isBooked(), false)))
+                    .collect(Collectors.toList());
+            System.out.println("MY LIST => " + timeSlotList.size());
 
+            if (!timeSlotList.isEmpty()){
+                List tempList = new ArrayList<>();
+                for (int i = 0; i < timeSlotList.size(); i++) {
+                    if (Objects.equals(timeSlot.getTime(), timeSlotList.get(i).getTime())) {
+                        tempList.add(i);
+                        if (!tempList.isEmpty()){
+                            LOG.warn("{} : time slot already exist");
+                            return ResponseEntity.status(409).body(new ResponseResult(409, "Time slot Already exist", null));
+
+                        }
+                    }
+                }
             }
 
             timeSlotRepository.save(timeSlot);
