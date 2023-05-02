@@ -11,6 +11,13 @@ public class TimeSlot {
     public TimeSlot() {
     }
 
+    public TimeSlot(long timeSlotId, String time, boolean booked) {
+        this.timeSlotId = timeSlotId;
+        this.time = time;
+        //this.day = day;
+        this.booked = booked;
+    }
+
     public TimeSlot(long timeSlotId, String time, AppointmentDay day, boolean booked, int deleted) {
         this.timeSlotId = timeSlotId;
         this.time = time;

@@ -7,4 +7,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="empty_message">YOU HAVE NO APPOINTMENT</string>
+    <string name="drop_down_name">Select Time</string>
+    <string name="select_item">Select Time</string>
 </resources>

@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.icu.text.SimpleDateFormat;
@@ -19,6 +20,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -34,6 +36,7 @@ import android.widget.DatePicker;
 import com.codesurfers.healthcare.constants.RetrofitClient;
 import com.codesurfers.healthcare.model.Appoint;
 import com.codesurfers.healthcare.model.Appointment;
+import com.codesurfers.healthcare.model.AppointmentDay;
 import com.codesurfers.healthcare.model.Clinic;
 import com.codesurfers.healthcare.model.ResponseResult;
 import com.codesurfers.healthcare.model.TimeSlot;
@@ -53,23 +56,29 @@ public class MakeAppointment extends AppCompatActivity {
     AutoCompleteTextView autoCompleteTextView;
 
     ArrayAdapter<String> adapterClinics;*/
+
+    Button appointmentButton;
     SharedPreferences sp;
     TextView editTextDate, studentNo, firstName, lastName, qualification;
     TextView reason, appointmentDate,time, note;
     ImageButton dateSelector;
     DatePickerDialog datePickerDialog;
     Spinner appointmentTime;
+    AutoCompleteTextView autoCompleteTextView;
+    ArrayAdapter<String> adapterItems;
     List<TimeSlot> timeSlots = new ArrayList<>();
     List<String> times = new ArrayList<>();
     String dayOfTheWeek;
 
     long userId;
+    long timeSlotId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_make_appointment);
         setTitle("Schedule Appointment");
 
+        appointmentButton = findViewById(R.id.make_appointment_btn);
         studentNo = findViewById(R.id.studentNumberTxt);
         firstName = findViewById(R.id.firstNameTxt);
         lastName = findViewById(R.id.lastNameTxt);
@@ -77,7 +86,7 @@ public class MakeAppointment extends AppCompatActivity {
         reason = findViewById(R.id.reason);
         appointmentDate = findViewById(R.id.appointmentDate);
         //time = findViewById(R.id.timeTextView);
-        note = findViewById(R.id.notes);
+        //note = findViewById(R.id.notes);
 
 
 
@@ -101,16 +110,57 @@ public class MakeAppointment extends AppCompatActivity {
         dateSelector = findViewById(R.id.dateSelector);
         dateSelector.setOnClickListener(dateClickListener);
         editTextDate = findViewById(R.id.appointmentDate);
-        appointmentTime= findViewById(R.id.appointmentTime);
+        //appointmentTime= findViewById(R.id.appointmentTime);
+        autoCompleteTextView = findViewById(R.id.auto_complete_txt);
+        adapterItems = new ArrayAdapter<String>(this,R.layout.time_list, times);
         editTextDate.setFocusable(false);
         editTextDate.setClickable(false);
+
+        autoCompleteTextView.setAdapter(adapterItems);
+
+        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String item = adapterView.getItemAtPosition(i).toString();
+                timeSlotId = timeSlots.get(i).getTimeSlotId();
+                int position = i;
+                System.out.println("MY ITEM =>" + item);
+                System.out.println("POSITION => " + timeSlots.get(i));
+                System.out.println("TIME SLOT ID => " + timeSlotId);
+
+            }
+        });
+
+        appointmentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Appointment appointment = new Appointment();
+                User user = new User();
+                Clinic clinic = new Clinic();
+                TimeSlot timeSlot = new TimeSlot();
+
+
+                user.setUserId(userId);
+                clinic.setClinicId(1);
+                timeSlot.setTimeSlotId(timeSlotId);
+
+                appointment.setReason(reason.getText().toString());
+                appointment.setPatient(user);
+                appointment.setClinic(clinic);
+                appointment.setAppointmentTime(timeSlot);
+                appointment.setStatus("Open");
+
+
+                makeAppointment(appointment);
+            }
+        });
 
 
         //This is a list of options that will be used to feed the timeslots
 
         //ArrayAdapter<TimeSlot> adapter = new ArrayAdapter<TimeSlot>(this, android.R.layout.simple_gallery_item, timeSlots);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_gallery_item, times);
-        appointmentTime.setAdapter(adapter);
+        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_gallery_item, times);
+        //appointmentTime.setAdapter(adapter);
         /**editTextDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -132,17 +182,6 @@ public class MakeAppointment extends AppCompatActivity {
                 Toast.makeText(MakeAppointment.this, "Selected item is" + clinic, Toast.LENGTH_SHORT).show();
             }
         });*/
-        appointmentTime.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
 
     }
 
@@ -169,6 +208,8 @@ public class MakeAppointment extends AppCompatActivity {
         }
         System.out.println(dayOfTheWeek);
         editTextDate.setText(sdf.format(calendar.getTime()) + ", "+dayOfTheWeek);
+        times.clear();
+        adapterItems.clear();
         getTimeSlotByDay(dayOfTheWeek);
 
     };
@@ -207,12 +248,17 @@ public class MakeAppointment extends AppCompatActivity {
                 List<TimeSlot> timeSlotList = (List<TimeSlot>) response.body().getResults();
                 System.out.println(response.body().getResponseMessage());
                 JSONArray object = new JSONArray(timeSlotList);
-                times.clear();
+
                 for (int i = 0; i < object.length(); i++) {
                     try {
                         System.out.println("My STATUS");
+                        System.out.println(object.getJSONObject(i).get("timeSlotId"));
                         System.out.println(object.getJSONObject(i).get("time"));
+                        System.out.println(object.getJSONObject(i).getJSONObject("day").get("appointmentDayId"));
+                        System.out.println(object.getJSONObject(i).getJSONObject("day").get("appointmentDayName"));
+                        System.out.println(object.getJSONObject(i).get("booked"));
                         times.add((String) object.getJSONObject(i).get("time"));
+                        timeSlots.add(new TimeSlot(object.getJSONObject(i).getLong("timeSlotId"), (String) object.getJSONObject(i).get("time"), (Boolean) object.getJSONObject(i).get("booked")));
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
                     }
@@ -232,21 +278,26 @@ public class MakeAppointment extends AppCompatActivity {
 
     private void makeAppointment(Appointment appointment) {
         RetrofitClient client = new RetrofitClient(BASE_URL);
-        User user = new User();
-        Clinic clinic = new Clinic();
-        TimeSlot timeSlot = new TimeSlot();
-        user.setUserId(userId);
-        clinic.setClinicId(1);
-        timeSlot.setTimeSlotId(1);
-        Call<Appointment> call = client.getClinicAPI().makeAppointment(appointment);
+        Call<ResponseResult> call = client.getClinicAPI().makeAppointment(appointment);
 
-        call.enqueue(new Callback<Appointment>() {
+        call.enqueue(new Callback<ResponseResult>() {
             @Override
-            public void onResponse(Call<Appointment> call, Response<Appointment> response) {
+            public void onResponse(Call<ResponseResult> call, Response<ResponseResult> response) {
 
-                if (!response.isSuccessful()) {
+                System.out.println(response.code());
+                /**if (!response.isSuccessful()) {
                     // Do something
                     return;
+                }*/
+
+                if (response.code() == 409){
+                    Toast.makeText(getApplicationContext(), "You have outstanding appointment", Toast.LENGTH_SHORT).show();
+                }
+                
+                if (response.code() == 201){
+                    Toast.makeText(MakeAppointment.this, "You appointment was successful", Toast.LENGTH_SHORT).show();
+                    Intent fp = new Intent(getApplicationContext(), AppointmentScreen.class);
+                    startActivity(fp);
                 }
 
                 // Do something else if response successful
@@ -254,8 +305,8 @@ public class MakeAppointment extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<Appointment> call, Throwable t) {
-
+            public void onFailure(Call<ResponseResult> call, Throwable t) {
+                Toast.makeText(MakeAppointment.this, "Error occurred", Toast.LENGTH_SHORT).show();
             }
         });
     }

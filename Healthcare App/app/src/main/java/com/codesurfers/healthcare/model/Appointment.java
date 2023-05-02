@@ -12,6 +12,8 @@ public class Appointment {
 
     private String notes;
 
+    private String reason;
+
     private int deleted = 0;
 
     private TimeSlot appointmentTime;
@@ -19,12 +21,13 @@ public class Appointment {
     public Appointment() {
     }
 
-    public Appointment(long appointmentId, User patient, Clinic clinic, String status, String notes, int deleted, TimeSlot appointmentTime) {
+    public Appointment(long appointmentId, User patient, Clinic clinic, String status, String notes, String reason, int deleted, TimeSlot appointmentTime) {
         this.appointmentId = appointmentId;
         this.patient = patient;
         this.clinic = clinic;
         this.status = status;
         this.notes = notes;
+        this.reason = reason;
         this.deleted = deleted;
         this.appointmentTime = appointmentTime;
     }
@@ -69,6 +72,14 @@ public class Appointment {
         this.notes = notes;
     }
 
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
     public int getDeleted() {
         return deleted;
     }
@@ -93,6 +104,7 @@ public class Appointment {
                 ", clinic=" + clinic +
                 ", status='" + status + '\'' +
                 ", notes='" + notes + '\'' +
+                ", reason='" + reason + '\'' +
                 ", deleted=" + deleted +
                 ", appointmentTime=" + appointmentTime +
                 '}';

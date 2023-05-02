@@ -103,6 +103,7 @@ public class HomeScreenActivity extends AppCompatActivity {
             case R.id.logout:
                 //String message = "Are you sure you want to log out?";
                 //showCustomDialog(message);
+                System.out.println("CLEARING CACHE");
                 sp.edit().clear();
                 sp.edit().commit();
                 Intent fp = new Intent(getApplicationContext(), MainActivity.class);

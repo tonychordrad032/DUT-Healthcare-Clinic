@@ -77,7 +77,7 @@ public interface IClinicAPI {
     Call<List<Appointment>> getAppointments();
 
     @POST("appointment")
-    Call<Appointment> makeAppointment(@Body Appointment appointment);
+    Call<ResponseResult> makeAppointment(@Body Appointment appointment);
 
     @GET("appointment/findAppointmentByUserId")
     Call<ResponseResult> getAppointmentByUserId (@Query("userId") long userId);
