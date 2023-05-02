@@ -2,6 +2,7 @@ package com.codesurfers.healthcare;
 
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -37,8 +38,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class HomeScreenActivity extends AppCompatActivity {
-    SharedPreferences preferences;
-    SharedPreferences.Editor editor;
+    SharedPreferences sp;
     private IClinicAPI ClinicAPI;
 
     ArrayList<Clinic> arrayList = new ArrayList<>();
@@ -60,8 +60,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         //setContentView(R.layout.fragment_home_fragrament);
 
 
-        preferences = getSharedPreferences("MyPreferences", MODE_PRIVATE);
-        editor = preferences.edit();
+        sp = getApplicationContext().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragrament).commit();
         BadgeDrawable badgeDrawable = bottomNavigationView.getOrCreateBadge(R.id.notifications);
@@ -104,8 +103,8 @@ public class HomeScreenActivity extends AppCompatActivity {
             case R.id.logout:
                 //String message = "Are you sure you want to log out?";
                 //showCustomDialog(message);
-                editor.clear();
-                editor.commit();
+                sp.edit().clear();
+                sp.edit().commit();
                 Intent fp = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(fp);
                 return true;
@@ -131,8 +130,8 @@ public class HomeScreenActivity extends AppCompatActivity {
         btnYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editor.clear();
-                editor.commit();
+                //editor.clear();
+                //editor.commit();
                 Intent fp = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(fp);
             }

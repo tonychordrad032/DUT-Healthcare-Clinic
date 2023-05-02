@@ -49,7 +49,7 @@ public class HistoryFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_upcoming, container, false);
         listView = view.findViewById(R.id.listView);
-        history=view.findViewById(R.id.appointmentHistory);
+        history=view.findViewById(R.id.noAppointment);
         date = (TextView) view.findViewById(R.id.dateTxt);
         time = view.findViewById(R.id.timeTextView);
         status = view.findViewById(R.id.statusTextView);

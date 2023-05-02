@@ -43,6 +43,10 @@ public class User {
         this.password = password;
     }
 
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }

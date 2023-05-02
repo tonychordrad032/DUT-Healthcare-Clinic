@@ -13,10 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -47,6 +44,8 @@ public class AppointmentService {
 
             LOG.info("{} : BEDORE SEARCHING {} " + appointment.getPatient().getUserId(), correlationId, appointment);
 
+
+
             /**List<Appointment> appointmentList = appointmentRepository.findAllById(Collections.singleton(appointment.getPatient().getUserId()))
                     .stream()
                     .filter(appointment1 -> appointment1.getDeleted() == 0 && Objects.equals(appointment1.getStatus(), "Open"))
@@ -56,28 +55,33 @@ public class AppointmentService {
 
             LOG.info("{} : AFTER SEARCHING {} ", correlationId, appointmentList);
 
-
-            if (appointmentList.size() > 0) {
-                LOG.warn("{} : You already have pending appointment");
-                return ResponseEntity.status(409).body(new ResponseResult(409, "You already have pending appointment", null));
+            if (!appointmentList.isEmpty()){
+                List tempList = new ArrayList<>();
+                System.out.println(appointmentList.size());
+                for (int i = 0; i < appointmentList.size(); i++) {
+                    if (Objects.equals(appointmentList.get(i).getStatus(), "Open")){
+                        tempList.add(appointmentList.get(i));
+                    }
+                }
+                System.out.println(tempList.size());
+                if (tempList.size() > 0) {
+                    LOG.warn("{} : You already have pending appointment", tempList);
+                    return ResponseEntity.status(409).body(new ResponseResult(409, "You already have pending appointment", null));
+                }
             }
-
-
 
 
             TimeSlot bookedTimeSlot = timeSlotRepository.findById(appointment.getAppointmentTime().getTimeSlotId()).orElseThrow();
             LOG.info("{} : SEARCHING TIME SLOT ", correlationId, bookedTimeSlot);
             if(bookedTimeSlot != null){
-                bookedTimeSlot.setBooked(true);
+                if (bookedTimeSlot.isBooked() == true){
+                    return ResponseEntity.status(409).body(new ResponseResult(409, "Time slot "+ appointment.getAppointmentTime().getTime() + " already booked", null));
+                }
             }
             LOG.info("{} : AFTER SEARCHING TIME SLOT ", correlationId, bookedTimeSlot);
 
-            if (appointment.getAppointmentTime().isBooked()){
-                return ResponseEntity.status(409).body(new ResponseResult(409, "Time slot "+ appointment.getAppointmentTime().getTime() + " already booked", null));
-            }
 
-
-
+            bookedTimeSlot.setBooked(true);
             appointmentRepository.save(appointment);
             LOG.info("{} : appointment created successfully", correlationId);
 

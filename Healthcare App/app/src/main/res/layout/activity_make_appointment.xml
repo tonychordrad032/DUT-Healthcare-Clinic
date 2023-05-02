@@ -212,7 +212,6 @@
         android:background="@drawable/edt_background"
         android:drawablePadding="10dp"
         android:hint="notes.."
-        android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:paddingTop="1dp"
         android:paddingRight="10dp" />

@@ -8,12 +8,19 @@ public class Clinic {
     private String latitude;
     private String longitude;
 
+    public Clinic() {
+    }
+
     public Clinic(String clinicName, String clinicDescription, String clinicCampus, String latitude, String longitude) {
         this.clinicName = clinicName;
         this.clinicDescription = clinicDescription;
         this.clinicCampus = clinicCampus;
         this.latitude = latitude;
         this.longitude = longitude;
+    }
+
+    public void setClinicId(long clinicId) {
+        this.clinicId = clinicId;
     }
 
     public void setClinicName(String clinicName) {

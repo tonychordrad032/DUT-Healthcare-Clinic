@@ -24,6 +24,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -33,8 +34,10 @@ import android.widget.DatePicker;
 import com.codesurfers.healthcare.constants.RetrofitClient;
 import com.codesurfers.healthcare.model.Appoint;
 import com.codesurfers.healthcare.model.Appointment;
+import com.codesurfers.healthcare.model.Clinic;
 import com.codesurfers.healthcare.model.ResponseResult;
 import com.codesurfers.healthcare.model.TimeSlot;
+import com.codesurfers.healthcare.model.User;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -50,13 +53,17 @@ public class MakeAppointment extends AppCompatActivity {
     AutoCompleteTextView autoCompleteTextView;
 
     ArrayAdapter<String> adapterClinics;*/
+    SharedPreferences sp;
     TextView editTextDate, studentNo, firstName, lastName, qualification;
+    TextView reason, appointmentDate,time, note;
     ImageButton dateSelector;
     DatePickerDialog datePickerDialog;
     Spinner appointmentTime;
     List<TimeSlot> timeSlots = new ArrayList<>();
     List<String> times = new ArrayList<>();
     String dayOfTheWeek;
+
+    long userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,17 +74,27 @@ public class MakeAppointment extends AppCompatActivity {
         firstName = findViewById(R.id.firstNameTxt);
         lastName = findViewById(R.id.lastNameTxt);
         qualification = findViewById(R.id.qualificationTxt);
+        reason = findViewById(R.id.reason);
+        appointmentDate = findViewById(R.id.appointmentDate);
+        //time = findViewById(R.id.timeTextView);
+        note = findViewById(R.id.notes);
 
-        SharedPreferences sp = getApplicationContext().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+
+
+
+        sp = getApplicationContext().getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
         String studentNumber = sp.getString("studentNumber", "");
         String name = sp.getString("firstName", "");
         String surname = sp.getString("lastName", "");
         String qual = sp.getString("qualification", "");
+        Integer id = sp.getInt("userId", 0);
 
+        userId = id.longValue();
         studentNo.setText(studentNumber);
         firstName.setText(name);
         lastName.setText(surname);
         qualification.setText(qual);
+        System.out.println("MY USER ID => " +userId);
 
 
 
@@ -115,6 +132,17 @@ public class MakeAppointment extends AppCompatActivity {
                 Toast.makeText(MakeAppointment.this, "Selected item is" + clinic, Toast.LENGTH_SHORT).show();
             }
         });*/
+        appointmentTime.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
     }
 
@@ -197,6 +225,36 @@ public class MakeAppointment extends AppCompatActivity {
             @Override
             public void onFailure(Call<ResponseResult> call, Throwable t) {
                 System.out.println("FAILURE");
+
+            }
+        });
+    }
+
+    private void makeAppointment(Appointment appointment) {
+        RetrofitClient client = new RetrofitClient(BASE_URL);
+        User user = new User();
+        Clinic clinic = new Clinic();
+        TimeSlot timeSlot = new TimeSlot();
+        user.setUserId(userId);
+        clinic.setClinicId(1);
+        timeSlot.setTimeSlotId(1);
+        Call<Appointment> call = client.getClinicAPI().makeAppointment(appointment);
+
+        call.enqueue(new Callback<Appointment>() {
+            @Override
+            public void onResponse(Call<Appointment> call, Response<Appointment> response) {
+
+                if (!response.isSuccessful()) {
+                    // Do something
+                    return;
+                }
+
+                // Do something else if response successful
+                // response.body() has the returned response data
+            }
+
+            @Override
+            public void onFailure(Call<Appointment> call, Throwable t) {
 
             }
         });
