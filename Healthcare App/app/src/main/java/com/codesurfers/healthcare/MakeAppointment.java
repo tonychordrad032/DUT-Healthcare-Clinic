@@ -148,6 +148,7 @@ public class MakeAppointment extends AppCompatActivity {
                 appointment.setPatient(user);
                 appointment.setClinic(clinic);
                 appointment.setAppointmentTime(timeSlot);
+                appointment.setRealDate(editTextDate.getText().toString());
                 appointment.setStatus("Open");
 
 
@@ -188,9 +189,15 @@ public class MakeAppointment extends AppCompatActivity {
     private DatePickerDialog.OnDateSetListener dateSetListener = (view, year, monthOfYear, dayOfMonth) -> {
         // Set the selected date to the text field
         Calendar calendar = Calendar.getInstance();
-        calendar.set(year, monthOfYear, dayOfMonth);
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+        //calendar.set(year, monthOfYear, dayOfMonth);
+        calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
+        calendar.set(Calendar.MONTH, monthOfYear);
+        calendar.set(Calendar.YEAR,year);
+        calendar.getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy", Locale.US);
         System.out.println("MY DAY OF THE WEEK");
+        System.out.println(sdf);
         if (calendar.get(Calendar.DAY_OF_WEEK) == 1){
             dayOfTheWeek = "Sunday";
         } else if (calendar.get(Calendar.DAY_OF_WEEK) == 2) {
@@ -207,7 +214,9 @@ public class MakeAppointment extends AppCompatActivity {
             dayOfTheWeek = "Saturday";
         }
         System.out.println(dayOfTheWeek);
+        System.out.println(editTextDate);
         editTextDate.setText(sdf.format(calendar.getTime()) + ", "+dayOfTheWeek);
+        System.out.println("MY FINAL DATE => "+editTextDate.getText());
         times.clear();
         adapterItems.clear();
         getTimeSlotByDay(dayOfTheWeek);

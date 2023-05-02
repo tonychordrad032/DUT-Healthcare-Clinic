@@ -14,6 +14,8 @@ public class Appointment {
 
     private String reason;
 
+    private String realDate;
+
     private int deleted = 0;
 
     private TimeSlot appointmentTime;
@@ -21,13 +23,15 @@ public class Appointment {
     public Appointment() {
     }
 
-    public Appointment(long appointmentId, User patient, Clinic clinic, String status, String notes, String reason, int deleted, TimeSlot appointmentTime) {
+
+    public Appointment(long appointmentId, User patient, Clinic clinic, String status, String notes, String reason, String realDate, int deleted, TimeSlot appointmentTime) {
         this.appointmentId = appointmentId;
         this.patient = patient;
         this.clinic = clinic;
         this.status = status;
         this.notes = notes;
         this.reason = reason;
+        this.realDate = realDate;
         this.deleted = deleted;
         this.appointmentTime = appointmentTime;
     }
@@ -80,6 +84,14 @@ public class Appointment {
         this.reason = reason;
     }
 
+    public String getRealDate() {
+        return realDate;
+    }
+
+    public void setRealDate(String realDate) {
+        this.realDate = realDate;
+    }
+
     public int getDeleted() {
         return deleted;
     }
@@ -105,6 +117,7 @@ public class Appointment {
                 ", status='" + status + '\'' +
                 ", notes='" + notes + '\'' +
                 ", reason='" + reason + '\'' +
+                ", realDate='" + realDate + '\'' +
                 ", deleted=" + deleted +
                 ", appointmentTime=" + appointmentTime +
                 '}';

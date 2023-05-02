@@ -11,17 +11,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import com.codesurfers.healthcare.HomeScreenActivity;
 import com.codesurfers.healthcare.ListAdapter;
 import com.codesurfers.healthcare.MakeAppointment;
 import com.codesurfers.healthcare.ViewAppointmentScreen;
-import com.codesurfers.healthcare.constants.IClinicAPI;
 import com.codesurfers.healthcare.R;
 import com.codesurfers.healthcare.constants.RetrofitClient;
 import com.codesurfers.healthcare.databinding.ActivityMainBinding;
@@ -35,7 +33,6 @@ import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -80,6 +77,7 @@ public class UpcomingFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(getContext(), "Clicked object" + adapterView.getItemIdAtPosition(i), Toast.LENGTH_SHORT).show();
                 Intent fp = new Intent(getContext(), ViewAppointmentScreen.class);
                 startActivity(fp);
             }
@@ -132,7 +130,7 @@ public class UpcomingFragment extends Fragment {
                         System.out.println(object.getJSONObject(i).get("status"));
                         if (object.getJSONObject(i).get("status").toString().equals("Open")){
                             System.out.println("INSIDE IF");
-                            appointmentList.add(new Appoint("01 May 2023, Monday", "09:00", (String) object.getJSONObject(i).get("status")));
+                            appointmentList.add(new Appoint(object.getJSONObject(i).getString("realDate"), object.getJSONObject(i).getJSONObject("appointmentTime").getString("time"), (String) object.getJSONObject(i).get("status")));
                             System.out.println(appointmentList);
 
                         }
