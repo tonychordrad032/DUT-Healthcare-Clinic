@@ -21,6 +21,11 @@
             android:label="@string/title_activity_admin_setup_time_slots"
             android:theme="@style/Theme.Healthcare" />
         <activity
+            android:name=".AdminViewAppointmentScreen"
+            android:exported="false"
+            android:parentActivityName=".AdminAppointmentScreen" />
+            />
+        <activity
             android:name=".ViewAppointmentScreen"
             android:exported="false"
             android:parentActivityName=".AppointmentScreen" />
@@ -32,7 +37,9 @@
             android:exported="false" />
         <activity
             android:name=".AdminAppointmentScreen"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".AdminHomscreen"
+            />
         <activity
             android:name=".AdminHomscreen"
             android:exported="false" />

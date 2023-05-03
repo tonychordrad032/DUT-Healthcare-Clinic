@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminViewAppointmentScreen">
+
+    <!--        STUDENT NUMBER  START     -->
+    <TextView
+        android:id="@+id/studentNumberViewAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:text="Student Number  : "
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:id="@+id/studentNumberTxtAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="18dp"
+        android:layout_toRightOf="@+id/studentNumberViewAdmin"
+    android:text="22024191"
+        android:textAlignment="textStart"
+        android:textSize="18dp" />
+
+    <!--        STUDENT NUMBER  ENDS     -->
+
+    <!--        QUALIFICATION  STARTS     -->
+
+    <TextView
+        android:id="@+id/qualificationViewAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/studentNumberViewAdmin"
+        android:layout_marginLeft="15dp"
+        android:text="Qualification  : "
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:id="@+id/qualificationTxtAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="18dp"
+        android:layout_below="@+id/studentNumberViewAdmin"
+        android:layout_toRightOf="@+id/qualificationViewAdmin"
+        android:text="Diploma in Accounting"
+        android:textAlignment="textStart"
+        android:textSize="18dp" />
+
+    <!--        QUALIFICATION  ENDS     -->
+
+
+    <!--        FIRST NAME  STARTS     -->
+
+    <TextView
+        android:id="@+id/firstNameViewAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/qualificationViewAdmin"
+        android:layout_marginLeft="15dp"
+        android:text="First Name  : "
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:id="@+id/firstNameTxtAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="18dp"
+        android:layout_below="@+id/qualificationViewAdmin"
+        android:layout_toRightOf="@+id/firstNameViewAdmin"
+        android:text="Cebile"
+        android:textAlignment="textStart"
+        android:textSize="18dp" />
+    <!--        FIRST NAME  ENDS     -->
+
+    <!--        LAST NAME  STARTS     -->
+
+    <TextView
+        android:id="@+id/lastNameViewAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/firstNameViewAdmin"
+        android:layout_marginLeft="15dp"
+        android:text="Last Name  : "
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:id="@+id/lastNameTxtAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="18dp"
+        android:layout_below="@+id/firstNameViewAdmin"
+        android:layout_toRightOf="@+id/lastNameViewAdmin"
+        android:text="Mkhwanazi"
+        android:textAlignment="textStart"
+        android:textSize="18dp" />
+    <!--        LAST NAME  ENDS     -->
+
+    <TextView
+        android:id="@+id/dateViewAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_below="@+id/lastNameViewAdmin"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:text="Date  : "
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:id="@+id/date_text_view_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_below="@+id/lastNameViewAdmin"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="18dp"
+        android:layout_toRightOf="@+id/dateViewAdmin"
+        android:text="20 May 2023, Tuesday"
+        android:textAlignment="textStart"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/timeViewAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="1dp"
+        android:layout_below="@+id/dateViewAdmin"
+        android:layout_marginLeft="15dp"
+        android:text="Time  : "
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:id="@+id/time_text_view_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_below="@+id/dateViewAdmin"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="94dp"
+        android:layout_toRightOf="@+id/timeViewAdmin"
+        android:text="09:00 "
+        android:textAlignment="textStart"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/reasonViewAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="1dp"
+        android:layout_below="@+id/timeViewAdmin"
+        android:layout_marginLeft="15dp"
+        android:text="Reason for booking  : "
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:id="@+id/reason_text_view_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_below="@+id/timeViewAdmin"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/reasonViewAdmin"
+        android:layout_marginTop="1dp"
+        android:text="I am sick, i feel like vomiting"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/commentAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_below="@+id/reasonViewAdmin"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/edt_background"
+        android:drawablePadding="10dp"
+        android:hint="Comment..."
+        android:paddingLeft="10dp"
+        android:paddingTop="1dp"
+        android:paddingRight="10dp" />
+
+    <Button
+        android:id="@+id/close_appointment_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commentAdmin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edt_background"
+        android:paddingLeft="20dp"
+        android:text="Close Appointment" />
+
+</RelativeLayout>

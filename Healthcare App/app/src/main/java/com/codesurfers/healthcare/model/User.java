@@ -1,6 +1,11 @@
 package com.codesurfers.healthcare.model;
 
-public class User {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
+public class User implements Parcelable {
     private long userId;
     private String firstName;
     private String lastName;
@@ -42,6 +47,32 @@ public class User {
         this.username = username;
         this.password = password;
     }
+
+    protected User(Parcel in) {
+        userId = in.readLong();
+        firstName = in.readString();
+        lastName = in.readString();
+        dateOfBirth = in.readString();
+        username = in.readString();
+        studentNumber = in.readString();
+        password = in.readString();
+        profilePicture = in.readString();
+        userType = in.readString();
+        mobile = in.readString();
+        qualification = in.readString();
+    }
+
+    public static final Creator<User> CREATOR = new Creator<User>() {
+        @Override
+        public User createFromParcel(Parcel in) {
+            return new User(in);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
 
     public void setUserId(long userId) {
         this.userId = userId;
@@ -146,5 +177,25 @@ public class User {
                 ", mobile='" + mobile + '\'' +
                 ", qualification='" + qualification + '\'' +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+        dest.writeLong(userId);
+        dest.writeString(firstName);
+        dest.writeString(lastName);
+        dest.writeString(dateOfBirth);
+        dest.writeString(username);
+        dest.writeString(studentNumber);
+        dest.writeString(password);
+        dest.writeString(profilePicture);
+        dest.writeString(userType);
+        dest.writeString(mobile);
+        dest.writeString(qualification);
     }
 }
