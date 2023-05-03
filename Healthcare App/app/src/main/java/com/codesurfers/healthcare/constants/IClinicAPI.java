@@ -4,6 +4,7 @@ import com.codesurfers.healthcare.model.Appointment;
 import com.codesurfers.healthcare.model.Clinic;
 import com.codesurfers.healthcare.model.Feedback;
 import com.codesurfers.healthcare.model.ResponseResult;
+import com.codesurfers.healthcare.model.TimeSlot;
 import com.codesurfers.healthcare.model.User;
 
 import java.util.List;
@@ -94,4 +95,7 @@ public interface IClinicAPI {
 
     @DELETE("/appointment/{id}")
     Call<Void> deleteAppointment(@Path("id") long appointmentId);
+
+    @PUT("time-slot")
+    Call<ResponseResult> updateTimeSlot(@Body TimeSlot timeSlot);
 }

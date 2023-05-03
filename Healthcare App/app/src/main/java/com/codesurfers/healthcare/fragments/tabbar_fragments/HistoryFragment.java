@@ -98,8 +98,9 @@ public class HistoryFragment extends Fragment {
                 for (int i = 0; i < object.length(); i++) {
                     try {
                         System.out.println(object.getJSONObject(i).get("status"));
-                        if (object.getJSONObject(i).get("status").toString().equals("Closed")){
-                            appointmentList.add(new Appoint("01 May 2023, Monday", "09:00", (String) object.getJSONObject(i).get("status")));
+                        if (object.getJSONObject(i).get("status").toString().equals("Closed") || object.getJSONObject(i).get("status").toString().equals("Cancelled")){
+                            appointmentList.add(new Appoint(object.getJSONObject(i).getString("realDate"), object.getJSONObject(i).getJSONObject("appointmentTime").getString("time"), (String) object.getJSONObject(i).get("status")));
+                            //appointments.add(object.getJSONObject(i));
                             System.out.println(appointmentList);
                         }
 

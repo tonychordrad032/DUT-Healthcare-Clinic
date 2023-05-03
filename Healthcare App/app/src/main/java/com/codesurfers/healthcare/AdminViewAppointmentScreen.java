@@ -76,6 +76,8 @@ public class AdminViewAppointmentScreen extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponseResult> call, Response<ResponseResult> response) {
 
+                System.out.println("MY STATUS CODE => "+response.code());
+                System.out.println(response);
                 if (!response.isSuccessful()) {
                     Toast.makeText(AdminViewAppointmentScreen.this, "Error while saving appointment", Toast.LENGTH_SHORT).show();
                     return;

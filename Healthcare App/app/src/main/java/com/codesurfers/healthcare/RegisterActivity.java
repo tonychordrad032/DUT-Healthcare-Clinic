@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private IClinicAPI ClinicAPI;
     TextView username, password, studentNumber, firstName, lastName;
+    EditText qualification;
     String URL = "http://localhost:7070/dut_healthcare_clinic/api/";
 
     @Override
@@ -48,6 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
         studentNumber = findViewById(R.id.studentNumber);
         firstName = findViewById(R.id.firstName);
         lastName = findViewById(R.id.lastName);
+        qualification = findViewById(R.id.qualificationReg);
 
         Button createAccountButton = findViewById(R.id.createAccountBtn);
         createAccountButton.setOnClickListener(new View.OnClickListener() {

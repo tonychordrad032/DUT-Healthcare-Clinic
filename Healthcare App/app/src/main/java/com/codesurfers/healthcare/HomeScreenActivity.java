@@ -105,6 +105,7 @@ public class HomeScreenActivity extends AppCompatActivity {
                 //showCustomDialog(message);
                 System.out.println("CLEARING CACHE");
                 sp.edit().clear();
+                sp.edit().remove("userId");
                 sp.edit().commit();
                 Intent fp = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(fp);

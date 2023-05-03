@@ -87,28 +87,22 @@ public class MainActivity extends AppCompatActivity {
 
         Button loginBtn = (Button) findViewById(R.id.loginBtn);
 
-        if (preferences.contains("userId")){
-            Intent fp = new Intent(getApplicationContext(), AdminHomeActivity.class);
-            startActivity(fp);
-        }else {
-            loginBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    User user = new User();
-                    user.setUsername(username.getText().toString());
-                    user.setPassword(password.getText().toString());
-                    Intent adminHome = new Intent(getApplicationContext(), AdminHomeActivity.class);
-                    startActivity(adminHome);
-                    //startActivity(fp);
-                    //loginUser(user);
-                    //getUsers();
-                    //System.out.println("BEFORE");
-                    //getAppointmentByUserId(1);
-                    //System.out.println("AFTER");
-                }
-            });
-
-        }
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                User user = new User();
+                user.setUsername(username.getText().toString());
+                user.setPassword(password.getText().toString());
+                //Intent adminHome = new Intent(getApplicationContext(), AdminHomeActivity.class);
+                //startActivity(adminHome);
+                //startActivity(fp);
+                loginUser(user);
+                //getUsers();
+                //System.out.println("BEFORE");
+                //getAppointmentByUserId(1);
+                //System.out.println("AFTER");
+            }
+        });
 
 
 
@@ -277,8 +271,8 @@ public class MainActivity extends AppCompatActivity {
                         if (userType.equals("student")){
                             System.out.println("TRUE");
                             Toast.makeText(MainActivity.this, "Login Successfully" , Toast.LENGTH_SHORT).show();
-                            //Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
-                            Intent fp = new Intent(getApplicationContext(), AdminHomeActivity.class);
+                            Intent fp = new Intent(getApplicationContext(), HomeScreenActivity.class);
+                            //Intent fp = new Intent(getApplicationContext(), AdminHomeActivity.class);
                             startActivity(fp);
                         }else if (userType.equals("admin")){
                             System.out.println("FALSE");

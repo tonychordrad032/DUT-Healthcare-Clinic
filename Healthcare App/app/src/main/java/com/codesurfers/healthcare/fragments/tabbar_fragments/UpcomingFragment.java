@@ -37,6 +37,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -90,12 +91,13 @@ public class UpcomingFragment extends Fragment {
                 JsonElement mJson = parser.parse(jsonObject);
                 Gson gson = new Gson();
                 Appointment appointment = gson.fromJson(mJson, Appointment.class);
-                String timeSlot = appointment.getAppointmentTime().getTime();
+                TimeSlot timeSlot = appointment.getAppointmentTime();
                 System.out.println(timeSlot);
                 System.out.println(appointment);
                 Toast.makeText(getContext(), "Clicked object" + adapterView.getItemIdAtPosition(i), Toast.LENGTH_SHORT).show();
                 Intent fp = new Intent(getContext(), ViewAppointmentScreen.class);
                 fp.putExtra("appointment", appointment);
+                fp.putExtra("timeSlot", timeSlot);
                 startActivity(fp);
             }
         });

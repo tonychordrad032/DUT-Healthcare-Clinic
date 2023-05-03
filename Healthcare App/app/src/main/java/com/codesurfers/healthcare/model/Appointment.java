@@ -19,6 +19,8 @@ public class Appointment implements Parcelable {
 
     private String reason;
 
+    private String reasonForCancel;
+
     private String realDate;
 
     private int deleted = 0;
@@ -29,25 +31,30 @@ public class Appointment implements Parcelable {
     }
 
 
-    public Appointment(long appointmentId, User patient, Clinic clinic, String status, String notes, String reason, String realDate, int deleted, TimeSlot appointmentTime) {
+    public Appointment(long appointmentId, User patient, Clinic clinic, String status, String notes, String reason, String reasonForCancel, String realDate, int deleted, TimeSlot appointmentTime) {
         this.appointmentId = appointmentId;
         this.patient = patient;
         this.clinic = clinic;
         this.status = status;
         this.notes = notes;
         this.reason = reason;
+        this.reasonForCancel = reasonForCancel;
         this.realDate = realDate;
         this.deleted = deleted;
         this.appointmentTime = appointmentTime;
     }
 
+
     protected Appointment(Parcel in) {
         appointmentId = in.readLong();
+        patient = in.readParcelable(User.class.getClassLoader());
         status = in.readString();
         notes = in.readString();
         reason = in.readString();
+        reasonForCancel = in.readString();
         realDate = in.readString();
         deleted = in.readInt();
+        appointmentTime = in.readParcelable(TimeSlot.class.getClassLoader());
     }
 
     public static final Creator<Appointment> CREATOR = new Creator<Appointment>() {
@@ -110,6 +117,14 @@ public class Appointment implements Parcelable {
         this.reason = reason;
     }
 
+    public String getReasonForCancel() {
+        return reasonForCancel;
+    }
+
+    public void setReasonForCancel(String reasonForCancel) {
+        this.reasonForCancel = reasonForCancel;
+    }
+
     public String getRealDate() {
         return realDate;
     }
@@ -143,11 +158,13 @@ public class Appointment implements Parcelable {
                 ", status='" + status + '\'' +
                 ", notes='" + notes + '\'' +
                 ", reason='" + reason + '\'' +
+                ", reasonForCancel='" + reasonForCancel + '\'' +
                 ", realDate='" + realDate + '\'' +
                 ", deleted=" + deleted +
                 ", appointmentTime=" + appointmentTime +
                 '}';
     }
+
 
     @Override
     public int describeContents() {
@@ -157,10 +174,13 @@ public class Appointment implements Parcelable {
     @Override
     public void writeToParcel(@NonNull Parcel dest, int flags) {
         dest.writeLong(appointmentId);
+        dest.writeParcelable(patient, flags);
         dest.writeString(status);
         dest.writeString(notes);
         dest.writeString(reason);
+        dest.writeString(reasonForCancel);
         dest.writeString(realDate);
         dest.writeInt(deleted);
+        dest.writeParcelable(appointmentTime, flags);
     }
 }
