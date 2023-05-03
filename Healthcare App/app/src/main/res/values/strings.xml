@@ -9,4 +9,5 @@
     <string name="empty_message">YOU HAVE NO APPOINTMENT</string>
     <string name="drop_down_name">Select Time</string>
     <string name="select_item">Select Time</string>
+    <string name="select_day_item">Select Day</string>
 </resources>

@@ -6,46 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".AdminAppointmentScreen">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/my_text_input_admin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_margin="16dp"
+        android:hint="@string/select_day_item"
+        android:background="@drawable/edt_background"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="88dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
-            android:height="30dp"
-            android:paddingBottom="10dp"
-            android:text="Choose Day"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-            app:layout_constraintEnd_toStartOf="@+id/spinner"
-            app:layout_constraintHorizontal_bias="0.1"
-            app:layout_constraintStart_toStartOf="parent" />
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete_txt_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="265dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
-            android:spinnerMode="dropdown"
-            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-            app:layout_constraintEnd_toEndOf="parent" />
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="409dp"
+    <ListView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/linearLayout"
-        android:scrollbars="vertical"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="55dp" />
+        android:layout_below="@id/my_text_input_admin"
+        tools:listitem="@layout/activity_appointment_list_view"
+        android:id="@+id/listView"/>
 
 </RelativeLayout>
