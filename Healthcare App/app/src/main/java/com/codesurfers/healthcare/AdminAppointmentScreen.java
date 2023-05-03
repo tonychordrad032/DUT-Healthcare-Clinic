@@ -128,9 +128,10 @@ public class AdminAppointmentScreen extends AppCompatActivity {
 
 
                         //Set the adapter on the recycler view
-
-                        appointments.setLayoutManager(new LinearLayoutManager(AdminAppointmentScreen.this));
+                        System.out.println("In between");
                         appointments.setAdapter(new AdminAppointmentAdapter(getApplicationContext(),appointmentList));
+
+                        System.out.println("Sucess");
                     }else{
                         Toast.makeText(AdminAppointmentScreen.this, "An error occured" , Toast.LENGTH_SHORT).show();
                     }
