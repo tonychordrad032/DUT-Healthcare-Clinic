@@ -769,6 +769,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        });
     }*/
 
     private void getAppointmentByDay(String day) {

@@ -93,4 +93,8 @@ public interface IClinicAPI {
 
     @DELETE("/appointment/{id}")
     Call<Void> deleteAppointment(@Path("id") long appointmentId);
+
+    @GET("/refresh-time-slot")
+
+    Call<ResponseResult>  refreshTimeSlots();
 }
