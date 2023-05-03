@@ -22,14 +22,20 @@ import com.codesurfers.healthcare.MakeAppointment;
 import com.codesurfers.healthcare.ViewAppointmentScreen;
 import com.codesurfers.healthcare.R;
 import com.codesurfers.healthcare.constants.RetrofitClient;
-import com.codesurfers.healthcare.databinding.ActivityMainBinding;
 import com.codesurfers.healthcare.model.Appoint;
 import com.codesurfers.healthcare.model.Appointment;
 import com.codesurfers.healthcare.model.ResponseResult;
+import com.codesurfers.healthcare.model.TimeSlot;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,8 +47,9 @@ import retrofit2.Response;
 
 public class UpcomingFragment extends Fragment {
 
-    ActivityMainBinding binding;
+    //ActivityMainBinding binding;
     ArrayList<Appoint> appointmentList = new ArrayList<>();
+    ArrayList<JSONObject> appointments = new ArrayList<org.json.JSONObject>();
     ListView listView;
     TextView noAppointment, date, time, status;
 
@@ -77,8 +84,18 @@ public class UpcomingFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                ObjectMapper m = new ObjectMapper();
+                String jsonObject = String.valueOf(appointments.get(i));
+                JsonParser parser = new JsonParser();
+                JsonElement mJson = parser.parse(jsonObject);
+                Gson gson = new Gson();
+                Appointment appointment = gson.fromJson(mJson, Appointment.class);
+                String timeSlot = appointment.getAppointmentTime().getTime();
+                System.out.println(timeSlot);
+                System.out.println(appointment);
                 Toast.makeText(getContext(), "Clicked object" + adapterView.getItemIdAtPosition(i), Toast.LENGTH_SHORT).show();
                 Intent fp = new Intent(getContext(), ViewAppointmentScreen.class);
+                fp.putExtra("appointment", appointment);
                 startActivity(fp);
             }
         });
@@ -128,10 +145,15 @@ public class UpcomingFragment extends Fragment {
                     try {
                         System.out.println("My STATUS");
                         System.out.println(object.getJSONObject(i).get("status"));
+                        System.out.println(object.getJSONObject(i));
                         if (object.getJSONObject(i).get("status").toString().equals("Open")){
                             System.out.println("INSIDE IF");
                             appointmentList.add(new Appoint(object.getJSONObject(i).getString("realDate"), object.getJSONObject(i).getJSONObject("appointmentTime").getString("time"), (String) object.getJSONObject(i).get("status")));
+                            appointments.add(object.getJSONObject(i));
+                            System.out.println(appointments);
                             System.out.println(appointmentList);
+                            System.out.println(appointments.size());
+                            System.out.println(appointmentList.size());
 
                         }
 

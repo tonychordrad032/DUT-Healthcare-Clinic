@@ -1,6 +1,11 @@
 package com.codesurfers.healthcare.model;
 
-public class TimeSlot {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
+public class TimeSlot implements Parcelable {
 
     private long timeSlotId;
     private String time;
@@ -25,6 +30,25 @@ public class TimeSlot {
         this.booked = booked;
         this.deleted = deleted;
     }
+
+    protected TimeSlot(Parcel in) {
+        timeSlotId = in.readLong();
+        time = in.readString();
+        booked = in.readByte() != 0;
+        deleted = in.readInt();
+    }
+
+    public static final Creator<TimeSlot> CREATOR = new Creator<TimeSlot>() {
+        @Override
+        public TimeSlot createFromParcel(Parcel in) {
+            return new TimeSlot(in);
+        }
+
+        @Override
+        public TimeSlot[] newArray(int size) {
+            return new TimeSlot[size];
+        }
+    };
 
     public long getTimeSlotId() {
         return timeSlotId;
@@ -75,5 +99,18 @@ public class TimeSlot {
                 ", booked=" + booked +
                 ", deleted=" + deleted +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+        dest.writeLong(timeSlotId);
+        dest.writeString(time);
+        dest.writeByte((byte) (booked ? 1 : 0));
+        dest.writeInt(deleted);
     }
 }

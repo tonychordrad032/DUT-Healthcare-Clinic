@@ -1,8 +1,13 @@
 package com.codesurfers.healthcare.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
 import java.time.LocalDateTime;
 
-public class Appointment {
+public class Appointment implements Parcelable {
     private long appointmentId;
 
     private User patient;
@@ -35,6 +40,27 @@ public class Appointment {
         this.deleted = deleted;
         this.appointmentTime = appointmentTime;
     }
+
+    protected Appointment(Parcel in) {
+        appointmentId = in.readLong();
+        status = in.readString();
+        notes = in.readString();
+        reason = in.readString();
+        realDate = in.readString();
+        deleted = in.readInt();
+    }
+
+    public static final Creator<Appointment> CREATOR = new Creator<Appointment>() {
+        @Override
+        public Appointment createFromParcel(Parcel in) {
+            return new Appointment(in);
+        }
+
+        @Override
+        public Appointment[] newArray(int size) {
+            return new Appointment[size];
+        }
+    };
 
     public long getAppointmentId() {
         return appointmentId;
@@ -121,5 +147,20 @@ public class Appointment {
                 ", deleted=" + deleted +
                 ", appointmentTime=" + appointmentTime +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+        dest.writeLong(appointmentId);
+        dest.writeString(status);
+        dest.writeString(notes);
+        dest.writeString(reason);
+        dest.writeString(realDate);
+        dest.writeInt(deleted);
     }
 }
