@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10dp">
+
+    <TextView
+        android:id="@+id/appointmentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+
+
+        android:paddingStart="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/appointmentTime"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/appointmentTitle"
+        android:paddingStart="10dp"
+        android:textAlignment="textStart" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/appointmentTime"
+        android:background="#DAD8D8" />
+
+</RelativeLayout>
